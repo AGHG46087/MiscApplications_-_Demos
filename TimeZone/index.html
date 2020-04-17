@@ -1,0 +1,735 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="/timezone.manifest">
+<head>
+  <title>Time Zones</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="imagetoolbar" content="false" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-startup-image" href="startup.png" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon-precomposed" href="everytimezone.png"/>
+  <link rel="icon" type="image/png" href="everytimezone.png" />
+  <style media="screen">
+    body {
+      margin: 0;
+      background: #333;
+      background: #111414 no-repeat center top -moz-radial-gradient(top,#2a2e30,#111414);
+      background: #111414 no-repeat top center -webkit-gradient(radial, center top, 0, center top, 600, from(#2a2e30), to(#111414));
+      font:54px/58px Futura, Helvetica, Arial, sans-serif;
+      color: #fff;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: perspective(-900);
+    }
+    * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default;
+    }
+/* Patrick H. Lauke: although Opera doesn't currently seem to have the proprietary user-select property, we're faking it with the ::selection pseudoclass */
+    *::selection {
+      background: transparent;
+      color: #fff;
+    }
+    html {
+      height: 100%;
+      -webkit-text-size-adjust:none;
+    }
+    #wrapper {
+      position: relative;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: rotateY(90deg) perspective(900);
+      width: 100%;
+      overflow: hidden;
+    }
+    #wrapper.o0, #wrapper.o180 {
+      width: 768px;
+      overflow:hidden;
+    }
+    #wrapper.o90, #wrapper.o-90 {
+      width: 1024px;
+      overflow:hidden;
+    }
+    #content {
+      margin: 0 auto;
+      width: 700px;
+      xheight: 650px;
+    }
+    #cities {
+      position: relative;
+      clear: both;
+    }
+    #cities_info {
+      position: absolute;
+      left: 0px;
+      top: 110px;
+    }
+    #time_info {
+      position: absolute;
+      left: 0px;
+      top: 110px;
+      z-index: 11;
+    }
+    div.city-time {
+      position: absolute;
+      width: 100px;
+      height: 20px;
+      font:15px/17px Futura, Helvetica, Arial, sans-serif;
+      z-index:100;
+    }
+    
+    div.city-wrapper {
+      height: 60px;
+      position: relative;
+      width: 900px;
+      clear: both;
+    }
+    div.city-wrapper.local {
+    }
+    div.city.active {
+      background: transparent;
+      color: #fff !important;
+    }
+    div.city-name {
+      font:15px/17px Futura, Helvetica, Arial, sans-serif;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      text-align: left;
+      width: 300px;
+    }
+    div.city-name span.tz {
+      padding-left:5px;
+      font:10px/17px Futura, Helvetica, Arial, sans-serif;
+      color:#666;
+    }
+    div.city-wrapper.local div.city.active {
+      background: transparent;
+    }
+    div.city {
+      float: left;
+      margin-top: 24px;
+      width: 345px;
+      height: 10px;
+      color: transparent;
+      background: transparent;
+      font:10px/18px Futura, Helvetica, Arial, sans-serif;
+      margin-bottom: 10px;
+      padding: 3px 0 10px 0;
+      text-transform: lowercase;
+      text-align: center;
+      text-indent: 10px;
+      margin-left: 2px;
+      margin-right: 3px;
+    }
+    #now, #cnow {
+      position: relative;
+      clear: both;
+      background: #525;
+      background-image: -moz-linear-gradient(top, #414, #525);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#414), to(#525));
+      width: 80px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      padding: 4px 10px 8px;
+      text-align: center;
+      height: 20px;
+      font:15px/14px Futura, Helvetica, Arial, sans-serif;
+      color: #fff;
+      margin-left: -50px;
+      margin-bottom: 20px;
+      z-index:10;
+    }
+    #now {
+      color: #000;
+      margin-top: -52px;
+      background: #cce93f;
+      background-image: -moz-linear-gradient(top, #b8ff41, #d3ff59);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#b8ff41), to(#d3ff59));
+      padding: 4px 5px 8px 15px;
+    }
+    #now div.drag1, #now div.drag2 {
+      position: absolute;
+      width:3px;
+      top: 5px;
+      left: 8px;
+      height: 22px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      background: #3fba07;
+      background-image: 
+        -webkit-gradient(linear, left top, left bottom, color-stop(0.0, rgba(63,186,7,0.5)), color-stop(1.0, rgba(110,216,27,0.5))),
+        -webkit-gradient(linear, left top, right top, color-stop(0.0, #3fba07), color-stop(0.5, #6ed81b), color-stop(1.0, #3fba07));
+    }
+    #now div.drag2 {
+      left: 13px;
+    }
+    #now span.info, #cnow span.info {
+      display: block;
+      font: 9px/12px Futura, Helvetica, Arial, sans-serif;
+    }
+    #line, #cline {
+      position: absolute;
+      left: 49px;
+      background: #d3ff59;
+      width: 2px;
+      height: 735px;
+      top: 32px;
+    }
+    #cline {
+      background: #525;
+    }
+    #title, #tagline, #by {
+    }
+    #title {
+      font-size: 30px;
+      float: left;
+      margin: 0 20px 0 0;
+    }
+    #tagline, #by, #ad {
+      font-size: 12px;
+      line-height: 15px;
+      float: left;
+      padding-top: 13px;
+      width: 160px;
+    }
+    #by {
+      width: 280px;
+      float: right;
+      text-align: right;
+    }
+    #ad {
+      float: none;
+      text-align: left;
+      width: 650px;
+      padding-top: 20px;
+      line-height: 16px;
+      margin-bottom: 30px;
+    }
+    #ad img {
+      padding-right: 20px;
+      margin-top: -5px;
+    }
+    a {
+      color: #fff;
+    }
+    span.remove {
+      display: inline-block;
+      background: -webkit-gradient(linear, left top, left bottom, from(#ff816d), to(#fa544f));
+      color: #5f1618;
+      border: 1px solid #ff3838;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      height: 15px;
+      width: 15px;
+      font: 16px/13px Verdana;
+      text-align: center;
+    }
+    #ad a {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body onorientationchange="changeorientation(event)">
+  <div id="wrapper">
+    <canvas id="canvas" width="740" height="980" style="position: absolute; top:30px; left:0"></canvas>
+    
+    <div id="content">
+
+      <div id="title">Every Time Zone</div>
+      <div id="tagline">
+        Never warp your brain<br/>
+        with time zone math again.
+      </div>
+      <div id="by">
+        design by <a href="http://twitter.com/amyhoy">Amy Hoy</a> &amp; dev by <a href="http://twitter.com/thomasfuchs">Thomas Fuchs</a><br/>
+        iPad: works offline (tap + to add to home screen)
+      </div>
+      
+      <div id="cnow" unselectable="on">
+        <span id="clocaltime" unselectable="on"></span>
+        <span class="info" unselectable="on">current local time</span>
+        <div id="cline" unselectable="on"></div>
+      </div>
+      <div id="now" unselectable="on">
+        <div class="drag1" unselectable="on"></div>
+
+        <div class="drag2" unselectable="on"></div>
+        <span id="localtime" unselectable="on"></span>
+        <span class="info" unselectable="on">your local time</span>
+        <div id="line" unselectable="on"></div>
+      </div>
+      
+      
+      <div id="cities"></div>
+      <div id="cities_info"></div>
+      <div id="time_info"></div>
+
+      
+    </div>
+  </div>
+  <script>
+    Function.prototype.delay = function(s){ setTimeout(this, s*1000); };
+    Date.prototype.addDays = function(days){ return new Date(this.getTime() + (days*1000*60*60*24)); }
+    
+    var defaultConfig = {
+      cities: [
+        [-10, 'Honolulu', 'HAST UTC-10'],
+        [-8, 'San Francisco', 'PST UTC-8'],
+        [-7, 'Phoenix', 'CST UTC-7'],
+        [-6, 'Chicago', 'CST UTC-6'],
+        [-5, 'New York', 'EST UTC-5'],
+        [-2, 'Rio de Janeiro', 'BRST UTC-2 (DST)'],
+        //[0, 'UTC', 'UTC'],
+        [0, 'London', 'GMT UTC'],
+        [1, 'Vienna', 'CET UTC+1'],
+        [5.5, 'Mumbai', 'IST UTC+5:30'],
+        [8, 'Hong Kong', 'HKT UTC+8'],
+        [9, 'Tokyo', 'JST UTC+9'],
+        [11, 'Sydney', 'EDT UTC+11 (DST)'],
+      ].reverse(),
+      format: 'ampm'
+    };
+    
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    
+    (function(){
+      var 
+        ua = navigator.userAgent, webkit = ua.indexOf('AppleWebKit/') > -1,  
+        moz = ua.indexOf('Gecko') > -1 && !webkit, opera = ua.indexOf('Opera') > -1,
+        ie = ua.indexOf('MSIE') > -1,
+        citites = [], 
+        /* Bruce Lawson / Patrick H. Lauke: changed transprop and transstr to also use OTransform / -o-transform */
+        transprop = webkit ? 'webkitTransform' : (ie ? 'msTransform' : (moz ? 'MozTransform' : (opera ? 'OTransform' : 'transform'))),
+        transstr = webkit ? '-webkit-transform' : (ie ? '-ms-transform' : (moz ? '-moz-transform' : (opera ? '-o-transform' : 'transform'))),
+        supportsTouch = ('createTouch' in document),
+        scale = 72, now = new Date, current = now, day = current.getDate(), 
+        month = current.getMonth(), nowminutes = (now.getHours()*60) + now.getMinutes(), 
+        localoffset = now.getTimezoneOffset(), ext = null, math = Math, i = 0,
+        utimeout = null, dragging = false, citiesright = false,
+        config = defaultConfig; // JSON.parse(localStorage.getItem('config')) || defaultConfig;
+        
+      cities = config.cities;
+      
+      function save(){
+        //localStorage.setItem('config', JSON.stringify(config));
+      }
+      
+      function $(id){ return document.getElementById(id); }
+      function html(id, html){ $(id).innerHTML = html; }
+      function css(id, style){ $(id).style.cssText += ';'+style; }
+      
+      function anim(id, transform, opacity, dur){
+        css(id, '-webkit-transition:-webkit-transform'+
+          ',opacity '+(dur||0.5)+'s,'+(dur||0.5)+'s;'+transstr+':'+
+          transform+';opacity:'+(1||opacity)); 
+      }
+
+      function translateX(element, x){
+        if(isNaN(x)) return;
+        if(webkit && supportsTouch){
+          element.style[transprop] = 'translate3d('+x+'px,0,0)';
+        } else {
+          element.style[transprop] = 'translateX('+x+'px)';
+        }
+      }
+     
+      var ctx = $('canvas').getContext("2d");
+      var defaultg = ctx.createLinearGradient(0,0,230,0);
+      defaultg.addColorStop(0,'#4b4c4d');
+      defaultg.addColorStop(0.249,'#4b4c4d');
+      defaultg.addColorStop(0.25,'#575b5c');
+      defaultg.addColorStop(0.329,'#575b5c');
+      defaultg.addColorStop(0.33,'#6b7071');
+      defaultg.addColorStop(0.749,'#6b7071');
+      defaultg.addColorStop(0.75,'#575b5c');  
+      defaultg.addColorStop(0.909,'#575b5c');
+      defaultg.addColorStop(0.91,'#4b4c4d');
+      defaultg.addColorStop(1,'#4b4c4d');
+      
+      var activeg = ctx.createLinearGradient(0,0,230,0);
+      activeg.addColorStop(0,'#5485b1');
+      activeg.addColorStop(0.249,'#5485b1');
+      activeg.addColorStop(0.25,'#3cafc5');
+      activeg.addColorStop(0.329,'#3cafc5');
+      activeg.addColorStop(0.33,'#55c8e4');
+      activeg.addColorStop(0.749,'#55c8e4');
+      activeg.addColorStop(0.75,'#3cafc5');  
+      activeg.addColorStop(0.909,'#3cafc5');
+      activeg.addColorStop(0.91,'#5485b1');
+      activeg.addColorStop(1,'#5485b1');
+      
+      var localg = ctx.createLinearGradient(0,0,230,0);
+      localg.addColorStop(0,'#8abb29');
+      localg.addColorStop(0.249,'#8abb29');
+      localg.addColorStop(0.25,'#a5df3b');
+      localg.addColorStop(0.329,'#a5df3b');
+      localg.addColorStop(0.33,'#b8ff41');
+      localg.addColorStop(0.749,'#b8ff41');
+      localg.addColorStop(0.75,'#a5df3b');  
+      localg.addColorStop(0.909,'#a5df3b');
+      localg.addColorStop(0.91,'#8abb29');
+      localg.addColorStop(1,'#8abb29');
+      
+      var roundg = ctx.createLinearGradient(0,0,0,23);
+      roundg.addColorStop(0,'rgba(0,0,0,0)');
+      roundg.addColorStop(1,'rgba(0,0,0,0.4)');
+      
+      var topg = ctx.createLinearGradient(0,0,0,23);
+      topg.addColorStop(0,'rgba(255,255,255,0.3)');
+      topg.addColorStop(0.025, 'rgba(255,255,255,0)');
+      
+      var bottomg = ctx.createLinearGradient(0,23,0,0);
+      bottomg.addColorStop(0,'rgba(255,255,255,0.3)');
+      bottomg.addColorStop(0.025, 'rgba(255,255,255,0)');
+      
+      //-webkit-gradient(linear, left top, left bottom, 
+      //  from(rgba(255,255,255,0.3)),
+      //  color-stop(0.025, rgba(255,255,255,0)), 
+      //  to(rgba(255,255,255,0))
+      //),
+      //-webkit-gradient(linear, left bottom, left top, 
+      //  from(rgba(255,255,255,0.3)),
+      //  color-stop(0.025, rgba(255,255,255,0)), 
+      //  to(rgba(255,255,255,0))
+      //),
+      
+      function rr(w,h,rad){
+        ctx.beginPath();
+        ctx.moveTo(rad, 0);
+        
+        ctx.lineTo(w-rad, 0);
+        ctx.bezierCurveTo(w, 0, w, 0, w, rad);
+        
+        ctx.lineTo(w, h-rad);
+        ctx.bezierCurveTo(w, h, w, h, w-rad, h);
+        
+        ctx.lineTo(rad, h);
+        ctx.bezierCurveTo(0, h, 0, h, 0, h-rad);
+        
+        ctx.lineTo(0, rad);
+        ctx.bezierCurveTo(0, 0, 0, 0, rad, 0);
+        
+        //ctx.stroke();
+        ctx.fill();
+      }
+      
+      function drawBox(x,y,w,h,gradient){
+        ctx.save();
+        gradient = gradient || defaultg;
+        ctx.translate(x, y);
+        ctx.fillStyle = gradient;
+        ctx.clearRect(0, 0, w, h);
+        rr(w, h, 18);
+        ctx.fillStyle = roundg;
+        rr(w, h, 18);
+        ctx.fillStyle = topg;
+        rr(w, h, 18);
+        ctx.fillStyle = bottomg;
+        rr(w, h, 18);
+        ctx.restore();
+      };
+      
+      css('canvas','left:'+$('content').offsetLeft+'px')
+      
+      function hr2p(hr){ return 50+(-hr*(100/scale)); };
+      
+      ext = [hr2p(-12-24), hr2p(12)];
+      ext.push(math.abs(ext[1])+math.abs(ext[0]));
+      
+      var cel;
+      
+      function tz(id, city, zone, zonedesc){
+        var s =  ((700/scale*24)|0)-5+'px', dy = current.addDays(-1), 
+          dt = current.addDays(1), el = document.createElement('div'), 
+          timeel = document.createElement('div'), nameel = document.createElement('div'),
+          off;
+          
+        el.className = 'city-wrapper'+ ((-zone*60)==localoffset ? ' local' : '');
+        el.id = 'city_'+id;
+        el.innerHTML =
+          '<div class="city" style="width:'+s+'" id="city_'+id+'_1">'+months[dy.getMonth()]+' '+dy.getDate()+'</div>'+
+          '<div class="city" style="width:'+s+'" id="city_'+id+'_2">'+months[current.getMonth()]+' '+current.getDate()+'</div>'+
+          '<div class="city" style="width:'+s+'" id="city_'+id+'_3">'+months[dt.getMonth()]+' '+dt.getDate()+'</div>';
+        $('cities').appendChild(el);
+        
+        timeel.className = 'city-time';
+        $('time_info').appendChild(timeel);
+        timeel.style.cssText += ';top:'+((11-id)*60)+'px';
+        
+        nameel.className = 'city-name';
+        nameel.innerHTML = city + '<span class="tz">'+zonedesc+'</span> <span class="remove" id="city_'+id+'_remove" style="display:none">–</span>';
+        $('cities_info').appendChild(nameel);
+        nameel.style.cssText += ';top:'+(110+id*60)+'px';
+        
+        //nameel.ontouchstart = (function(event){
+        //  nameel._pos1 = event.touches[0].pageX;
+        //  $('city_'+id+'_remove').style.display = 'none';
+        //  event.stopPropagation();
+        //  event.preventDefault();
+        //});
+        //nameel.ontouchmove = (function(event){
+        //  if(!nameel._pos1) return;
+        //  nameel._pos2 = event.touches[0].pageX;
+        //  if(nameel._pos2-nameel._pos1>50){
+        //    $('city_'+id+'_remove').style.display = 'inline-block';
+        //    nameel._pos1 = null;
+        //  } else {
+        //    $('city_'+id+'_remove').style.display = 'none';
+        //  }
+        //  event.stopPropagation();
+        //  event.preventDefault();          
+        //});
+        
+        css('city_'+id, 'left:'+hr2p(zone+24)+'%');
+        off = $('city_'+id).offsetLeft;
+
+        var c1,c2,c3, x, y, w, h, x2,y2,w2,h2, x3,y3,w3,h3;
+        c1 = $('city_'+id+'_1');
+        x = c1.offsetLeft + off;
+        y = c1.offsetTop + (80+(11-id)*60);
+        w = c1.offsetWidth;
+        h = c1.offsetHeight;
+        drawBox(x,y,w,h);
+        
+        c2 = $('city_'+id+'_2');
+        x2 = c2.offsetLeft + off;
+        y2 = c2.offsetTop + (80+(11-id)*60);
+        w2 = c2.offsetWidth;
+        h2 = c2.offsetHeight;        
+        drawBox(x2,y2,w2,h2);
+        
+        c3 = $('city_'+id+'_3');
+        x3 = c3.offsetLeft + off;
+        y3 = c3.offsetTop + (80+(11-id)*60);
+        w3 = c3.offsetWidth;
+        h3 = c3.offsetHeight;        
+        drawBox(x3,y3,w3,h3);
+        
+        
+        cel.push([
+          0,0,0,0,0,0,
+          $('city_'+id+'_1'),//6
+          $('city_'+id+'_2'),//7
+          $('city_'+id+'_3'),//8
+          false,//9
+          false,//10
+          false,//11
+          timeel, //12
+          $('city_'+id), //13
+          zone, //14
+          nameel, //15
+          false, // 16
+          [x,y,w,h], //17
+          [x2,y2,w2,h2], //18
+          [x3,y3,w3,h3], //19
+          (-zone*60)==localoffset //20
+        ]);
+        
+        //c1.style.display = 'none';
+        //c2.style.display = 'none';
+        //c3.style.display = 'none';
+        
+        $('city_'+id+'_remove').onclick = (function(){ removeCity(id); });
+      }
+      
+      function setupGrid(){
+        html('cities', '');
+        html('cities_info', '');
+        cel = [];
+        
+        var i = cities.length;
+        while(i--) tz(i, cities[i][1], cities[i][0], cities[i][2]);
+        
+        translateX($('cities_info'), $('content').offsetLeft);
+        timeselector();        
+      }
+      
+      function removeCity(id){
+        cities.splice(id,1);
+        setupGrid();
+        
+        config.cities = cities;
+        save();
+      }
+      
+      setupGrid();
+      
+      if(webkit) (function(){ anim('wrapper', 'rotateY(0deg)'); }).delay(0.5);
+      //(function(){ anim('canvas', '', 1); }).delay(1);
+      
+      var cOffL = $('content').offsetLeft;
+      
+      function renderinfo(){
+        utimeout = null;
+        
+        var n = offsp, p = n - cOffL+48, cbase = now+localoffset/60,
+          i = cities.length, c, c1, c2, c3, celc;
+        
+        while(i--) {
+          celc = cel[i];
+          c = cbase+celc[14];
+          c1 = c<0;          
+          c3 = c>=24;
+          c2 = c>=0 && !c3;
+          
+          if(c1 && !celc[9]) {
+            celc[6].className = 'city active'; 
+            celc[9] = true;
+            drawBox(celc[17][0], celc[17][1], celc[17][2], celc[17][3], celc[20] ? localg : activeg);
+          } else if(!c1 && cel[i][9]) {
+            celc[6].className = 'city';
+            celc[9] = false;
+            drawBox(celc[17][0], celc[17][1], celc[17][2], celc[17][3]);
+          }
+          if(c2 & !celc[10]) {
+            celc[7].className = 'city active';
+            celc[10] = true;
+            drawBox(celc[18][0], celc[18][1], celc[18][2], celc[18][3], celc[20] ? localg : activeg);
+          } else if(!c2 && celc[10]) {
+            celc[7].className = 'city'; 
+            celc[10] = false;
+            drawBox(celc[18][0], celc[18][1], celc[18][2], celc[18][3]);
+          }
+          if(c3 && !celc[11]) {
+            celc[8].className = 'city active';
+            celc[11] = true;
+            drawBox(celc[19][0], celc[19][1], celc[19][2], celc[19][3], celc[20] ? localg : activeg);
+          } else if(!c3 && cel[i][11]) {
+            celc[8].className = 'city';
+            celc[11] = false;
+            drawBox(celc[19][0], celc[19][1], celc[19][2], celc[19][3]);
+          }
+          
+          celc[12].innerHTML = formattime(now+celc[14]+(localoffset/60));
+          
+          if(!celc[16]) {
+            celc[16] = true;
+            celc[15].style.cssText += ';top:'+celc[13].offsetTop+'px';
+          }
+        }
+        
+        translateX($('time_info'), 15+n+cOffL);
+        
+        
+        if(n<170 && !citiesright){
+          $('cities_info').style.webkitTransition = '-webkit-transform,0.4s';
+          translateX($('cities_info'), cOffL+550);
+          citiesright = true;
+        } else if(n>500 && citiesright){
+          citiesright = false;
+          $('cities_info').style.webkitTransition = '-webkit-transform,0.4s';
+          translateX($('cities_info'), cOffL);
+        }
+      }
+      
+      function updateinfo(){
+        html('localtime', formattime(now));
+        // *** ouch safari bug-- force rerendering of node
+        var tn = document.createTextNode(' ');
+        $('localtime').appendChild(tn);
+        // ***
+        renderinfo();
+        //if(utimeout) clearTimeout(utimeout);
+        //utimeout = setTimeout(renderinfo, 3);
+      }
+      
+      function formattime(t){
+        var m;
+        if(t<0) t = 24-math.abs(t%24);
+        if(t>=24) t = t%24;
+        m = math.abs(((t*60)%60)|0), sf = 'am';
+        m = m<10?'0'+m:m; 
+        t = t|0;
+        if(config.format=='ampm') {
+          if(t>=12) { t = t %12; sf = 'pm'; }
+          if(t==0) t=12;
+          return t + ':' + m + ' ' +sf;
+        } else
+          return t + ':' + m;
+      }
+      
+      var offsp;
+      
+      function timeselector(px){
+        var p = hr2p(-now-localoffset/60),
+          d = -((p/100)*700)+700/(24/now);
+        
+        if(px){
+          css('now','left:0px');
+          translateX($('now'), px);
+          offsp = px;      
+        } else {
+          css('now','left:'+p+'%');
+          offsp = p*7;
+        }
+        updateinfo();
+      }
+      
+      function currenttime(time){
+        var p = hr2p(-time-localoffset/60),
+          d = -((p/100)*700)+700/(24/time);
+        css('cnow','left:'+p+'%');  
+        html('clocaltime', formattime(time));
+      }
+      
+      currenttime(nowminutes/60);
+      now = nowminutes/60;
+      timeselector();
+      
+      setInterval((function(){
+        var now = new Date;
+        currenttime(now.getHours() + now.getMinutes()/60);
+        return arguments.callee;
+      })(), 1000);
+      
+      function move(event){
+        if(!dragging) return;
+        var pageX = event.pageX;
+        if (event.touches) pageX = event.touches[0].pageX;        
+        now = ((pageX-$('content').offsetLeft-350)/700);
+        now = now * scale - (localoffset/60);
+        timeselector(pageX-$('content').offsetLeft);
+        if (event.touches) event.preventDefault();
+      }
+      
+      if('orientation' in window)
+        window.changeorientation = (function(){ 
+          $('wrapper').className = 'o'+orientation; 
+          cOffL = $('content').offsetLeft;
+          return arguments.callee;
+        })();
+        
+      var w = $('wrapper');
+      w[supportsTouch ? 'ontouchstart' : 'onmousedown'] = function(event){
+        var el = event.target;
+        if(el.nodeType!=1) el = el.parentNode ? el.parentNode : el;
+        if(el&&el.tagName&&el.tagName=='A') return;
+        if(el&&el.tagName&&el.tagName=='IMG') return;
+
+        if(event.touches){
+          if(event.touches[0].pageY < 50) return;
+          if(event.touches[0].pageX < $('content').offsetLeft) return;
+        } 
+        dragging = true; move(event);
+      };
+      w[supportsTouch ? 'ontouchmove' : 'onmousemove'] = move;
+      w[supportsTouch ? 'ontouchend' : 'onmouseup'] = function(event){ dragging = false; };
+    })();
+  </script>
+  
+  <script src="http://static.getclicky.com/js"></script>
+  <script>clicky.init(204109);</script>
+  <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/204109ns.gif" /></p></noscript>
+
+</body>
+</html>
+
+
