@@ -1,0 +1,70 @@
+1. Install MAMP into the Applications directory
+2. Start up local host should current be pointing to ==> "/Applications/MAMP/htdocs"
+3. Select the MAMP control Panel -> Preferences
+        Select the "Ports" tab.  and click the "Set to Default Apache and MySQL ports"
+        Select the PHP tab, ensure PHP5 is selcted.
+        Select the Apache tab, Select the Document Root, ex: "/Users/hansgreiner/Sites"
+        Click OK
+4. Modify the /etc/hosts file.
+        cd to /etc
+        sudo vi hosts (enter root password)
+        Add in the hosts to the localhost IP:
+        ex: 127.0.0.1 mysite
+            127.0.0.1 demos
+5. Create a restart script of Apache if desired.
+       cd /Users/hansgreiner/bin
+       create the script name and add the contents (and comments if desired):
+           /Applications/MAMP/Library/bin/apachect1 stop
+           sleep 5
+           /Applications/MAMP/Library/bin/apachect1 start
+       Save the file
+6. Configure the httpd.conf file
+       if a Soft link is desired for the httpd.conf
+         cd to the Document root set from step 3  "/Users/hansgreiner/Sites"
+         ln -s /Applications/MAMP/conf/apache/httpd.conf hans.httpd
+       Edit the httpd.conf either from soft link or actual location.
+       Ensure the php5_module is uncommented.
+           LoadModule php5_module        modules/libphp5.so
+       Set the approprite DirectoryIndoex priority of file types.
+           DirectoryIndex index.php index.html
+       Set the Virtual hosts identified from Step 4 in editing the /etc/hosts
+           NameVirtualHost *
+           <VirtualHost *>
+             DocumentRoot "/Users/hansgreiner/Sites/"
+             ServerName localhost
+           </VirtualHost>
+
+           <VirtualHost *>
+             DocumentRoot "/Users/hansgreiner/Sites/demos/"
+             ServerName demos
+           </VirtualHost>
+
+           <VirtualHost *>
+             DocumentRoot "/Users/hansgreiner/Sites/mysite/"
+             ServerName mysite
+           </VirtualHost>
+7.  If behind a proxy make sure the virtual host domains are in the proxy exclusion list in the
+    browser as they are local.
+8.  If running VMWare and would like to access the MAMP server
+       Stop the VMWare Fusion if Running
+       Go the WMWare Preferences under Network Adapters ( VMWare can run upto 3 adapters )
+       If needed Add a new Adapter that is "Host Only".
+            This has a network adapter that ties to the MAC internaly. this will bind to "vmnet1" switch
+            info: There are also nine virtual Ethernet switches, designated as VMnet0 - VMnet8
+                  VMnet0 is dedicated to bridged mode,
+                  VMnet1 is dedicated to Host Only mode, and
+                  VMnet8 is for NAT (Network Address Translation) mode.
+                  VMnet2 - VMnet7, are available to be used by the VM when using Custom networking mode.
+       Restart the VMWare Fusion Windows app.
+       In a mac terminal window type command ifconfig vmnet1.  capture the inet address: ex: 172.16.41.1
+       Get the goofy name of the computer local hostname that MAC sets up.  can be captured from System Preferences
+         Open System Preferences
+         Click on Sharing
+         Click the Edit button, see the name. EX: hans-greiners-macbook-pro-2.local
+       In the Windows (inside VMWare) we are going to modify the hosts file
+         open file C:\Windows\system32\drivers\etc\hosts
+         add the inet address captured from the ifconfig vmnet1 and the goofy name, along with virtual hosts
+         EX: 172.16.41.1  hans-greiners-macbook-pro-2.local localhost.local mysite demos
+         open a cmd window and type ipconfig /flushdns
+9.  Lastly if behind a proxy sure the virtual host domains are in the proxy exclusion list in the
+    browser as they are local.
