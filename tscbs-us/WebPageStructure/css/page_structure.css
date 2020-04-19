@@ -1,0 +1,48 @@
+/*
+*/
+/* CSS reset ...  */
+body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;}q:before,q:after{content:'';}
+/* font reset ... */
+body {font:13px arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}select, input, textarea {font:99% arial,helvetica,clean,sans-serif;}pre, code {font:115% monospace;*font-size:100%;}body * {line-height:1.22em;}
+
+.iframeCompare {
+    width: 310px;
+    height: 350px;
+    border: solid 1px #000000;
+}
+.frameCaption {
+   width: 310px;
+   padding: 0 120px 0 20px;
+   _padding: 0 100px 0 20px;
+   #padding: 0 100px 0 20px;
+}
+
+.codeEmphasize {
+    width: 350px;
+    background-color: #EEE;
+    padding: 4px;
+    border: 1px solid;
+}
+
+#pageHead, #mainContent, #frameWrapper, #linkWrapper {
+   padding: 0 0 0 20px;
+}
+#pageFrame1, #pageFrame2, #pageFrame3 {
+    height: 335px;
+}
+h1 {
+   font: 40px arial;
+   color: #FF0000;
+}
+h1.frameTitle {
+   font: 20px arial;
+   color: #0000FF;
+}
+span.frameLink {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#done-top, #done-middle, #done-bottom {
+   font: 20px arial;
+   color: #FF0000;
+}
