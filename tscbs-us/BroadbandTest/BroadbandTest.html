@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>BroadBand vs NarrowBand Detect Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script type="text/javascript">
+      <!--
+//  BroadBand Detection
+function setBandwidth(whichVal)
+ {
+   var expdate = new Date();
+   var days = 1; // 60 days
+   expdate.setTime(expdate.getTime() + (60*60*24*days));
+   document.cookie = 'setbandwidth=' + whichVal + ':ttl='+ expdate.toGMTString() + '; expires=' + expdate.toGMTString() + '; path=/';
+ }
+function setTagValue(el, value)
+ {
+   var element = document.getElementById(el);
+   if ( element != null )
+   {
+     element.innerHTML = value;
+   }
+ }
+function setBandMsg()
+ {
+   var args = setBandMsg.arguments;
+   setTagValue("detectValue", args[0] );
+   setTagValue("methodValue", args[1] );
+   setTagValue("timeValue", args[2] );
+   setTagValue("threshholdValue", args[3] );
+   setTagValue("cookieValue", document.cookie );
+ }
+
+
+startDate=new Date();
+startTime=startDate.getTime();
+
+function broadbandDetect(threshhold)
+ {
+   var args= broadbandDetect.arguments;
+   var el=(document.layers)?document.layers['Layer1'].document.Myimage1:document.Myimage1;
+   if(el.complete)
+   {
+     var endDate=new Date();
+     var endTime=endDate.getTime();
+     var diffTime=(endTime-startTime)/1000;
+     if(document.cookie.indexOf('setbandwidth=broadband')>=0)
+     {
+       setBandMsg('broadband', ' cookie', diffTime, threshhold);
+     }
+     else if(document.cookie.indexOf('setbandwidth=narrowband')>=0)
+     {
+       setBandMsg('narrowband', ' cookie', diffTime, threshhold);
+     }
+     else if(diffTime<threshhold)
+     {
+       setBandwidth('broadband');
+       setBandMsg('broadband', ' timed', diffTime, threshhold);
+     }
+     else if(diffTime>=threshold)
+     {
+       setBandwidth('narrowband');
+       setBandMsg('narrowband', ' timed', diffTime, threshhold);
+     }
+   }
+ }
+      //-->
+    </script>
+
+    <style type="text/css">
+      div {font-size:16px;}
+      #HellobbTester {font-size:16pt;}
+      .redClass {color : red; font-weight: bold;}
+      #Layer1 {position:absolute; left:0px; top:0px; width:100px; height:100px; z-index:1; visibility: hidden;}
+    </style>
+  </head>
+
+  <body onload="broadbandDetect('4.5')">
+    <div id="BroadBandTester" ><span id="HellobbTester">Hello broadband tester:</span><br/>
+      Detected&nbsp;<span id="detectValue" class="redClass"></span>&nbsp;user<br/>
+      Determined Method by:&nbsp;<span id="methodValue" class="redClass"></span>&nbsp;detection<br/>
+      Cookie value:&nbsp;<span id="cookieValue" class="redClass"></span><br/>
+      Download time value:&nbsp;<span id="timeValue" class="redClass"></span>&nbsp;seconds.<br/>
+      Threshhold value:&nbsp;<span id="threshholdValue" class="redClass"></span>&nbsp;seconds.<br/>
+    </div>
+    <div id="Layer1">
+      <img src="myimage.jpg" alt="loadImage" width="100" height="100" border="0" name="Myimage1" />
+    </div>
+  </body>
+</html>
