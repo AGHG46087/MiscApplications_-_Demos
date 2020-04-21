@@ -1,0 +1,86 @@
+/*
+*   menu2.css
+*/
+/***************************************************************
+* The first thing we are going to do with our CSS is eliminate
+* padding, margin, decorations.
+***************************************************************/
+#nav {
+    margin: 0;
+    padding: 0;
+}
+#nav li.on ul, #nav li.off ul {
+    margin: 0;
+    padding: 0;
+}
+#nav a {
+    text-decoration: none;
+    outline: none;
+}
+/***************************************************************
+* The second thing we are going to do with our CSS is to display
+* the primary level horizontally (using float) and hide all of
+* the subnavigation lists. We will also set the display for the
+* links in the list to be bold, colored, and have a border.
+***************************************************************/
+#nav li {
+  /* float the main list(<li>) items */
+  margin: 0;
+  float: left;
+  display: block;
+  padding-right: 15px;
+}
+#nav li.off ul, #nav li.on ul {
+  /* hide the subnavs */
+  display: none;
+}
+/***************************************************************
+* Next, let's position our second nav level below the main list,
+* so that when it does show up again, it is in the right place.
+***************************************************************/
+#nav li.off ul, #nav li.on ul {
+    /* put the subnav below */
+    position: absolute;
+    top: 33px;
+    /* We need an IE Hack Here, Menu Overlaps in IE */
+    left: 5px;
+    padding-top: 10px;
+    background: #DBE9F4;
+    height: 28px;
+    width: 790px;
+    _width: 1024px;
+}
+#nav li a {
+    color: #999999;
+    font-weight: bold;
+    display: block;
+    height: 15px;
+    width: 100px;
+    border: 2px solid #999999;
+    padding: 5px;
+}
+/***************************************************************
+* Finally, we will show the subnavigation bar for the active topic
+* area, "Your Account" we have set a class of "on" to the
+* active topic and "off" to the inactive topics.
+***************************************************************/
+#nav li.on a {
+  /* change border color for active topic area */
+  border: 1px solid #f90;
+}
+#nav li.on ul a, #nav li.off ul a {
+  /* cancel inherit of border on subnav of active topic */
+  border: 0;
+}
+#nav li.on ul a, #nav li.off ul a {
+    float: left;
+/* ie doesn't inherit the float */
+    border: 0;
+    color: #999999;
+    width: auto;
+    margin-right: 15px;
+}
+#nav li.on ul {
+  /* display active subnav list */
+  display: block;
+}
