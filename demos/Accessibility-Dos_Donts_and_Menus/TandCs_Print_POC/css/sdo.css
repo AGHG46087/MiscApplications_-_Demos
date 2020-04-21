@@ -1,0 +1,140 @@
+/* Common Style for SDO application */
+.sdomain {
+	border:1px solid #CEE7F2; 
+	background-color:#e9e9e9; 
+	width:650px;
+	height:auto;
+	font-family:arial;
+	color:#585858;	
+	overflow:hidden;
+}
+.mainfont {
+	font-size:15px;
+}
+.margin {
+	margin:0px;
+}
+.subfont {
+	font-size:13px;
+}
+.commonmargin {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.commonpadding {
+	padding:10px;
+}
+.sdobgnd { 
+	background-color:#ffffff; 
+	border:1px solid #CEE7F2;
+	overflow:hidden;
+}
+.block {
+	display:block;
+}
+.displaynone {
+	display:none;
+}
+.cardspacing {
+	margin-left:5px;
+	margin-top:5px;
+}
+.carddescfont {
+	font-size:11px;
+}
+#carddesc {
+	_margin-bottom:40px;
+}
+.emailsalign {
+	margin-bottom:4px;
+}
+.curemailalign {
+	margin-left:11px;
+}
+.chngemailalign {
+	margin-left:9px;
+}
+.rentremailalign {
+	margin-left:4px;
+}
+.headerline {
+	border-top:1px solid #A4A4A4;
+}
+.cleardivfloat {
+	clear:both;
+}
+#tctxtareafield	{
+ 	width:650px;
+	*width:646x;
+	overflow-y: scroll;
+	height:80px;
+}
+.editlinkalign {
+	padding-left:126px;
+}
+.editemaillnk {
+	text-decoration: none;
+}
+#close {
+	font-size:12px;
+	padding-top:2px;
+	margin-top: -18px;
+	_margin-top:-18px;
+	*margin-top:-18px;
+}
+.floatleft {
+	float:left;
+}
+.floatright {
+	float:right;
+}
+.marginrghtalign {
+	margin-right:59px;
+}
+.sdogreyout {
+	filter:alpha(opacity=25);
+	opacity:0.4;
+	-moz-opacity:.25;
+	cursor:default;
+}
+.sdobtnPointer {
+    cursor: pointer;
+}
+#agreetxt {
+	margin-top:30px;
+	*margin-top:10px;
+	margin-bottom:15px;
+	_margin-bottom:0px;
+}
+#save {
+	padding-left:10px;
+}
+
+/* Terms and Conditions styles*/
+
+.Normal{
+	Color: #333333;
+	font-size: 11px;
+	font-family: Arial;
+}
+.TnC_Heading{
+	font-family: Arial,helvetica;
+	font-weight: bold;
+	Color: #333333;
+	font-size: 11px;
+	font-family: Arial;
+}
+#sdo_tnc_main{
+	padding-left:10px;
+	_padding-left:10px;
+	padding-bottom:10px
+	Color: #333333;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+a span.outofsight {
+  left: -2500px;
+  position: absolute;
+  width: 16px;
+}
