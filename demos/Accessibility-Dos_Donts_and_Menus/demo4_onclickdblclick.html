@@ -1,0 +1,94 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demo_default.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demofiles.css' />
+  </head>
+  <body id="demo4">
+    <h3>Demo:  OnClick &amp; onDblClick</h3>
+    <div class="example">
+      <p>The <code class="markup">onClick</code> event handler is triggered when the mouse is pressed when over an <acronym title="HyperText Markup
+      Language">HTML</acronym> element. <code class="markup">onClick</code> is intended to be a mouse dependent event handler. However, if
+      the <code class="markup">onClick</code> event handler is used with hypertext links or form controls, then most major browsers and assistive technologies
+      trigger <code class="markup">onClick</code> if the <span class="keycap"><strong>Enter</strong></span> key is pressed when the link or control has
+      focus. In these cases, <code class="markup">onClick</code> is a device independent event handler. Nevertheless,
+      the <span class="keycap"><strong>Enter</strong></span> key will not trigger the <code class="markup">onClick</code> event if it is used with non-link and
+      non-control elements, such as plain text or table cells.</p>
+      <p>The <code class="markup">onDblClick</code> event handler is associated with the double click of a mouse on a selected <acronym title="HyperText Markup
+      Language">HTML</acronym> element. There is no device independent or keyboard equivalent to <code class="markup">onDblClick</code>, which should be
+      avoided.</p>
+      <h3>Example 1</h3>
+      <p>The following link triggers a JavaScript confirmation box which allows you to confirm whether you want to view the page or not.</p>
+      <p><a id="TestLink4_1" class="outlinenormal" href="./NoscriptIndex.php?id=TestLink4_1">View this onClick example</a></p>
+      <h4>Problems</h4>
+      <p><span class='emp'>None</span>. The confirmation box is read by all major screen readers. By using the <code class="markup">return</code> JavaScript parameter, the link action
+      is cancelled if the user selects <span class="buttonLike"><strong>Cancel</strong></span> in the confirmation dialog box. If JavaScript is disabled, the link will work
+      normally.</p>
+      <h3>Example 2</h3>
+      <p>The following text is styled to appear like a link (blue,underlined and mouse pointer), but is plain text paragraph that has an <code class="markup">onClick</code> event which
+      opens another document in the browser window. Use the mouse to click the following text.</p>
+      <p id="TestLink4_2" class="looklikeanchor"  >View another onClick example</p>
+      <h4>Problems</h4>
+      <p>Because the text is not a hypertext link or form control, it does not receive focus while navigating with the keyboard. Because it does not gain focus,
+      the keyboard cannot be used to activate the <code class="markup">onClick</code> event.</p>
+      <h5>Solution</h5>
+      <p>Use the <code class="markup">onClick</code> event handler on a link or form control instead of an element that cannot be accessed using a keyboard.</p>
+      <h3>Example 3</h3>
+      <p>A very common use of JavaScript is to validate form information. The following form will use JavaScript to allow you to confirm the information you
+      have entered.</p>
+      <p>Enter your name in the following box, then press the <span class="emp">Submit</span> button.</p>
+      <form onsubmit="validate(); return false;" action="./NoscriptIndex.php?id=TestLink4_3">
+        <p><label for="yourname">Name:</label>
+          <input type="text" id="yourname" name="yourname"/>
+          <input id="TestLink4_3" type="button" value="Submit" name="button"/>
+        </p>
+      </form>
+      <h4>Problems</h4>
+      <p>The confirmation and alert dialog boxes that are triggered by the <code class="markup">onClick</code> 
+          event are accessible to browsers and assistive technologies that have 
+          JavaScript enabled. Validating the form information with a server side 
+          script and then displaying feedback on another web page allows you to 
+          bypass any problems that may occur in the JavaScript code and allows 
+          the form to validate if JavaScript is disabled. If JavaScript is used 
+          to validate the form, make sure that all form elements and functionality 
+          can be completed using the keyboard. Because the <code class="markup">onClick</code> 
+          handler is used with a form element, it is activated using both the 
+          mouse and the keyboard.</p>
+      <div class="note">
+        <p><span class="title"><strong>Note</strong></span></p>
+        <p>Because most browsers will submit the form when the <span class="keycap"><strong>Enter</strong></span> key is pressed, the <code class="markup">onsubmit</code> event handler has been added to the <code class="markup">&lt;form&gt;</code> tag to ensure that the form will validate if the user does not activate the <span class="emp">Submit</span> button, but presses the <span class="keycap"><strong>Enter</strong></span> key while focus is in the text box. Also notice the required form label for the text box.</p>
+      </div>
+      <h3>Example 4</h3>
+      <p>This example also validates the form information, but feedback is displayed in another place within the page.</p>
+      <p>How many items are in a baker's dozen? Enter the amount into the box below, then press the <span class="menuchoice">Check</span> button.</p>
+      <form onsubmit="checkAnswer2(); return false;" action="./NoscriptIndex.php?id=TestLink4_4">
+        <!-- The "right answer" message: note that it is initialized to being -->
+        <!-- invisible via our "invis" class define above.	-->
+        <p id="answercorrect" class="invis">Correct, there are 13 items in a baker's dozen.</p>
+        <!-- The "wrong answer" message: note that it is initialized to being -->
+        <!-- invisible via our "invis" class define above.      -->
+        <p id="answerwrong" class="invis">Incorrect. There are 13 items in a baker's dozen.</p>
+        <p><label for="answerbox">Enter Answer:</label>
+          <input type="text" id="answerbox"/>
+          <input id="TestLink4_4" type="submit" value="Check" onclick="checkAnswer2()"/>
+        </p>
+      </form>
+      <h4>Problems</h4>
+      <p>The feedback is not presented in a manner that would be accessible to some assistive technologies. In this example, JavaScript is modifying the display
+      style parameters for elements within the page to make them visible or invisible based upon the response. The screen reader user would not be aware that
+      additional content has suddenly appeared within the page.</p>
+      <h5>Solutions</h5>
+      <ol>
+        <li>Validate the form information with a server side script, then display the feedback on another page.</li>
+        <li>Provide the feedback in a way that is accessible, such as a JavaScript alert or another form element.</li>
+      </ol>
+    </div>
+  </body>
+  <script type='text/javascript' src='./scripts/prototype.js'></script>
+  <script type='text/javascript' src='./scripts/demopages.js'></script>
+  
+</html>
