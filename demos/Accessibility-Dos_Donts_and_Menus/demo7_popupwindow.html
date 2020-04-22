@@ -1,0 +1,58 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demo_default.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demofiles.css' />
+  </head>
+  <body id="demo7">
+    <h3>Demo:  popup windows</h3>
+    <div class="example">
+      <p>Pop-up windows provide a unique accessibility problem. First of all, most usability experts would argue against the use of pop-up windows except in the
+      most extreme of cases. If you must use pop-up windows, know that they introduce several very unique accessibility issues. For a visual user, it may be
+      difficult to notice and navigate to the new window. For someone who is using assistive technologies, the new window may be annoying and confusing because
+      the default behavior for the link has been modified. JavaScript implementation may make the new window difficult or impossible to resize or scale for
+      someone using a screen enlarger. For someone who is blind, there is typically no indication that they are presently navigating in a new window. When the
+      screen reader user attempts to return to the previous page by selecting the back button, it may be confusing to find that this does not work.</p>
+      <p><strong>This is considered a non-accessible popup window.</strong>
+        <a id="popupLink2" href="./popup_placeholder.html" title="Click here to view a printable page in a new window.">Print this page.</a></p>
+      
+      <h3>Pop-up example</h3>
+      <p>
+        <a id="popupLink" target='_blank' href="./popup_placeholder.html" title="New window with printable page.">Select link to view printable page in a new
+        window. </a></p>
+      <p>
+        <a id="popupLink3" href="./TandCs_Print_POC/SDO_TandCs_Print_POC.html" title="Opens T&Cs in new window"><strong>T&amp;C Print Demo</strong></a>
+      </p>
+      <div class="note">
+        <p><span class="title"><strong>Note</strong></span></p>
+        <p>If you are using software to block pop-up windows, you may need disable the software or select the link in a way that bypasses the pop-up blocker<br />
+        (typically
+          <strong><span class="keycap">Ctrl</span> + click</strong> or
+          <strong><span class="keycap">Ctrl</span> +
+            <span class="keycap">Enter</span></strong> with the link selected).
+        </p>
+      </div>
+      <p>In the example code above, the link will continue to work normally (i.e., in the same browser window) if JavaScript is disabled.</p>
+      <p>When using JavaScript to open new windows, you can modify the size and 
+        position of the new window. You can also add or remove functionality of 
+        the window, such as the ability to resize, display scroll bars, show tool 
+        bars, etc. Be very careful when changing the default behavior of the browser 
+        window. If a user has low vision and must enlarge the content, a small 
+        window that cannot be enlarged and does not display scroll bars would 
+        be very inaccessible. Someone with a motor disability may rely upon large 
+        tool bars to accurately control the web browser, so removing or modifying 
+        them may introduce difficulties for this user.</p>
+      <p>As you can see, there are many difficulties in both usability and accessibility that arise through the use of pop-up windows. Care must be taken in
+      making the decision to use them. If they are used, thorough user testing of your implementation is vital to ensure accessibility.
+        <em>Always alert the user to the fact that a pop-up window will be opened.</em></p>
+      
+    </div>
+  </body>
+  <script type='text/javascript' src='./scripts/prototype.js'></script>
+  <script type='text/javascript' src='./scripts/demopages.js'></script>
+  
+</html>
