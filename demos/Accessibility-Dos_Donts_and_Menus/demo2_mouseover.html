@@ -1,0 +1,51 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demo_default.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demofiles.css' />
+  </head>
+  <body id="demo2">
+    <h3>Demo:  MouseOver Images</h3>
+    <div class="example">
+      <p>Place your mouse over the following image to see an example of <code class='markup'>onMouseOver</code>. When the mouse is placed over the image of the
+      word &quot;Accessibility&quot, another image appears in its place which presents the definition of the word &quot;Accessibility&quot;.</p>
+      <p>Try navigating to the image using the keyboard. Notice that the additional information does not display. The alternative text for the image provides the content displayed using the <code class='markup'>onMouseOver</code> event handler. This allows users who know how to access this alternative text to get the content, but is not a truly universal solution.</p>
+      <p>
+        <a id="TestMouseOver2" class="testFocus" href="#" >
+          <img width="289" height="79" alt="Accessibility Image" title="Accessibility Image" id="homepic" src="images/mouseover.gif"/></a>
+      </p>
+      <h4>Problems</h4>
+      <p>In this example, additional content is being displayed using <code class='markup'>onMouseOver</code>. This content can only be viewed if the user uses a mouse to hover over the
+        image. It is not available to someone who is using the keyboard to navigate through the page. The <code class='markup'>onMouseOver</code> event handler cannot be made directly
+        accessible to keyboard users. Thus, an alternative must be provided.</p>
+      <h4>Partial Solution</h4>
+      <p>Place the additional content in the alternative text of the image itself. This would work for screen reader users - the screen reader would read the
+      alternative text. But for sighted users whose browser does not display alternative text for images or who do not know to mouse over the image to see the
+      alternative text, this is not a viable alternative. Still, the image must have equivalent alternative text.</p>
+      <h5>Solutions</h5>
+      <p>In addition to <code class='markup'>onMouseOver</code> and <code class='markup'>onMouseOut</code>, use <code class='markup'>onFocus</code> and <code class='markup'>onBlur</code>. These actions will be triggered when the keyboard is used to navigate to and from a
+      link that surrounds the <code class='markup'>&lt;img&gt;</code> element.</p>
+      <h3>Using onfocus - for keyboard</h3>
+      <br />
+
+      <p>
+        <a id="TestMouseOver2a" class="testFocus" href="./NoscriptIndex.php?id=MouseOver_Focus"  >
+          <img width="289" height="79" alt="Accessibility Image" title="Accessibility Image" id="ex1pic2" src="images/mouseover.gif"/></a>
+      </p>
+
+      <p>You must still provide the descriptive alternative text for non-visual users, but <code class='markup'>onFocus</code>
+      and <code class='markup'>onBlur</code> will provide the visual image swap for users that are using a keyboard only.</p>
+      <div class="note">
+        <p><span class="title"><strong>Note</strong></span></p>
+        <p>In this case JavaScript was required to enhance Accessibility, where Ineternet Explorer fell short.</p>
+      </div>
+    </div>
+  </body>
+  <script type='text/javascript' src='./scripts/prototype.js'></script>
+  <script type='text/javascript' src='./scripts/demopages.js'></script>
+  
+</html>
