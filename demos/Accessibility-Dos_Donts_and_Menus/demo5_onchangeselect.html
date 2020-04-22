@@ -1,0 +1,69 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demo_default.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demofiles.css' />
+  </head>
+  <body id="demo5">
+    <h3>Demo:  OnChange &amp; onSelect</h3>
+    <div class="example">
+      <h3>OnChange Trigger</h3>
+      <p>The <code class="markup">onChange</code> event handler is triggered when a form element is selected and changed (for example, when a radio button is
+      initially selected or when the text changes within a text box). The <code class="markup">onSelect</code> event handler is processed when text is selected
+      within a text field or text area. Although these event handlers are device independent and can be activated using the mouse, keyboard, or other device,
+      the actions that are performed as a result of these event handlers must be analyzed to determine if they cause accessibility problems.</p>
+      <h3><code class="markup">onChange</code> example</h3>
+      <p>The following drop-down menu form element is used for navigation. By selecting an item from the list, JavaScript will automatically open the specified
+      page within the browser.</p>
+      <div class="note">
+        <p><span class="title"><strong>Note</strong></span></p>
+        <p>In some browsers you may have to hit the <span class="keycap"><strong>Enter</strong></span> key or click on the page after selecting a menu item to
+        activate the <code class="markup">onchange</code> event handler. Click on the <span class="menuchoice">Back</span> button in the browser to return to
+        this page.</p>
+      </div>
+      <form onsubmit="return false;" action="./NoscriptIndex.php?id=SelectLink1_0">
+        <p><label for="selectPage">Go to:</label>
+          <select id="selectPage" name="selectPage">
+            <option value="">Select a page:</option>
+            <option value="./NoscriptIndex.php?id=SelectLink1_p1">Page 1</option>
+            <option value="./NoscriptIndex.php?id=SelectLink1_p2">Page 2</option>
+            <option value="./NoscriptIndex.php?id=SelectLink1_p3">Page 3</option>
+          </select>
+        </p>
+      </form>
+      <h4>Problems</h4>
+      <p>The JavaScript causes the browser to go to a new page using <code class="markup">onChange</code> or when the user selects an item from the select
+      list. If the end user is using a keyboard, the <code class="markup">onChange</code> event handler is executed for every item within the list. It is
+      impossible for the user to directly select the last item in the list, as each previous item within the list will trigger the page change. The only way the
+      user can select the last menu item is by navigating to the page for the first item in the list, then pressing the <span class="menuchoice">Back</span>
+      button, navigating to the second item, then pressing the <span class="emp">Back</span> button, and so forth until the last menu item is
+      accessed.</p>
+      <h5>Solutions</h5>
+      <p>Rather than using the <code class="markup">onChange</code> event handler, allow the user to select the item from a list then select a button or submit
+      the form to activate the script. When server-side scripting is used to process the form information and redirect the browser accordingly, there is no need
+      for JavaScript at all. The following code demonstrates one method of fixing the <code class="markup">onChange</code> problem.</p>
+      <p>Select a page using the drop-down menu then select the <span class="emp">Go!</span> button. Click on the <span class="menuchoice">Back</span>
+      button in the browser to return to this page.</p>
+      <form onsubmit="return false;" action="./NoscriptIndex.php?id=SelectLink1_0">
+        <p>
+          <label for="selectPage2">Go to:</label>
+          <select id="selectPage2" name="selectPage2">
+            <option value="">Select a page:</option>
+            <option value="./NoscriptIndex.php?id=SelectLink2_p1">Page 1</option>
+            <option value="./NoscriptIndex.php?id=SelectLink2_p2">Page 2</option>
+            <option value="./NoscriptIndex.php?id=SelectLink2_p3">Page 3</option>
+          </select>
+          <input id="selectPageBtn" type="button" value="Go!"/>
+        </p>
+      </form>
+      
+    </div>
+  </body>
+  <script type='text/javascript' src='./scripts/prototype.js'></script>
+  <script type='text/javascript' src='./scripts/demopages.js'></script>
+  
+</html>
