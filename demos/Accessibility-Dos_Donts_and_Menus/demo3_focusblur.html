@@ -1,0 +1,42 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demo_default.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demofiles.css' />
+  </head>
+  <body id="demo3">
+    <h3>Demo:  OnBlur &amp; onFocus</h3>
+    <div class="example">
+      <p>In this example, the <code class="markup">onBlur</code> event triggers JavaScript code that changes the functionality of the Web browser. Place your
+      mouse into the following text box and enter a number between 1 and 10. Then press the <span class="keycap"><strong>Tab</strong></span> key or click the
+      mouse outside of the text box to trigger the <code class="markup">onBlur</code> event which will validate the number you entered to ensure it is correct
+      and present feedback regarding your answer. If it is incorrect, the text box will retain the cursor focus until you enter the correct number. In this
+      example, <label for="input1">you <strong>MUST</strong> enter the correct answer of <span class='emp'>'7'</span></label> to allow the browser to navigate
+      to other portions of the page.</p>
+      <form onsubmit="return false;" action="#" id="ex2">
+        <p>Guess a number between 1 and 10?</p>
+        <p id="correct" class="invis">You correctly guessed number 7.</p>
+        <p id="higher" class="invis">Sorry. Try a higher number.</p>
+        <p id="lower" class="invis">Sorry. Try a lower number.</p>
+        <p>Enter Answer: <input type="text" size="5" id="input1" name="text"/> </p>
+      </form>
+      
+      <h4>Problems</h4>
+      
+      <p>Although the <code class="markup">onblur</code> event is device independent, it is being used to execute JavaScript code that makes the page difficult
+      to navigate. The textbox maintains focus until the correct answer is given. This change in browser default behavior may be confusing and
+      restricting. Also, the feedback is displayed in a different part of the page. Because focus is maintained within the text box, a screen reader will not be
+      able to access the feedback text or any other part of the page until the correct answer is entered.</p>
+      <h5>Solution</h5>
+      <p>Do not force the focus to remain within the text box. Allow the user to navigate throughout the page. Display the feedback on another page after the form has been submitted (works without JavaScript) or display the feedback with a JavaScript alert (requires JavaScript). Try entering a letter into the textbox above to see a JavaScript alert feedback message.</p>
+      
+    </div>
+  </body>
+  <script type='text/javascript' src='./scripts/prototype.js'></script>
+  <script type='text/javascript' src='./scripts/demopages.js'></script>
+  
+</html>
