@@ -1,0 +1,45 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demo_default.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='./css/demofiles.css' />
+  </head>
+  <body id="demo6">
+    <h3>Demo:  document.write</h3>
+    <div class="example">
+      <h2>Using <code class="markup">document.write</code></h2>
+      <p>Dynamic, constantly changing information is being written to the page in this example using the <code class="markup">document.write</code> command in
+      JavaScript. In most cases, content that is written to the page using JavaScript is accessible to assistive technologies. However, if the dynamic content
+      is constantly changing or otherwise interferes with navigation or browser functionality, then it may cause accessibility problems.</p>
+      <h3><code class="markup">document.write</code> example</h3>
+      <p>The current time is displayed in the text box below. It updates and changes every second.</p>
+      <form action="">
+        <p>
+          <label for="face">The current time is:</label>
+          <input type="text" value="" size="13" id="face"/>
+        </p>
+      </form>
+      <div id="prob_time" class="section">
+        <h4>Problems</h4>
+        <p>In this case, because the content is constantly changing and refreshing, a screen reader would not be able to read it and it may cause some
+        confusion.</p>
+      </div>
+      <div id="solution_time" class="section">
+	<h5>Solutions</h5>
+        <p>When using dynamic information, you must first ask yourself if it is necessary and vital to the function or content of the page. If so, there is
+        often a way to provide the content without using inaccessible JavaScript. For instance, you could write the current time to the page when it loads using
+        a server-side script. Though it will not be constantly updating, it may suffice. You may also have the user select a link or button to go to another
+        page that displays the current time from server side processing. Another approach that uses a more accessible implementation of JavaScript would be to
+        provide a link or button that allows the user to display the current time at their request.</p>
+        <p><input id="showTimeBtn" type="button" value="Display the current time" name="button"/></p>
+      </div>
+    </div>
+  </body>
+  <script type='text/javascript' src='./scripts/prototype.js'></script>
+  <script type='text/javascript' src='./scripts/demopages.js'></script>
+  
+</html>
