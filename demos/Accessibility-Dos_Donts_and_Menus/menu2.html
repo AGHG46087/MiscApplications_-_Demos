@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Accessible Device Independent Menu Demo with CSS and JavaScript</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/menu2_dropdown.css" />
+    <meta http-equiv="content-language" content="en">
+    <meta name="Description" content="Page to demonstrate the capabilities of a menu, that is driven primarily by Javascript to push the drop downs,  it is 100% accessibile only in a case where the users has JavaScript enabled.">
+    <meta name="Keywords" content="Accessibility, menu, menus, JavaScript, CSS, demo, demos, home, dos, donts, Menu Item, second, Third, Fourth, Fifth, Level,
+    keyboard, mouse, navigation, keyboard navigation, mouse navigation ">
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/menu2_dropdown_ie6.css" /><![endif]-->
+  </head>
+  <body>
+    <ul id="nav">
+      <li><a title='Top level to Home' href="#">Home</a></li>
+      <li><a title='Top level to Item 1' href="#">Menu Item 1</a></li>
+      <li><a title='Top level to Item 2' href="#">Menu Item 2</a>
+        <ul>
+          <li><a title='Second level to level 1' href="#">Second Level 1</a></li>
+	  <li><a title='Second level to level 2' href="#">Second Level 2</a>
+            <ul>
+	      <li><a title='Third level to level 1' href="#">Third Level 1</a></li>
+	      <li><a title='Third level to level 2' href="#">Third Level 2</a>
+	        <ul>
+                  <li><a title='Fourth level to level 1' href="#">Fourth Level 1</a></li>
+		  <li ><a title='Fourth level to level 2' href="#">Fourth Level 2</a>
+		    <ul>
+		      <li><a title='Fifth level to level 1' href="#">Fifth Level 1</a></li>
+		      <li><a title='Fifth level to level 2' href="#">Fifth Level 2</a></li>
+		      <li><a title='Fifth level to level 3' href="#">Fifth Level 3</a></li>
+		    </ul>
+		  </li>
+		  <li><a title='Fourth level to level 3' href="#">Fourth Level 3</a></li>
+		</ul>
+              </li>
+	      <li><a title='Third level to level 3' href="#">Third Level 3</a></li>
+	    </ul>
+	  </li>
+	  <li><a title='Second level to level 3' href="#">Second Level 3</a></li>
+	</ul>
+      </li>
+      <li><a title='Top level to Item 3' href="#">Menu Item 3</a></li>
+      <li><a title='Top level to Item 4' href="#">Menu Item 4</a>
+        <ul>
+	  <li><a title='Second level to level 4' href="#">Second Level 4</a>
+	    <ul>
+	      <li><a title='Third level to level 4' href="#">Third Level 4</a>
+	      </li>
+	    </ul>
+	  </li>
+	  <li><a title='Second level to level 5' href="#">Second Level 5</a></li>
+	</ul>
+      </li>
+    </ul>
+
+    <h1>Page Navigation</h1>
+    <p>Page Navigation is simple with a maenu such as this, where the user can either use the mouse or the keyboard. It is important to note: that this
+    solution is driven by <pre>&lt;ul&gt;,&lt;li&gt;,&lt;a&gt;, CSS and Javascript</pre> controlling the behavior.</p>
+    <h2>Keyboard Navigation</h2>
+    <p>The page top navigation can easily be traversed on this nav, by the use of the keyboard only.  In this case simply hitting the tab key will take the
+    user to each tab stop.  </p>
+    <h2>Mouse Navigation</h2>
+    <p>The page not only being accessible by the keyboard it is also accessible by the use of the mouse, in this case we have achieved device independence.</p>
+  </body>
+  <script type="text/javascript" src="scripts/menu2_dropdown.js"></script>
+</html>
