@@ -1,0 +1,296 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <meta http-equiv="content-language" content="en">
+    <link rel='stylesheet' media='all' type='text/css' href='./css/menu1_default.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='./css/menu1_step4.css' />
+    
+  </head>
+  <body>
+    <ul id="nav">
+      <li id="rowa_1" class="topItem off"><a title='View Your Account' href="./NoscriptIndex.php?id=rowa_1">Your Account</a>
+        <ul>
+          <li id="row1_1" ><a title='view Bill Payments' href="./NoscriptIndex.php?id=row1_1">Bill Payment</a></li>
+	  <li id="row1_2" ><a title='View Statement Delivery Options' href="./NoscriptIndex.php?id=row1_2">Statement Delivery Options</a></li>
+	  <li id="row1_3" ><a title='view Card Alerts' href="./NoscriptIndex.php?id=row1_3">Card Alerts</a></li>
+	  <li id="row1_4" ><a title='view Your Details' href="./NoscriptIndex.php?id=row1_4">Your Details</a></li>
+	  <li id="row1_5" ><a title='View Account Services' href="./NoscriptIndex.php?id=row1_5">Account Services</a></li>
+        </ul>
+      </li>
+      <li id="rowa_2" class="topItem off"><a title='View MR' href="./NoscriptIndex.php?id=rowa_2">MR</a>
+        <ul>
+          <li id="row2_1" ><a title='view MR Rewards' href="./NoscriptIndex.php?id=row2_1">Rewards</a></li>
+          <li id="row2_2" ><a title='View Offers' href="./NoscriptIndex.php?id=row2_1">Offers</a></li>
+          <li id="row2_3" ><a title='Sagfe and secure' href="./NoscriptIndex.php?id=row2_1">Safe and Secure</a></li>
+          <li id="row2_4" ><a title='View MR Access' href="./NoscriptIndex.php?id=row2_1">Access</a></li>
+          <li id="row2_5" ><a title='View MR Flixibility' href="./NoscriptIndex.php?id=row2_1">Flexibility</a></li>
+        </ul>
+      </li>
+      <li id="rowa_3" class="topItem off"><a title='View Our Cards' href="./NoscriptIndex.php?id=rowa_3">Our Cards</a>
+        <ul>
+          <li id="row3_1" ><a title='All Cards' href="./NoscriptIndex.php?id=row3_1">All Cards</a></li>
+          <li id="row3_2" ><a title='Help Choosing Cards' href="./NoscriptIndex.php?id=row3_2">Help Choosing</a></li>
+          <li id="row3_3" ><a title='Add Someone to card' href="./NoscriptIndex.php?id=row3_3">Add someone</a></li>
+          <li id="row3_4" ><a title='Refer a Friend' href="./NoscriptIndex.php?id=row3_4">Refer a Friend</a></li>
+          <li id="row3_5" ><a title='Apply for Card' href="./NoscriptIndex.php?id=row3_5">Apply Now</a></li>
+        </ul>
+      </li>
+      <li id="rowa_4" class="topItem off"><a title='View travel' href="./NoscriptIndex.php?id=rowa_4">Travel</a>
+        <ul>
+          <li id="row4_1" ><a title='Book Travel' href="./NoscriptIndex.php?id=row4_1">Book Travel</a></li>
+          <li id="row4_2" ><a title='Travel Offers' href="./NoscriptIndex.php?id=row4_2">Offers</a></li>
+          <li id="row4_3" ><a title='Foriegn Exchange' href="./NoscriptIndex.php?id=row4_3">Foreign Exchange</a></li>
+          <li id="row4_4" ><a title='Traveler Cheques' href="./NoscriptIndex.php?id=row4_4">Traveler Cheques</a></li>
+          <li id="row4_5" ><a title='Travel Support' href="./NoscriptIndex.php?id=row4_5">Travel Support</a></li>
+        </ul>
+      </li>
+      <li id="rowa_5" class="topItem off"><a title='View INsurance' href="./NoscriptIndex.php?id=rowa_5">Insurance</a>
+        <ul>
+          <li id="row5_1" ><a title='Home Insurance' href="./NoscriptIndex.php?id=row5_1">Home Insurance</a></li>
+          <li id="row5_2" ><a title='Card Insurance' href="./NoscriptIndex.php?id=row5_2">Card Insurance</a></li>
+          <li id="row5_3" ><a title='Travel Insurance' href="./NoscriptIndex.php?id=row5_3">Travel Insurance</a></li>
+          <li id="row5_4" ><a title='Payment Protection' href="./NoscriptIndex.php?id=row5_4">Repayment Protection</a></li>
+          <li id="row5_5" ><a title='Identify Defense' href="./NoscriptIndex.php?id=row5_5">Identity Defense</a></li>
+        </ul>
+      </li>
+    </ul>
+    <br />
+    <div id="css_info">
+      <h1>Page 4: Accessible Menus, <span class='emp'>Final</span> Adding JavaScript for focus and click, fix IE hover</h1>
+      <p><strong class='emp'>NOTE: </strong>This page has the first item in the list set to &quot;off&quot;, such that the sub items are not
+        rendered on inital page load.  It will be turned to &quot;on&quot; when the condition is true.
+        <strong class='emp'><pre>&lt;li id=&quot;rowa_1&quot; class=&quot;topItem off&quot;&gt;</pre></strong> </p>
+      <pre class="css_styles">
+/***************************************************************
+* The first thing we are going to do with our CSS is eliminate
+* padding, margin, decorations.
+***************************************************************/
+#nav {
+    margin: 0;
+    padding: 0;
+}
+#nav li.on ul, #nav li.off ul {
+    margin: 0;
+    padding: 0;
+}
+#nav a {
+    text-decoration: none;
+    outline: none;
+}
+#nav a:focus, #nav li.on a:focus {
+    text-decoration: underline;
+    color: #005495;
+}
+<span class='emp'>
+/* Here is another CSS class added that accomodates
+* a Javascript Hack for IE focus events */
+a.ieLinkItem,  {
+    color: #005495 !important;
+    text-decoration: underline !important;
+}
+</span>
+/***************************************************************
+* The second thing we are going to do with our CSS is to display
+* the primary level horizontally (using float) and hide all of
+* the subnavigation lists. We will also set the display for the
+* links in the list to be bold, colored, and have a border.
+***************************************************************/
+#nav li {
+  /* float the main list(&lt;li&gt;) items */
+    margin: 0;
+    float: left;
+    display: block;
+    padding-right: 15px;
+}
+#nav li ul {
+    /* Hide the subnavs */
+    display: none;
+}
+/***************************************************************
+* Next, let's position our second nav level below the main list,
+* so that when it does show up again, it is in the right place.
+***************************************************************/
+/***************************************************************
+* You have two options for users of browsers like IE, which lack
+* support for anything except &lt;a&gt;.  you can leave as is, and in
+* a few yearws IE will work correctly.  Or you can write some Javascript
+* to fix IE and carry all the weight. We do have to adjust the
+* top position a little with the IE Hacks.
+***************************************************************/
+#nav li.off ul, #nav li.on ul {
+    /* put the subnav below */
+    position: absolute;
+    top: 33px;
+    _top: 42px; /*IE6*/
+    #top: 42px; /*IE7*/
+    left: 5px;
+    padding-top: 10px;
+    background: #DBE9F4;
+    height: 28px;
+    width: 790px;
+}
+
+#nav li a {
+    color: #999999;
+    font-weight: bold;
+    display: block;
+    height: 15px;
+    width: 100px;
+    border: 2px solid #999999;
+    padding: 5px;
+}
+/***************************************************************
+* Finally, we will show the subnavigation bar for the active topic
+* area, &quot;Your Account&quot; we have set a class of &quot;on&quot; to the
+* active topic and &quot;off&quot; to the inactive topics.
+***************************************************************/
+#nav li.on a {
+    /* change border color for active topic area */
+    border: 2px solid #005495;
+    color: #005495;
+}
+
+#nav li.on ul a, #nav li.off ul a {
+    float: left;
+/* ie doesn't inherit the float */
+    border: 0;
+    color: #999999;
+    width: auto;
+    margin-right: 15px;
+}
+#nav li.on ul {
+    display: block;
+}
+
+/***************************************************************
+* Now, we activate the rollover.  This is not much different than
+* any other CSS dropdown menu, the HOVER is on the &lt;li&gt; element,
+* So IE will choke due to its poor implementation of the :hover
+* psuedo-class. We will get on to fix that soon enough.  The following
+* CSS removes the border on the second nav level, sets the active
+* subnav to always display, and sets the inactive subnavs to display
+* when their parents are hoverd.  We will set a z-index to be sure
+* that the hovers always take precendence over the current topic
+* area subnav.  @see #nav li.on ul a, #nav li.off ul a
+***************************************************************/
+#nav li.off:hover ul {
+    display: block;
+    z-index: 6000;
+}
+/***************************************************************
+* More user friendly with background on hovered tabs
+***************************************************************/
+
+#nav li.on a:hover, #nav li.off a:hover, #nav li:hover a, #nav li.over a {
+    background: #DBE9F4;
+    color: #005495;
+}
+      </pre>
+      <h2>Now we add JavaScript</h2>
+      <pre class="css_styles emp">
+function clearIELinkItems() {
+    // Clear all link items - if IE worked properly this would not be required.
+  var listElements=$$(&quot;li.level2 a&quot;);
+  for(var a=0;(listElements!= null) && (a < listElements.length);a++){
+    var node = listElements[a];
+    listElements[a].removeClassName(&quot;ieLinkItem&quot;);
+  }
+}
+function addIEKeyFocus() {
+  var parent = this.ancestors()[0];
+    // If we are a level 2 item, set the node
+    // if IE worked properly this would not be required.
+  if ( parent.hasClassName(&quot;level2&quot;) )
+  { 
+    this.addClassName(&quot;ieLinkItem&quot;);
+  }
+    // this is the case if the menu item is level 1, we want to have the
+    // level 2 menu show focus
+    // if IE worked properly this would not be required.
+  if ( parent.hasClassName(&quot;topItem&quot;) && parent.hasClassName(&quot;off&quot;) )
+  {
+    var listElements=$$(&quot;li.topItem&quot;);
+    for(var a=0;(listElements!= null) && (a < listElements.length);a++){
+      var node = listElements[a];
+      listElements[a].addClassName(&quot;off&quot;);
+      listElements[a].removeClassName(&quot;on&quot;);
+    }
+    parent.addClassName(&quot;on&quot;);
+    parent.removeClassName(&quot;off&quot;);
+    parent.addClassName(&quot;over&quot;);
+  }
+  
+  
+}
+function startList() {
+  if (document.getElementById)
+  {
+    var navRoot = $(&quot;nav&quot;);
+    for (i=0; i<navRoot.childNodes.length; i++)
+    {
+      node = navRoot.childNodes[i];
+      var nodeName = node.nodeName;
+      if (node.nodeName == &quot;LI&quot;)
+      {
+        node.onmouseover = function() { this.addClassName(&quot;over&quot;); }
+        node.onmouseout = function() { this.removeClassName(&quot;over&quot;);  }
+      }
+    }
+    var listElements=$$(&quot;a&quot;);
+    for(var a=0;(listElements!= null) && (a < listElements.length);a++){
+      var node = listElements[a];
+      node.observe(&quot;keyup&quot;, addIEKeyFocus);
+      node.observe(&quot;blur&quot;, function(){
+            clearIELinkItems();
+            var parent = this.ancestors()[0];
+            parent.removeClassName(&quot;over&quot;);
+          });
+    }
+    
+  }
+}
+function actionEventToProcess(evt) {
+  Event.stop(evt);
+  var listElements=$$(&quot;li.topItem&quot;);
+  for(var a=0;(listElements!= null) && (a < listElements.length);a++){
+    listElements[a].addClassName(&quot;off&quot;);
+    listElements[a].removeClassName(&quot;on&quot;);
+  }
+  var element = this;
+  if( element != null )
+  {
+    element.addClassName(&quot;on&quot;);
+    element.removeClassName(&quot;off&quot;);
+  }
+  element = Event.element(evt);
+}
+function addObservers() {
+  var elements=$$(&quot;li.topItem&quot;);
+  for(var a=0;(elements!= null) && (a < elements.length);a++){
+      // Device independent, Keyboard focus and mouse click
+    Event.observe(elements[a].id,&quot;click&quot;,actionEventToProcess);
+    Event.observe(elements[a].id,&quot;focus&quot;,actionEventToProcess);
+  }
+    // Where do ya want to go on these links
+  var listElements=$$(&quot;a&quot;);
+  for(var a=0;(listElements!= null) && (a < listElements.length);a++){
+    var node = listElements[a];
+    node.observe(&quot;click&quot;, whereDoYaWannaGo);
+  }
+}
+/* Function to be triggered once the page has loaded */
+Event.observe(window,&quot;load&quot;,function(){
+      startList();
+      addObservers();
+});
+      </pre>
+    </div> <!-- id=&quot;css_info&quot; -->
+
+  </body>
+  <script type='text/javascript' src='./scripts/prototype.js'></script>
+  <script type='text/javascript' src='./scripts/page4.js'></script>
+</html>
