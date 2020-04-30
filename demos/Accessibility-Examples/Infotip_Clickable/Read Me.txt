@@ -1,0 +1,14 @@
+Here the "aria-live" and "aria-relevant" properties are used to make the popup readable to the screanreader (Jaws).
+
+"assertive" value for "aria-live" property sets the heighest priority for the useragents to notify the user about the change in the respective element, immediately.
+
+"additions" value for "aria-relevant" property is to prioritize the nodes, added to the DOM within the region. So the reader will read only the new message.
+
+
+Reference>>
+http://www.w3.org/TR/wai-aria-implementation/
+
+
+/*disclaimer*/
+In firefox the reader reads the updated message after a slight delay.
+
