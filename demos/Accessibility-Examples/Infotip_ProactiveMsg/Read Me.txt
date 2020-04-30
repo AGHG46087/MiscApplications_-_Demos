@@ -1,0 +1,22 @@
+Here the "aria-live" and "aria-relevant" properties are used to make the popup readable to the screanreader (Jaws).
+
+"assertive" value for "aria-live" property sets the heighest priority for the useragents to notify the user about the change in the respective element, immediately.
+
+"additions" value for "aria-relevant" property is to prioritize the nodes, added to the DOM within the region. So the reader will read only the new message.
+
+As in firefox browser, there is a delay in reading, above mentioned approach is only taken for IE.
+
+For Firefox the following approach is followed >>
+
+<label> element is provided for the input box and the message provided for the label is the same as the popup message. Now onfocus of the input box the label will be read. 
+Each time a wrong key pressed the label is changed to error message, Focus is taken out and braught back in to the input field to read the updated label(which is error message now) for the input box.
+
+
+
+
+Reference>>
+http://www.w3.org/TR/wai-aria-implementation/
+
+/*Disclaimer*/
+
+As the label is changed, shortcut keys to navigate thruogh the input fields will display the changed label for the same input field, which might be misleading to the user.
