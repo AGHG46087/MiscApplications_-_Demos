@@ -1,0 +1,56 @@
+/*
+*
+*/
+fieldset,p{
+  -moz-border-radius:10px;
+  background-color:#eee;
+  margin:16px;
+  padding:16px;
+}
+fieldset div{
+  padding:8px 0;
+  border:none;
+}
+legend{
+  padding:0 4px;
+}
+p{
+  border:1px solid #666;
+}
+
+.noDisplay{
+    display:none;
+}
+.dispBlock {
+    display: block;
+}
+.lookNfeel{
+    width:300px;
+    
+}
+.dynamicSpan{
+    width:290px;
+    background:#E5EFF6;		
+    float:left;
+    padding-left:10px;
+}
+.rtop, .rbottom{
+    display:block;
+    background:#fff;
+}
+.rtop *, .rbottom *{
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    background:#E5EFF6;
+}
+.r1{margin: 0 5px}
+.r2{margin: 0 3px}
+.r3{margin: 0 2px}
+.r4{
+    margin: 0 1px;
+    height: 2px
+}
+
+
+
