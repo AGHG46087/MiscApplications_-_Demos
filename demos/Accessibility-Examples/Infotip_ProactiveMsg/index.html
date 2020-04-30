@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title> Dynamic Content for Screan Reader </title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Info tip Accessibility Demo</h1>
+    <p>This demo shows an accessible xHTML forms mode. This demo implements a proactive messaging technique
+      for pages where character validation ocurrs.  To activate the mode  <strong>Please enter the Reader in Forms mode - usually the &lt;enter&gt; key</strong>.</p>
+    
+    <!--label is added for the input field-->
+    <label id="inputLabel" for="inputNumber" class="noDisplay">Please enter 5 numeric characters</label>
+    <input type="text" id="inputNumber" name ="inputNum" autocomplete="off" size="10" maxlength="5"
+           title="Input 5 numeric characters" />
+    <!--
+    <input type="text" id="inputNumber" name ="inputNum" autocomplete="off" size="10" maxlength="10"
+           title="Input 5 numeric characters" onfocus="showPopup();"  onKeyUp="validatePopup(event)" onblur="hidePopup();"/>
+    -->
+    <div id="dynamicPopUP" class="noDisplay lookNfeel">
+      <strong class="rtop">
+	<strong class="r1"></strong>
+	<strong class="r2"></strong>
+	<strong class="r3"></strong>
+	<strong class="r4"></strong>
+      </strong>
+      <div id="msgContainerDiv" class="dynamicSpan">
+	<span id="dynamicMsg" >
+	  Please enter 5 numeric characters
+	</span>
+      </div>
+      <strong class="rbottom">
+	<strong class="r4"></strong>
+        <strong class="r3"></strong>
+	<strong class="r2"></strong>
+	<strong class="r1"></strong>
+      </strong>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/prototype.js" ></script>
+  <script type="text/javascript" src="js/scripts.js" ></script>
+</html>
