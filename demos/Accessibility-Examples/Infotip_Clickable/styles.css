@@ -1,0 +1,33 @@
+.noDisplay{
+		display:none;
+	}
+	.lookNfeel{
+		width:300px;
+
+	}
+	.dynamicSpan{
+		width:290px;
+		background:#E5EFF6;		
+		float:left;
+		padding-left:10px;
+	}
+	.rtop, .rbottom{
+	display:block;
+	background:#fff;
+	}
+	.rtop *, .rbottom *{
+		display: block;
+		height: 1px;
+		overflow: hidden;
+		background:#E5EFF6;
+	}
+	.r1{margin: 0 5px}
+	.r2{margin: 0 3px}
+	.r3{margin: 0 2px}
+	.r4{
+		margin: 0 1px;
+		height: 2px
+	}
+
+
+
