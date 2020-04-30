@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title> Dynamic Content for Screan Reader </title>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<input type="text" id="inputNumber" name ="inputNum" autocomplete="off" size="5" maxlength="5" title="Please enter 5 numeric characters" onfocus="showPopup();" onKeyUp="validatePopup(event)" onblur="hidePopup();"/>
+
+		<div id="dynamicPopUP" class="noDisplay lookNfeel">		
+				 <strong class="rtop">
+						<strong class="r1"></strong> 
+						<strong class="r2"></strong> 
+						<strong class="r3"></strong> 
+						<strong class="r4"></strong>
+			  </strong>
+			  <div id="msgContainerDiv" class="dynamicSpan">
+			  <span id="dynamicMsg" >
+				Please enter 5 numeric characters
+				</span>
+				</div>
+				 <strong class="rbottom">
+						<strong class="r4"></strong> 
+						<strong class="r3"></strong> 
+						<strong class="r2"></strong> 
+						<strong class="r1"></strong>
+			  </strong>		
+		</div>	
+	</body>
+	<script type="text/javascript" src="scripts.js" ></script>
+</html>
