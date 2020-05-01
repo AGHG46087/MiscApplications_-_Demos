@@ -1,0 +1,64 @@
+﻿html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,font,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+dl,dt,dd,ol,ul,li,
+fieldset,form,input,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td{
+	margin:0;
+	padding:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:1em;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+body{
+  font-size:16px;
+  color:#000;
+  background:transparent;
+}
+ol {
+	list-style: decimal outside;	
+}
+ul {
+	list-style: none outside;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+  font-size:inherit;
+}
+caption,th,td{
+	text-align:center;
+	font-weight:bold;
+}
+:link,:visited{text-decoration:none}
+img{
+  border:0;
+}
+a img,:link img,:visited img{border:none}
+blockquote:before,blockquote:after,
+q:before,q:after{
+	content:"";
+}
+blockquote,q{
+	quotes:"" "";
+}
+address{
+  font-style:normal
+}
+pre,code,kbd,samp,tt{
+  font-family:monospace;
+  line-height:100%;
+}
+sup{
+  vertical-align:text-top;
+}
+sub{
+  vertical-align:text-bottom;
+}
+del,ins{text-decoration:none;}
