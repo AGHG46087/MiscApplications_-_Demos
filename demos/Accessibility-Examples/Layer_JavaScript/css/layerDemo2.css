@@ -1,0 +1,88 @@
+/*
+*
+*/
+@import url(clear-styles.css);
+a:link {color: #FF0000}     /* unvisited link */
+a:visited {color: #00FF00}  /* visited link */
+a:hover,a:focus {color: #FF00FF}   /* mouse over / focus link */
+a:active {color: #0000FF}   /* selected link */
+:focus{outline:1px dotted #ff0000;} /* Used to identify focus - remove in normal use */
+h1{
+  color:#0000FF;
+  font-size:2em;
+}
+h2{
+  color:#0000FF;
+  font-size:1.6em;
+}
+h1,h2{
+  font-family:"Times New Roman";
+  font-weight:bold;
+  text-align:center;
+}
+fieldset,p{
+  -moz-border-radius:10px;
+  background-color:#eee;
+  margin:16px;
+  padding:16px;
+}
+fieldset div{
+  padding:8px 0;
+  border:none;
+}
+legend{
+  padding:0 4px;
+}
+p{
+  border:1px solid #666;
+}
+p.centerText,div.centerText{
+  text-align:center;
+}
+div.popup p{
+  text-align:left;
+  padding:0 8px;
+}
+p img,div.popup img{
+  display:block;
+  margin:0 auto;
+}
+/* Layer / Popup presentation styles */
+div#layer{
+  background-color:#000000;
+  opacity:0.4;
+  filter:Alpha(Opacity=40);
+  -moz-opacity:0.4;
+}
+div.popup{
+  -moz-border-radius:10px;
+  background-color:#fff;  
+  width:580px;  
+  border:2px solid #666;
+  top:120px;
+  left:200px;
+}
+/* Layer / Popup Required Styles - DO NOT CHANGE */
+html,body{
+  /* Dumb IE6 fixes */
+  _height:100%;
+  _overflow-y:auto;
+}
+div#layer{
+  height:100%;
+  left:0;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:6001;
+  display:none;
+  /* Dumb IE6 fix */
+  _position:absolute;
+}
+div.popup{
+  -moz-border-radius:10px;
+  position:fixed;
+  z-index:6002;
+  /* Dumb IE6 fix */
+  _position:absolute;
+}
