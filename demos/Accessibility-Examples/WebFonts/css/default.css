@@ -1,0 +1,83 @@
+﻿/* Undo default browser styles */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,form,input,label,table,caption,tbody,tfoot,thead,tr,th,td{outline:0;font-weight:inherit;font-style:inherit;font-size:1em;vertical-align:baseline;margin:0;padding:0}body{font-size:16px;color:#000;background:transparent}:focus{outline:0}ol{list-style:decimal outside}ul{list-style:none outside}table{border-collapse:collapse;border-spacing:0;font-size:inherit}caption,th,td{text-align:center;font-weight:bold}img{border:0}a img,:link img,:visited img{border:none}blockquote:before,blockquote:after,q:before,q:after{content:""}address{font-style:normal}pre,code,kbd,samp,tt{font-family:monospace;line-height:100%}sup{vertical-align:text-top}sub{vertical-align:text-bottom}:link,:visited,del,ins{text-decoration:none}
+/* Default link styles */
+a:link {color: #FF0000}     /* unvisited link */
+a:visited {color: #00FF00}  /* visited link */
+a:hover,a:focus {color: #FF00FF}   /* mouse over / focus link */
+a:focus {outline: 1px dotted #FF00FF}   /* focus link outline */
+a:active {color: #0000FF}   /* selected link */
+/* Import fonts for IE 6/7/8 only */
+@font-face {
+  font-family: Agenda;
+  font-style:  normal;
+  font-weight: normal;
+  src: url(../fonts/AgendaMedium.eot);
+}
+@font-face {
+  font-family:"Granjon LT";
+  font-style:  normal;
+  font-weight: normal;
+  src: url(../fonts/Granjon.eot);
+}
+/* Import fonts for FF 3.1 & Safari 3.1 */
+@font-face{
+  font-family:"Granjon LT";
+  src:local("Granjon LT Roman"),url("../fonts/Granjon.ttf") format("truetype");
+}
+@font-face{
+  font-family:"Agenda";
+  src:local("Agenda Medium"),url("../fonts/AgendaMedium.ttf") format("truetype");
+}
+/* Preload fonts offscreen */
+span#preloadFonts{position:absolute;left:-9999px;}span#font1{font-family:"Granjon LT";}span#font2{font-family:Agenda}
+body{
+  background-color:#fff;
+  font-family:Arial;
+}
+fieldset{
+  display:inline;
+}
+legend{
+  color:#000;
+}
+h1{
+  text-align:center;
+  font-size:3.0em;
+  font-weight:bold;
+}
+h2{
+  font-size:2.0em;
+  font-weight:normal;
+}
+h3{
+  font-size:1.5em;
+}
+h4{
+  font-size:1.0em;
+}
+p{
+  margin:0 0 1em;
+}
+div#testContainer{
+  padding:4em 0;
+}
+div.useGranjon{
+  background-color:#333;
+  color:#fff;
+}
+div.useGranjon h2,div.useGranjon h3{color:#FF0;font-family:"Granjon LT";}
+div.useGranjon h2{margin:0 0 0 115px}
+div.useGranjon h3{margin:1px 0 2em 135px}
+div.useGranjon p{
+  width:80%;
+  margin:0 auto 1em;
+}
+div.useAgenda{
+  width:80%;
+  margin:0 auto;
+}
+div.useAgenda h2,div.useAgenda h3{text-transform:uppercase;color:#FFF;font-family:Agenda;}
+div.useAgenda h2{margin:0 0 0 115px}
+div.useAgenda h3{margin:1px 0 2em 135px}
+div.useAgenda h2 span{background-color:#307095;padding:0 0.2em}
+div.useAgenda h3 span{background-color:#565656;padding:0 0.2em}
