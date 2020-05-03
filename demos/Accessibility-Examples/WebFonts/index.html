@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=7' />
+    <title>Cross-browser Font Faces</title>
+    <link rel='stylesheet' media='screen' type='text/css' href='./css/default.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8'><![endif]-->
+  <!--[if !IE]>--><body><!--<![endif]-->
+    <span id='preloadFonts'><span id='font1'>.</span><span id='font2'>.</span></span>
+    <h1>Cross-browser Font Faces</h1>
+    <p>Want fancy fonts without sIFR or images? Look no further. Tested in Firefox v3.1 +, Safari v3.1 +, Opera v10 + and Internet Explorer v6 +</p>
+    </ul>
+    <fieldset>
+      <legend>Change fonts</legend>
+      <button id='system' disabled='disabled'>Arial Font (System)</button>
+      <button id='useAgenda'>Agenda Font (Brand)</button>
+      <button id='useGranjon'>Granjon Font (David Jones)</button>
+    </fieldset>
+    <div id='testContainer'>
+      <h2>
+        <span>Lorem ipsum dolor</span>
+      </h2>
+      <h3>
+        <span>Nam placerat velit eu neque</span>
+      </h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis urna ipsum, non eleifend libero. Cras rhoncus nisi eu libero vehicula consectetur. Vivamus quis laoreet risus. Vivamus fermentum aliquet porttitor. Nulla gravida malesuada justo tempor iaculis. Sed ligula mi, congue a ultricies posuere, posuere vel libero. Suspendisse condimentum urna eget erat tristique lacinia eleifend purus dignissim. Vivamus erat nisl, faucibus in lobortis vitae, sodales quis ligula. Quisque semper neque vel ante consectetur eget mollis nisl placerat. Cras dapibus turpis vel ante vehicula a vehicula ipsum scelerisque. Etiam a turpis massa. Aenean pharetra, tellus sit amet dictum commodo, augue mauris accumsan nibh, et ornare neque urna at orci. Quisque at nisi lacinia sem viverra gravida sed in augue. Nullam malesuada congue quam, ac tempor nulla cursus eu.</p>
+      <p>Sed a lacinia velit. Mauris aliquet nunc ac odio facilisis iaculis elementum est aliquam. Vivamus vestibulum dictum urna vel consequat. Nullam volutpat laoreet nisi eget luctus. Donec lectus tortor, lobortis vitae viverra vel, tempus ac risus. Aenean ultricies turpis nec nibh adipiscing ac pretium nisl placerat. Nam semper molestie placerat. Curabitur tempor rutrum dolor, a laoreet felis congue quis. Cras commodo mollis placerat. Curabitur tempus aliquam ipsum, sed placerat nisl tincidunt eget. Quisque vitae velit felis.</p>
+    </div>
+    <script type='text/javascript' src='./js/prototype.js'></script>
+    <script type='text/javascript' src='./js/core.js'></script>
+  </body>
+</html>
