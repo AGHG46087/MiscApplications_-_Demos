@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+  <html>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta name="keywords" content="Bla bla bla to be filled" />
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate,max_age=0"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <head><title>CSS Sexy Image Buttons</title>
+
+    <!-- Load only the minimum -->
+    <link href="css/cssbuttons.css" media="all" type="text/css" rel="stylesheet" id="cssbuttons_css"/>
+    <script>
+      <!--
+          function count(nmbr)
+          {
+            if( nmbr == 2 )
+            {
+              alert( "You are correct" );
+            }
+            else
+            {
+              alert("Sorry... not " + nmbr + ", try again!");
+            }
+          }
+       -->
+    </script>
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Sexy image buttons with CSS</h1>
+      <span class="heavyBlue">How many images do you see on this page?</span>
+      <div class="clear" style="margin-bottom: 26px;">
+        <a class="button" onclick="this.blur(); count(1);return false;" href="#"><span>One</span></a>
+        <a class="button" onclick="this.blur(); count(2);return false;" href="#"><span>Two</span></a>
+        <a class="button" onclick="this.blur(); count(3);return false;" href="#"><span>Three</span></a>
+        <a class="button" onclick="this.blur(); count(4);return false;" href="#"><span>Four</span></a>
+        <a class="button" onclick="this.blur(); count(5);return false;" href="#"><span>Five or more</span></a>
+      </div>
+    <h2>Sliding Doors technique</h2>
+    <p>Many new pages are populated with a pluthera of images for buttons generated for sake of consistency.
+      However even in this pattern of images many of the images do not match exactly in color - or even the
+      effect of a click as a button.
+    </p>
+    <p>Since we want our buttons to be uber-flexible, we'll have to make the background image expand with the
+      size of the button's text. For that, we'll use the beloved
+      <a class="button" target="_blank" href="http://alistapart.com/articles/slidingdoors/"><span class="heavy">Sliding Doors</span></a>; two complementing images creating the illusion of a single, stretching image.
+    </p>
+    <p>Our button will be a basic&nbsp;<span class="code">&lt;a&gt;</span>&nbsp;tag with a nested
+      &nbsp;<span class="code">&lt;span&gt;</span>&nbsp;, each containing a different slice of the
+      background image.
+    </p>
+    <p>More Buttons<br/><br/>
+      <a class="button" onclick="this.blur(); return false;" href="#"><span class="heavy">A Bigger Button</span></a><br/><br/>
+      <a class="button" onclick="this.blur(); return false;" href="#"><span class="heavy">Even More Bigger Button</span></a><br/><br/>
+      <a class="button" onclick="this.blur(); return false;" href="#"><span class="heavy">A really big button with lots of text</span></a><br/><br/>
+    </p>
+   </div>
+  </body>
+</html>
+  
