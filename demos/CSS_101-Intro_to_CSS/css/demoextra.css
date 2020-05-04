@@ -1,0 +1,142 @@
+/*
+* This is a Demo CSS file
+*/
+
+
+#menuText, #fadeTextSpan, .SlideAndFade {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 700px;
+    margin-right: auto;
+    z-index: 20;
+}
+
+#systemWorking {
+    position: absolute;
+    background-color: transparent;
+    height: 30px;
+    width:  100px;
+    background: url(../images/img_loading.gif) no-repeat center center;
+    padding-left: 45px;
+    padding-top: 50px;
+    padding-right: 15px;
+    top: 250px;
+    left: 100px;
+    text-align: center;
+}
+
+#workingText {
+    top:-25px;
+    left: 110px;
+    position: relative;
+    padding-left: 0px;
+    padding-top: 0px;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:  30px;
+    color: #2E0FD7;
+}
+
+
+a.lnkKewlButton {
+    color: #408ADA;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px #216488 outset;
+    padding: 0.2em;
+    margin: 2px;
+    /* IE HACK for Button Compatability */
+    padding: 0 .25em 0 .25em;
+    width: auto;
+    overflow: visible;
+}
+a:link.lnkKewlButton, a:visited.lnkKewlButton, a:active.lnkKewlButton {
+    color: #408ADA;
+    background-color: #FFFFFF;
+}
+
+a:hover.lnkKewlButton {
+    color: #408ADA;
+    background-color: #eeeeee;
+    border: 2px #216488 inset;
+}
+
+input.btnKewlButton {
+    color: #408ADA;
+    background-color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px #216488 outset;
+    padding: 0.2em;
+    margin: 0px;
+    /* IE HACK for Button Compatability */
+    padding: 0 .25em 0 .25em;
+    width: auto;
+    overflow: visible;
+}
+
+input:hover.btnKewlButton {
+    color: #408ADA;
+    background-color: #eeeeee;
+    border: 2px #216488 inset;
+}
+
+#getFireFoxLnk {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+
+div#menu {
+    float:left;
+    width: 100%;
+    padding-top:120px;
+    background: #BBD9EE;
+}
+ul#nav,ul#nav li {
+    font-size : 10px;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+ul#nav{
+    margin-left: 100px;
+    width:850px;
+}
+/* GEEK: Here is a IE Hack */
+* html ul#nav {
+    width: 400px;
+}
+
+ul#nav li{
+    float:left;
+    margin-right: 3px;
+    text-align: center;
+}
+ul#nav span{
+    float:left;
+    width: 7em;
+    padding: 5px 0;
+    background: #E7F1F8;
+    text-decoration:none;
+    color: #666;
+    cursor: pointer;
+}
+ul#nav span:hover {
+    background: #FFA826;
+    color: #FFF;
+}
+ul#nav li.activelink span,ul#nav li.activelink span:hover {
+    background: #FFF;
+    color: #003;
+}
+/* GEEK:  Here is a IE Hack */
+* html div#centercontent {
+    height: 100%;
+}
