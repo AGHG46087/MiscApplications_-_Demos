@@ -1,0 +1,100 @@
+ /*
+  *  3 columns, center is fluid, right content and left content fixed in location, 
+  */ 
+@import "all.css";
+/* GEEK:  Here is an error - spelling */
+@import "niftyCorners.css"; 
+
+
+body {
+    margin:10px 10px 0px 10px;
+    padding:0px;
+}
+
+#leftcontent {
+    position: absolute;
+    left:10px;
+    top:50px;
+    width:200px;
+    background:#fff;
+    border:1px solid #000;
+    visibility : hidden;
+}
+
+#centercontent {
+    background:#fff;
+    margin-left: 199px;
+    margin-right:199px;
+    border:1px solid #000;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    margin-left: 201px;
+    margin-right:201px;
+}
+
+html>body #centercontent {
+    margin-left: 201px;
+    margin-right:201px;
+}
+
+#rightcontent {
+    position: absolute;
+    right:10px;
+    top:50px;
+    width:200px;
+    background:#fff;
+    border:1px solid #000;
+    visibility : hidden;
+}
+
+#banner {
+    background:#fff;
+    height:40px;
+    border-top:1px solid #000;
+    border-right:1px solid #000;
+    border-left:1px solid #000;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    height:39px;
+}
+html>body #banner {
+    height:39px;
+}
+		
+p,h1,pre {
+    margin:0px 10px 10px 10px;
+}
+		
+h1 {
+    font-size:14px;
+    padding-top:10px;
+}
+		
+#banner h1 {
+    font-size:14px;
+    padding:10px 10px 0px 10px;
+    margin:0px;
+}
+	
+#rightcontent p {
+    font-size:10px
+}
+
+#getFireFoxLnk {
+    visibility : hidden;
+}
+#printVersionText {
+    left:30px;
+    position:absolute;
+    top:10px;
+    color:#0000CC;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:20px;
+}
+
+#printableVersion {
+/*    visibility : hidden; */
+    display: none;
+}
+
