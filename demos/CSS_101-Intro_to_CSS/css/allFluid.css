@@ -1,0 +1,58 @@
+ /*
+  *  3 columns, center is fluid, right content and left content fixed in location, 
+  */ 
+@import "all.css";
+/* GEEK:  Here is an error - spelling */
+@import "niftyCorners.css"; 
+
+
+
+body {
+    margin:45px 10px 0px 10px;
+    padding:0px;
+    background:#115;
+}
+
+#rightcontent {
+    width:33%;
+    float:left;
+    background:#777;
+    padding-bottom:10px;
+}
+
+#centercontent {
+    width:34%;
+    float:left;
+    background:#fff;
+    padding-bottom:10px;
+}
+	
+#leftcontent {
+    width:33%;
+    float:left;
+    background:#777;
+    padding-bottom:10px;
+}
+
+#banner {
+    background:#fff;
+}
+
+p,h1,pre {
+    margin:0px 10px 10px 10px;
+}
+
+h1 {
+    font-size:14px;
+    padding-top:10px;
+}
+
+#mainright p { font-size:10px}
+#banner h1 { margin:0px; padding:10px}
+
+.lnkKewlButton, #printVersionText {
+    visibility : hidden;
+}
+#getFireFoxLnk {
+    visibility : visible;
+}
