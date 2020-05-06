@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Sliding Doors of CSS - Tabs</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="Description" content="Personal main landing page of launching demo projects in MAMP. Demo projects are written in PHP, demonstrating concepts for performance, accessibility and SEO.  All demo projects are written in JavaScript, CSS and XHTML-Strict. This project in particular provides a CSS instroduction ">
+    <meta name="Keywords" content="Sprite, Sprites, CSS Sprites, Presentation, demo, Sliding, doors, Sliding doors, tabs, doors of CSS, demos, CSS, CSS_102,
+  Welcome, products, support, contact, Sprites and Fixed tab, fixed tab, tabs, header list-style, background, display, hover, text-decoration ">
+  
+  <link href="css/slidingdoortab.css" id="preferred_layout" rel="stylesheet" type="text/css" title="slidingdoor" />
+</head>
+
+<body id="products">
+  <h1>Sliding Doors of CSS - Tabs</h1>
+
+<div id="header">
+  <ul>
+    <li id="nav-home" class="activeParent"><a id="lnk1" name="lnk1" class="activelink" title='Modifies view to Home' href="#" onClick="showActive(this)">Home</a></li>
+    <li id="nav-news"><a id="lnk2" name="lnk2" href="#" title='Modifies view to News'  onClick="showActive(this)">News to me</a></li>
+    <li id="nav-products"><a id="lnk3" name="lnk3" href="#" title='Modifies view to Products' onClick="showActive(this)">Products</a></li>
+    <li id="nav-about"><a id="lnk4" name="lnk4" href="#" title='Modifies view to About' onClick="showActive(this)">About something</a></li>
+    <li id="nav-contact"><a id="lnk5" name="lnk5" href="#" title='Modifies view to Contacts' onClick="showActive(this)">Contact us, we like it</a></li>
+
+  </ul>
+</div>
+ <!-- END OF Main HTML code -->
+ <!------------------------------------------------------------------------>
+ <!-- Below is the CSS rendered in HTML demonstrating the Styles applied -->
+ <br/><br/><br/>
+ <p class="p1">The tabs above are selectable and also show the appropriate state change of <strong>&quot;hover&quot;</strong>
+   and <strong>&quot;active&quot;</strong>.  The text in the tabs are extendable without creating new images.
+   In other words, development of pages with tabs is more flexible in this design approach.
+ </p>
+ <div id="pageButtons">
+   <input class="btnKewlButton" id="nextPage" type="button" VALUE="Next Page"  title='Select the button to continue on to Demo 6' onClick="goNextPage('6')" />
+ </div>
+ <div id="css_info">
+   <h2>The CSS involved</h2>
+   <br/>
+   <pre id="css_styles">
+<a id="tabs_body" name="tabs_body" title='Hightlighting the tab_body'>     
+     body {
+        background:#fff;
+        margin:0;
+        padding:0;
+        color:#000;
+    /*    font:x-small/1.5em Georgia,Serif; */
+    /*    font:x-small; */
+        voice-family: "\"}\"";
+        voice-family:inherit;
+    /*    font-size:small; */
+    }
+    /*html>body {font-size:small;} */</a>
+<a id="tabs_header" name='tabs_header' title='highlighting the tabs_header'>    
+    #header {
+        float:left;
+        width:100%;
+        background:#DAE0D2 url("../images/bg.gif") repeat-x bottom;
+        font-size:93%;
+        line-height:normal;
+    }</a>
+<a id="tabs_ul_normal" name='tabs_ul_normal'  title='Highlighting the tabs_ul_normal'>
+    #header ul {
+        margin:0;
+        padding:10px 10px 0;
+        list-style:none;
+    }</a>
+<a id="tabs_panels_normal" name='tabs_panel_normal' title='highlighting the tabs_panels_normal'>
+    #header li {
+        float:left;
+        background:url("../images/left_both.gif") no-repeat left top;
+        margin:0;
+        padding:0 0 0 9px;
+        border-bottom:1px solid #765;
+    }
+
+    #header a {
+        float:left;
+        display:block;
+        width:.1em;
+        background:url("../images/right_both.gif") no-repeat right top;
+        padding:5px 15px 4px 6px;
+        text-decoration:none;
+        font-weight:bold;
+        color:#765;
+    }
+    #header > ul a {width:auto;}
+        /* Commented Backslash Hack hides rule from IE5-Mac \*/
+        #header a {float:none;}
+        /* End IE5-Mac hack */
+        #header a:hover {
+          color:#333;
+        }</a>
+<a id="tabs_panels_hover" name='tabs_panel_hover' title='Highlighting the tabs_panels_hover'>
+    #header li:hover, #header li:hover a {
+        background-position:0% -150px;
+        color:#333;
+    }
+    #header li:hover a {
+        background-position:100% -150px;
+    }</a>
+<a id="tabs_panels_active" name='tabs_panels_active' title='Highlighting the tabs_panel_active'>
+    #header li.activeParent {
+        background-position:0 -150px;
+        border-width:0;
+    }
+    #header li a.activelink {
+        background-position:100% -150px;
+        padding-bottom:5px;
+        color:#333;
+   }</a>
+   </pre>
+ </div>
+ <div id="image_info">
+   <h2>The Image(s)</h2>
+   <img class="" alt='The right door of the image' title='Viewing the right door of the CSS image' src="./images/right_both.gif"/>
+   <img class="" alt='The background of the image' title='Viewing the background of the CSS image' src="./images/bg.gif"/>
+   <img class="" alt='The left door of the image' title='Viewing the left door of the CSS image' src="./images/left_both.gif"/>
+ </div>
+
+</body>
+  <script type="text/javascript" src="scripts/prototype.js"></script>
+  <script type="text/javascript" src="scripts/demoscripts.js"></script>
+  
+</html>
+

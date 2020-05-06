@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Sprites and fixed tabs - Tabs</title>
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="Description" content="Personal main landing page of launching demo projects in MAMP. Demo projects are written in PHP, demonstrating concepts for performance, accessibility and SEO.  All demo projects are written in JavaScript, CSS and XHTML-Strict. This project in particular provides a CSS instroduction ">
+    <meta name="Keywords" content="Sprite, Sprites, CSS Sprites, Presentation, Irregular, Shapes, Irregular Shapes, Conclusion, Benefits, Pitfalls, Sprites Presentation, Presentation Conclusion, Benefits and
+    Pitfalls, demo, demos, CSS, CSS_102, Welcome, products, support, contact, Sprites and Fixed tab, fixed tab, tabs">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <link href="css/fixedtabs.css" id="preferred_layout" rel="stylesheet" type="text/css" title="fixedtabs" />
+</head>
+
+<body id="welcome">
+  <h1>Sprites and fixed tabs - Tabs</h1>
+
+<div id="header"> 
+  <ul id="nav">
+    <li id="wel"><a name='showWelcome' title='Modifies view to Welcome' onClick="showFixedActive('welcome')" >welcome</a></li>
+    <li id="pro"><a name='showProducts' title='Modifies view to Products' onClick="showFixedActive('products')">products</a></li>
+    <li id="sup"><a name='showSupport' title='Modifies view to Support' onClick="showFixedActive('support')" >support</a></li>
+    <li id="con"><a name='showContact' title='Modifies view to Contact' onClick="showFixedActive('contact')" >contact</a></li>
+  </ul>
+</div>
+ <!-- END OF Main HTML code -->
+ <!------------------------------------------------------------------------>
+ <!-- Below is the CSS rendered in HTML demonstrating the Styles applied -->
+ <br/><br/><br/>
+ <p class="p1">This tab approach - although it works very well, does have a <u><strong>limitation</strong></u> with respect to
+   <strong>Changing the values of the text</strong>. <br/>The tabs are not flexible. To change the text, a whole
+   new image will need to be created. In addition the CSS involved is much more complex.
+ </p>
+ <div id="pageButtons">
+   <input class="btnKewlButton" id="nextPage" type="button" VALUE="Next Page"  title='Select the button to continue on to Demo 5' onClick="goNextPage('5')" />
+ </div>
+ <div id="css_info">
+   <h2>The CSS involved</h2>
+   <br/>
+   <pre id="css_styles">
+    body {
+        background: #f1efe2;
+    }
+
+    #header {
+        margin: 0 auto 0 auto;
+        width: 650px;
+        padding: 0;
+        border: 5px solid #fff;
+        height: 120px;
+        background: #666 url(../images/tabHeader.png) no-repeat left top;
+    }
+
+    ul#nav {
+        position: relative;
+        top: 68px;
+        left: 188px;
+        width: 346px;
+        margin: 0;
+        height: 22px;
+        list-style-type: none;
+        overflow: hidden;
+    }
+    body#welcome ul#nav  { background: transparent url(../images/navTabs.png) no-repeat 0 0; }
+    body#products ul#nav { background: transparent url(../images/navTabs.png) no-repeat 0 -22px; }
+    body#support ul#nav  { background: transparent url(../images/navTabs.png) no-repeat 0 -44px; }
+    body#contact ul#nav  { background: transparent url(../images/navTabs.png) no-repeat 0 -66px; }
+
+    ul#nav li a {
+        position: absolute;
+        top: 0;
+        width: 84px;
+        text-indent: -9000px;
+        text-decoration: none;
+        padding: 22px 0 0 0;
+        overflow: hidden;
+        height: 0px !important; 
+        height /**/:22px; /* IE5/Win */
+        background: transparent url(../images/navTabs.png) no-repeat;
+    }
+
+    body#welcome li#wel a       { background-position: 0 0; width: 94px; left: 0; }
+    body#welcome li#wel a:hover { background-position: 0 0; }
+    body#welcome li#pro a       { background-position: -94px -88px; left: 94px; }
+    body#welcome li#pro a:hover { background-position: -94px 0px; }
+    body#welcome li#sup a       { background-position: -178px -88px; left: 178px; }
+    body#welcome li#sup a:hover { background-position: -178px 0; }
+    body#welcome li#con a       { background-position: -262px -88px; left: 262px; }
+    body#welcome li#con a:hover { background-position: -262px 0; }
+
+    body#products li#wel a      { background-position: 0 -110px; width: 94px; left: 0; }
+    body#products li#wel a:hover{ background-position: 0 -22px; }
+    body#products li#pro a      { background-position: -94px -22px; left: 94px; }
+    body#products li#pro a:hover{ background-position: -94px -22px; }
+    body#products li#sup a      { background-position: -178px -88px; left: 178px; }
+    body#products li#sup a:hover{ background-position: -178px 0; }
+    body#products li#con a      { background-position: -262px -88px; left: 262px; }
+    body#products li#con a:hover{ background-position: -262px 0; }
+
+    body#support li#wel a       { background-position: 0 -88px; width: 94px; left: 0; }
+    body#support li#wel a:hover { background-position: 0 -44px; }
+    body#support li#pro a       { background-position: -94px -110px; left: 94px; }
+    body#support li#pro a:hover { background-position: -94px -44px; }
+    body#support li#sup a       { background-position: -178px -44px; left: 178px; }
+    body#support li#sup a:hover { background-position: -178px -44px; }
+    body#support li#con a       { background-position: -262px -88px; left: 262px; }
+    body#support li#con a:hover { background-position: -262px 0; }
+
+    body#contact li#wel a       { background-position: 0 -88px; width: 94px; left: 0px; }
+    body#contact li#wel a:hover { background-position: 0 -44px; }
+    body#contact li#pro a       { background-position: -94px -88px; left: 94px; }
+    body#contact li#pro a:hover { background-position: -94px 0; }
+    body#contact li#sup a       { background-position: -178px -110px; left: 178px; }
+    body#contact li#sup a:hover { background-position: -178px -66px; }
+    body#contact li#con a       { background-position: -262px -66px; left: 262px; }
+    body#contact li#con a:hover { background-position: -262px -66px; }
+
+
+    p { text-align: center; }
+    p a { color: #666; text-decoration: none; font: 11px/1.5 tahoma, arial, verdana, sans-serif; }
+    p a em { font-style: normal; border-bottom: 1px solid #999; }
+    p a:hover em { color: #333; border-bottom: 0; }
+
+   </pre>
+ </div>
+ <div id="image_info">
+   <h2>The Image(s)</h2>
+   <img class="imageBorder" alt='Fixed Navigation Tab image' title='Viewing the Fixed Tabs Nav Sprite used for this demo' src="./images/navTabs.png"/>
+ </div>
+
+</body>
+  <script type="text/javascript" src="scripts/prototype.js"></script>
+  <script type="text/javascript" src="scripts/demoscripts.js"></script>
+  
+</html>
+
