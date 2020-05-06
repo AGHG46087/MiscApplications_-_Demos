@@ -1,0 +1,35 @@
+/*
+*
+*/
+@import url("demo_default.css");
+
+#shapes {
+ width: 300px;
+ height: 150px;
+ background: url(../images/shapes.gif);
+ margin: 10px auto; padding: 0;
+ position: relative;
+}
+#shapes li {margin: 0; padding: 0; list-style: none; display: block; position: absolute;}
+
+#shapes a {display: block;}
+
+#shape1 {left: 9px; top: 7px; width: 86px; height: 130px;}
+#shape2 {left: 77px; top: 16px; width: 79px; height: 86px;}
+#shape3 {left: 160px; top: 0px; width: 112px; height: 77px;}
+#shape4 {left: 173px; top: 57px; width: 120px; height: 80px;}
+#shape5 {left: 110px; top: 102px; width: 98px; height: 45px;}
+#shape1 a {height: 130px;}
+#shape2 a {height: 86px;}
+#shape3 a {height: 77px;}
+#shape4 a {height: 80px;}
+#shape5 a {height: 45px;}
+
+
+#shape1 a:hover {background: url(../images/shapes.gif) -9px -157px no-repeat;}
+#shape2 a:hover {background: url(../images/shapes.gif) -77px -166px no-repeat;}
+#shape3 a:hover {background: url(../images/shapes.gif) -160px -150px no-repeat;}
+#shape4 a:hover {background: url(../images/shapes.gif) -173px -207px no-repeat;}
+#shape5 a:hover {background: url(../images/shapes.gif) -110px -252px no-repeat;}
+
+
