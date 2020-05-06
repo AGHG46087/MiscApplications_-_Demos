@@ -1,0 +1,34 @@
+/*
+*
+*/
+
+@import url("demo_default.css");
+
+body {
+    padding: 0px 50px 30px 50px;
+}
+span.buttonBlueLeft {
+    background: transparent url('../images/blueButtonLeft.gif') no-repeat center;
+    float: left;
+    height: 28px;
+    width: 10px;
+}
+a.buttonBlueCenter {
+    background: transparent url('../images/blueButtonCenter.gif') repeat-x center;
+    float: left;
+    height: 28px;
+    padding: 0px 2px 0 2px;
+    line-height: 14px;
+    text-decoration: none;
+}
+span.blueButtonText {
+    position: relative;
+    top: 7px;
+    color: #FFFFFF;
+}
+span.buttonBlueRight {
+    background: transparent url('../images/blueButtonRight.gif') no-repeat center;
+    float: left;
+    height: 28px;
+    width: 10px;
+}
