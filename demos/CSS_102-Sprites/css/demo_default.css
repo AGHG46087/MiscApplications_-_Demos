@@ -1,0 +1,84 @@
+/*
+*
+*/
+h2, h3 {
+    margin-bottom: 0;
+}
+#css_styles {
+    margin: 0;
+    position: relative;
+    left: 50px;
+    top: -10px;
+}
+.p1 {
+    margin: 0 30px 0 70px;
+    text-align: left;
+}
+input.btnKewlButton {
+color               : #408ADA;
+background-color    : #FFFFFF;
+font-size           : 11px;
+font-weight         : bold;
+text-decoration     : none;
+border              : 2px #216488 outset;
+padding             : 0.2em;
+margin              : 0px;
+/* IE HACK for Button Compatability */
+padding             : 0 .25em 0 .25em;
+width               : auto;
+overflow            : visible;
+}
+
+input:hover.btnKewlButton {
+color               : #408ADA;
+background-color    : #eeeeee;
+border              : 2px #216488 inset;
+}
+
+#pageButtons {
+    float: right;
+}
+.btnGap {
+    padding: 0 120px 0 0;
+}
+
+.imageBorder {
+    border: 2px solid #0000FF;
+}
+a#shapes_ul:hover, a#shapes_li:hover, a#shape_panels_normal:hover, a#shape_panels_hover:hover  {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+a#theBorder {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+
+a#sprites_ul:hover, a#sprites_li:hover, a#sprites_panels_normal:hover, a#sprites_panels_hover:hover  {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+a#tabs_body:hover, a#tabs_header:hover, a#tabs_ul_normal:hover, a#tabs_panels_normal:hover,
+a#tabs_panels_hover:hover, a#tabs_panels_active:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+a#cssBtn_page:hover, a#cssBtn_anchor:hover, a#cssBtn_span:hover, a#cssBtn_anchor_active:hover,
+a#cssBtn_span_active:hover, a#cssBtn_span_hover:hover, a#cssBtn_anchor_hover:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+a#btnBlue_spanLeft:hover, a#btnBlue_center:hover, a#btnBlue_text:hover, a#btnBlue_spanRight:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
