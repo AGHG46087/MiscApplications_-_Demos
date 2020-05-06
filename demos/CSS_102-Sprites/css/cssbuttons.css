@@ -1,0 +1,55 @@
+/*
+*
+*/
+
+@import url("demo_default.css");
+
+body { color: #444; /* font: normal 14px georgia, serif;*/ margin: 10px; padding: 0 30px 0 30px; }
+
+div#wrapper { margin: 0 auto; width: 800px; }
+.heavyBlue { color: #00F; font-weight: bold; }
+.clear { overflow: hidden; width: 100%; }
+.code { background-color: #DEF; color: #124; font: normal 12px monospace; line-height: 18px; }
+h1 {color: #000; font: normal 30px arial, sans-serif; margin: 0 0 2px 0; letter-spacing: -1px; }
+h2 {color: #000; font: normal 20px arial, sans-serif; margin: 0 0 8px 0; letter-spacing: -1px; }
+p { line-height: 20px; margin: 0 0 20px 0; }
+
+a.button {
+    background: transparent url('../images/bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px;
+    text-decoration: none;
+}
+
+a.button span {
+    background: transparent url('../images/bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+
+a.button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none;
+}
+
+a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px;
+}
+
+a.button:hover span {
+    color: #F00;
+}
+a.button:hover .heavy {
+    color: #F00;
+    font-weight: bold;
+}
+
+
