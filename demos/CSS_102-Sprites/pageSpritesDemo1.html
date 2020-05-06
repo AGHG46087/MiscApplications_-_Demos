@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+ <title>CSS Sprites: Irregular Shapes 1</title>
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="Description" content="Personal main landing page of launching demo projects in MAMP. Demo projects are written in PHP, demonstrating concepts for performance, accessibility and SEO.  All demo projects are written in JavaScript, CSS and XHTML-Strict. This project in particular provides a CSS instroduction ">
+    <meta name="Keywords" content="Sprite, Sprites, CSS Sprites, Presentation, Irregular, Shapes, Irregular Shapes, Conclusion, Benefits, Pitfalls, Sprites Presentation, Presentation Conclusion, Benefits and
+    Pitfalls, demo, demos, CSS, CSS_102, ">
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+ <link href="css/shapes1.css" id="preferred_layout" rel="stylesheet" type="text/css" title="shapes1" />
+</head>
+
+
+<body>
+  <h1>CSS Sprites - Irregular shapes 1</h1>
+ <ul id="shapes">
+  <li id="shape1"><a href="#" title='Selecting Shape #1'></a></li>
+  <li id="shape2"><a href="#" title='Selecting Shape #2'></a></li>
+  <li id="shape3"><a href="#" title='Selecting Shape #3'></a></li>
+  <li id="shape4"><a href="#" title='Selecting Shape #4'></a></li>
+  <li id="shape5"><a href="#" title='Selecting Shape #5'></a></li>
+ </ul>
+ <!-- END OF Main HTML code -->
+ <!------------------------------------------------------------------------>
+ <!-- Below is the CSS rendered in HTML demonstrating the Styles applied -->
+ <p class="p1">
+   The big difference from the previous page is where we are positioning the <strong>&lt;li&gt;</strong> tags.<br/>
+   Notice that the links are neither aligned horizontally nor vertically, but rather in specific positions.<br/>
+   The goal here is to surround each graphical element with a box that surrounds each of the shapes.</p>
+ <div id="pageButtons">
+   <input class="btnKewlButton" id="nextPage" type="button" VALUE="Next Page"  title='Select the button to continue on to Demo 2' onClick="goNextPage('2')" />
+ </div>
+ <div id="css_info">
+   <h2>The CSS involved</h2>
+   <pre id="css_styles">
+<a name='shapes_ul' id="shapes_ul" title='Highlighting the the CSS for the Shape ID'>     
+    #shapes {
+     width: 300px;
+     height: 150px;
+     background: url(../images/shapes.gif);
+     margin: 10px auto; padding: 0;
+     position: relative;
+    }</a>
+<a name='shapes_li' id="shapes_li" title='highlighting the CSS for the List Item'>    
+    #shapes li {margin: 0; padding: 0; list-style: none; display: block; position: absolute;}</a>
+<a name='theBorder' id="theBorder" title'Highlighting the CSS for the Border decoration'>
+    #shapes a {display: block; border: solid 1px #f00;}</a>
+<a name='shpaes_panel_normal' id="shape_panels_normal" title='highlighting the CSS for the Shape indexing'>
+    #shape1 {left: 9px; top: 7px; width: 86px; height: 130px;}
+    #shape2 {left: 77px; top: 16px; width: 79px; height: 86px;}
+    #shape3 {left: 160px; top: 0px; width: 112px; height: 77px;}
+    #shape4 {left: 173px; top: 57px; width: 120px; height: 80px;}
+    #shape5 {left: 110px; top: 102px; width: 98px; height: 45px;}
+    #shape1 a {height: 130px;}
+    #shape2 a {height: 86px;}
+    #shape3 a {height: 77px;}
+    #shape4 a {height: 80px;}
+    #shape5 a {height: 45px;}</a>
+   </pre>
+ </div>
+ <div id="image_info">
+   <h2>The Image(s)</h2>
+   <img class="imageBorder" alt='Irregular Shape Image' title='Viewing the Irregular Shape Sprite used for the Demo' src="./images/shapes.gif"/>
+ </div>
+ 
+</body>
+ <script type="text/javascript" src="scripts/prototype.js"></script>
+ <script type="text/javascript" src="scripts/demoscripts.js"></script>
+ 
+</html>

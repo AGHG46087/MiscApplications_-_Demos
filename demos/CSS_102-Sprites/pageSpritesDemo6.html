@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html>
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="Description" content="Personal main landing page of launching demo projects in MAMP. Demo projects are written in PHP, demonstrating concepts for performance, accessibility and SEO.  All demo projects are written in JavaScript, CSS and XHTML-Strict. This project in particular provides a CSS instroduction ">
+    <meta name="Keywords" content="Sprite, Sprites, CSS Sprites, Presentation, Sliding door, doors technique, button, buttons with CSS, CSS,  demo, demos, CSS,
+    CSS_102, one, two, three, four, five, background, text-decoration, wrapper, active, hover, heavy">
+    <title>Sliding Doors technique buttons with CSS</title>
+
+    <!-- Load only the minimum -->
+    <link href="css/cssbuttons.css" media="all" type="text/css" rel="stylesheet" id="cssbuttons_css"/>
+
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Sliding Doors technique buttons with CSS</h1>
+      <span class="heavyBlue">How many images do you see on this page?</span>
+      <div class="clear" style="margin-bottom: 26px;">
+        <a class="button" title='Invokes a check on your Selection of 1' onclick="this.blur(); count(1);return false;" href="#"><span>One</span></a>
+        <a class="button" title='Invokes a check on your Selection of 2' onclick="this.blur(); count(2);return false;" href="#"><span>Two</span></a>
+        <a class="button" title='Invokes a check on your Selection of 3' onclick="this.blur(); count(3);return false;" href="#"><span>Three</span></a>
+        <a class="button" title='Invokes a check on your Selection of 4' onclick="this.blur(); count(4);return false;" href="#"><span>Four</span></a>
+        <a class="button" title='Invokes a check on your Selection of 5' onclick="this.blur(); count(5);return false;" href="#"><span>Five or more</span></a>
+      </div>
+    <p>Many new pages are populated with a pluthera of images for buttons generated for sake of consistency.
+      However even in this pattern of creative agency image buttons,  many of the images do not match exactly
+      in color - or even the visual effect of a click as a button.
+    </p>
+    <p>Since we want our buttons to be uber-flexible, we'll have to make the background image expand with the
+      size of the button's text. For that, we'll use 
+      <a class="button" target="_blank" title='New Browser frame/tab to view article on sliding doors' href="http://alistapart.com/articles/slidingdoors/"><span class="heavy">Sliding Doors</span></a> two complementing images creating the illusion of a single, stretching image.
+    </p>
+    <p>Our button will be a basic&nbsp;<span class="code">&lt;a&gt;</span>&nbsp;tag with a nested
+      &nbsp;<span class="code">&lt;span&gt;</span>&nbsp;, each containing a different slice of the
+      background image.  Even this technique has its limitations when buttons are needed to be really large.
+      As you can see the button breaks down.
+    </p>
+    <p>More Buttons<br/><br/>
+      <a class="button" title='A Large Button to select' onclick="this.blur(); return false;" href="#"><span class="heavy">A Bigger Button</span></a><br/><br/>
+      <a class="button" title='A larger button to select' onclick="this.blur(); return false;" href="#"><span class="heavy">A much more larger button with lots of text</span></a><br/><br/>
+      <a class="button" title='A really large button to select' onclick="this.blur(); return false;" href="#"><span class="heavy">A Bigger button with so much Text that the sliding portion shows a gap in the button.</span></a><br/><br/>
+      <br/>
+    </p>
+   </div>
+ <div id="pageButtons">
+   <input class="btnKewlButton" id="nextPage" type="button" VALUE="Next Page"  title='Select the button to continue on to Demo 7' onClick="goNextPage('7')" />
+ </div>
+ <div id="css_info">
+   <h2>The CSS involved</h2>
+   <pre id="css_styles">
+<a id="cssBtn_page" name='cssBtn_page' title='Highlighting the cssBtn_page'>
+    body { color: #444; font: normal 14px georgia, serif; margin: 10px; }
+
+    div#wrapper { margin: 0 auto; width: 800px; }
+    .heavyBlue { color: #00F; font-weight: bold; }
+    .clear { overflow: hidden; width: 100%; }
+    .code { background-color: #DEF; color: #124; font: normal 12px monospace; line-height: 18px; }
+    h1 {color: #000; font: normal 30px arial, sans-serif; margin: 0 0 2px 0; letter-spacing: -1px; }
+    h2 {color: #000; font: normal 20px arial, sans-serif; margin: 0 0 8px 0; letter-spacing: -1px; }
+    p { line-height: 20px; margin: 0 0 20px 0; }</a>
+<a id="cssBtn_anchor" name="cssBtn_anchor" title='Highlighting the cssBtn_anchor'>
+    a.button {
+        background: transparent url('../images/bg_button_a.gif') no-repeat scroll top right;
+        color: #444;
+        display: block;
+        float: left;
+        font: normal 12px arial, sans-serif;
+        height: 24px;
+        margin-right: 6px;
+        padding-right: 18px;
+        text-decoration: none;
+    }</a>
+<a id="cssBtn_span" name="cssBtn_span" title='Highlighting the cssBtn_span'>
+    a.button span {
+        background: transparent url('../images/bg_button_span.gif') no-repeat;
+        display: block;
+        line-height: 14px;
+        padding: 5px 0 5px 18px;
+    }</a>
+<a id="cssBtn_anchor_active" name="cssBtn_anchor_active" title='Highlighting the cssBtn_anchor_active'>
+    a.button:active {
+        background-position: bottom right;
+        color: #000;
+        outline: none;
+    }</a>
+<a id="cssBtn_span_active" name="cssBtn_span_active" title='Highlighting the cssBtn_span_active'>
+    a.button:active span {
+        background-position: bottom left;
+        padding: 6px 0 4px 18px;
+    }</a>
+<a id="cssBtn_span_hover" name="cssBtn_span_hover" title='Highlighting the cssBtn_span_hover'>
+    a.button:hover span {
+        color: #F00;
+    }</a>
+<a id="cssBtn_anchor_hover" name="cssBtn_anchor_hover" title='Highlighting the cssBtn_anchor_hover'>
+    a.button:hover .heavy {
+        color: #F00;
+        font-weight: bold;
+    }</a>
+   </pre>
+ </div>
+ <div id="image_info">
+   <h2>The Image(s)</h2>
+   <img class="" alt='Background image used in Demo' title='Background image used in the Demo' src="./images/bg_button_a.gif"/>
+   <img class="" alt='Sliding door of the button' title='Viewing the Sliding door of the button' src="./images/bg_button_span.gif"/>
+ </div>
+    
+  </body>
+    <script type="text/javascript" src="scripts/prototype.js"></script>
+    <script type="text/javascript" src="scripts/demoscripts.js"></script>
+</html>
+  

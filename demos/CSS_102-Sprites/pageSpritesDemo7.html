@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="Content-Language" content="en" />
+  <title>Redesign Buttons</title>
+
+  <link href="css/button_styles.css" id="preferred_layout" rel="stylesheet" type="text/css" title="page_layout" />
+</head>
+
+<body>
+  <h1>CSS long buttons, 2 doors</h1>
+
+ <div class="BlueButton"> <!-- START div class="BlueButton" -->
+   <span class="buttonBlueLeft"></span>
+   <a class="buttonBlueCenter" href="#" title='Represents selecting an item to destination 1'>
+     <span class="blueButtonText">One</span>
+   </a>
+   <span class="buttonBlueRight"></span>
+ </div> <!-- END div class="BlueButton" -->
+        
+ <div class="BlueButton"> <!-- START div class="BlueButton" -->
+   <span class="buttonBlueLeft"></span>
+   <a class="buttonBlueCenter" href="#" title='Represents selecting an item to destination 2'>
+     <span class="blueButtonText">Two</span>
+   </a>
+   <span class="buttonBlueRight"></span>
+ </div> <!-- END div class="BlueButton" -->
+ 
+ <div class="BlueButton"> <!-- START div class="BlueButton" -->
+   <span class="buttonBlueLeft"></span>
+   <a class="buttonBlueCenter" href="#" title='Represents selecting an item to destination 3'>
+     <span class="blueButtonText">Three</span>
+   </a>
+   <span class="buttonBlueRight"></span>
+ </div> <!-- END div class="BlueButton" -->
+ 
+ <div class="BlueButton"> <!-- START div class="BlueButton" -->
+   <span class="buttonBlueLeft"></span>
+   <a class="buttonBlueCenter" href="#" title='Represents selecting an item to destination 4'>
+     <span class="blueButtonText">Four</span>
+   </a>
+   <span class="buttonBlueRight"></span>
+ </div> <!-- END div class="BlueButton" -->
+ 
+ <div class="BlueButton"> <!-- START div class="BlueButton" -->
+   <span class="buttonBlueLeft"></span>
+   <a class="buttonBlueCenter" href="#" title='Represents selecting an item to destination 5'>
+     <span class="blueButtonText">Five</span>
+   </a>
+   <span class="buttonBlueRight"></span>
+ </div> <!-- END div class="BlueButton" -->
+
+ <div>&nbsp;</div><br/><br/>
+ <div class="BlueButton"> <!-- START div class="BlueButton" -->
+   <span class="buttonBlueLeft"></span>
+   <a class="buttonBlueCenter" href="#" title='Viewing a larger button'>
+     <span class="blueButtonText">A Larger Button</span>
+   </a>
+   <span class="buttonBlueRight"></span>
+ </div> <!-- END div class="BlueButton" -->
+
+ <div>&nbsp;</div><br/><br/>
+ <div class="BlueButton"> <!-- START div class="BlueButton" -->
+   <span class="buttonBlueLeft"></span>
+   <a class="buttonBlueCenter" href="#" title='Viewing a much larger button'>
+     <span class="blueButtonText">A Much Larger button that has still works</span>
+   </a>
+   <span class="buttonBlueRight"></span>
+ </div> <!-- END div class="BlueButton" -->
+
+ <div>&nbsp;</div><br/><br/>
+ <div class="BlueButton"> <!-- START div class="BlueButton" -->
+   <span class="buttonBlueLeft"></span>
+   <a class="buttonBlueCenter" href="#" title='Viewing a even larger button across the page'>
+     <span class="blueButtonText">A even larger button, that that so much text a Creative Agency would love to see. It spans 3/4 of the page width</span>
+   </a>
+   <span class="buttonBlueRight"></span>
+ </div> <!-- END div class="BlueButton" -->
+ <div>&nbsp;</div><br/>
+ <!-- END OF Main HTML code -->
+ <!------------------------------------------------------------------------>
+ <!-- Below is the CSS rendered in HTML demonstrating the Styles applied -->
+ <p>This technique works well when creative agencies come with various different button lengths
+   to generate consistent art.  Even if the button is 3/4 the width of the page, it will accomodate
+   the textual content.
+ </p>
+ <div id="pageButtons">
+   <input class="btnKewlButton" id="nextPage" type="button" VALUE="Next Page"  title='Select the button to continue on to conclusion' onClick="goNextPage('8')" />
+ </div>
+ <div id="css_info">
+   <h2>The CSS involved</h2>
+   <pre id="css_styles"><br/>
+<a id="btnBlue_spanLeft" name="btnBlue_spanLeft" title='Highlighting btnBlue_spanLeft'>
+    span.buttonBlueLeft {
+        background: transparent url('../images/blueButtonLeft.gif') no-repeat center;
+        float: left;
+        height: 28px;
+        width: 10px;
+    }</a>
+<a id="btnBlue_center" name="btnBlue_center" title='HighLighting btnBlue_center'>
+    a.buttonBlueCenter {
+        background: transparent url('../images/blueButtonCenter.gif') repeat-x center;
+        float: left;
+        height: 28px;
+        padding: 0px 2px 0 2px;
+        line-height: 14px;
+        text-decoration: none;
+    }</a>
+<a id="btnBlue_text" name="btnBlue_text" title='HighLighting btnBlue_Text'>
+    span.blueButtonText {
+        position: relative;
+        top: 7px;
+        color: #FFFFFF;
+    }</a>
+<a id="btnBlue_spanRight" name="btnBlue_spanRight" title='Highlighting btnBlue_spanRight'>
+    span.buttonBlueRight {
+        background: transparent url('../images/blueButtonRight.gif') no-repeat center;
+        float: left;
+        height: 28px;
+        width: 10px;
+    }</a>
+   </pre>
+ </div>
+ <div id="image_info">
+   <h2>The Image(s)</h2>
+   <img class="" alt='Right door of blue button' title='Viewing the right Door of the Blue button' src="./images/blueButtonRight.gif"/>
+   <img class="" alt='Center background of blue button' title='Viewing the center background of the Blue button' src="./images/blueButtonCenter.gif"/>
+   <img class="" alt='Left door of blue button' title='Viewing the left Door of the Blue button' src="./images/blueButtonLeft.gif"/>
+ </div>
+ 
+</body>
+  <script type="text/javascript" src="scripts/prototype.js"></script>
+  <script type="text/javascript" src="scripts/demoscripts.js"></script>
+  
+</html>
