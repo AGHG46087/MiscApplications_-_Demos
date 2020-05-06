@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+ <title>CSS Sprites: Intro</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en" />
+ <link href="css/spritesintro.css" id="preferred_layout" rel="stylesheet" type="text/css" title="spritesintro" />
+</head>
+
+<body onload="animateImage()">
+  <h1>CSS Sprites</h1>
+ <ul id="sprites">
+   <li id="panel1"><a id="lnk1" href="#" title='Selecting Letter S'></a></li>
+   <li id="panel2"><a id="lnk2" href="#" title='Selecting Letter p'></a></li>
+   <li id="panel3"><a id="lnk3" href="#" title='Selecting Letter r'></a></li>
+   <li id="panel4"><a id="lnk4" href="#" title='Selecting Letter i'></a></li>
+   <li id="panel5"><a id="lnk5" href="#" title='Selecting Letter t'></a></li>
+   <li id="panel6"><a id="lnk6" href="#" title='Selecting Letter e'></a></li>
+   <li id="panel7"><a id="lnk7" href="#" title='Selecting Letter s'></a></li>
+ </ul>
+ <!-- END OF Main HTML code -->
+ <!------------------------------------------------------------------------>
+ <!-- Below is the CSS rendered in HTML demonstrating the Styles applied -->
+ <div id="pageButtons">
+   <input class="btnKewlButton" id="stopAnim" type="button" VALUE="Stop"  title='Select to stop the animation' onClick="stopAnimation()" />
+   <input class="btnKewlButton" id="startAnim" type="button" VALUE="Start"  title='Select to start the animation' onClick="animateImage()" />
+   <span class="btnGap">&nbsp;</span>
+   <input class="btnKewlButton" id="nextPage" type="button" VALUE="Next Page"  title='Select the button to continue on to demo 1' onClick="goNextPage('1')" />
+ </div>
+ <div id="css_info">
+   <h2>The CSS involved</h2>
+   <pre id="css_styles">
+<a id="sprites_ul" name="sprites_ul" title='Highlighting the CSS for the sprites_ul'>
+    #sprites {
+      width: 650px;
+      height: 200px;
+      background: url(../images/Sprite3.gif);
+      margin: 10px auto;
+      padding: 0;
+      position: relative;
+    }</a>
+<a id="sprites_li" name="sprites_li" title='Highlighting the CSS for the sprites_li'>
+    #sprites li { margin: 0; padding: 0; list-style: none; position: absolute; top: 0; }
+    #sprites li, #sprites a { height: 200px; display: block; }</a>
+<a id="sprites_panels_normal" name="sprites_panel_normal" title='Highlighting the CSS for the sprites_panels_normal'>
+    #panel1 {left: 0; width: 117px;}
+    #panel2 {left: 118px; width: 89px;}
+    #panel3 {left: 208px; width: 94px;}
+    #panel4 {left: 303px; width: 52px;}
+    #panel5 {left: 356px; width: 104px;}
+    #panel6 {left: 461px; width: 84px;}
+    #panel7 {left: 546px; width: 85px;}</a>
+<a id="sprites_panels_hover" name="sprites_panels_hover" title='Highlighting the CSS for the sprites_panels_hoverl'>
+    #panel1 a:hover {background: transparent url(../images/Sprite3.gif) 0 -200px no-repeat;}
+    #panel2 a:hover {background: transparent url(../images/Sprite3.gif) -118px -200px no-repeat;}
+    #panel3 a:hover {background: transparent url(../images/Sprite3.gif) -208px -200px no-repeat;}
+    #panel4 a:hover {background: transparent url(../images/Sprite3.gif) -302px -200px no-repeat;}
+    #panel5 a:hover {background: transparent url(../images/Sprite3.gif) -356px -200px no-repeat;}
+    #panel6 a:hover {background: transparent url(../images/Sprite3.gif) -461px -200px no-repeat;}
+    #panel7 a:hover {background: transparent url(../images/Sprite3.gif) -546px -200px no-repeat;}</a>
+   </pre>
+ </div>
+ <div id="css_info">
+   <h2>The Image(s)</h2>
+   <img class="imageBorder" alt='The Sprite Image used for this demo' title='Viewing the Sprite image used in this demo' src="./images/Sprite3.gif"/>
+ </div>
+ 
+   
+</body>
+ <script type="text/javascript" src="scripts/prototype.js"></script>
+ <script type="text/javascript" src="scripts/demoscripts.js"></script>
+ 
+</html>
