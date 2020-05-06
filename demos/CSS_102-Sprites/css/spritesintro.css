@@ -1,0 +1,46 @@
+/*
+*
+*/
+
+@import url("demo_default.css");
+
+#sprites {
+ width: 650px;
+ height: 200px;
+ background: url(../images/Sprite3.gif);
+ margin: 10px auto;
+ padding: 0;
+ position: relative;
+}
+#sprites li { margin: 0; padding: 0; list-style: none; position: absolute; top: 0; }
+
+#sprites li, #sprites a { height: 200px; display: block; }
+
+#panel1 {left: 0; width: 117px;}
+#panel2 {left: 118px; width: 89px;}
+#panel3 {left: 208px; width: 94px;}
+#panel4 {left: 303px; width: 52px;}
+#panel5 {left: 356px; width: 104px;}
+#panel6 {left: 461px; width: 84px;}
+#panel7 {left: 546px; width: 85px;}
+
+#panel1 a:hover {background: transparent url(../images/Sprite3.gif) 0 -200px no-repeat;}
+#panel2 a:hover {background: transparent url(../images/Sprite3.gif) -118px -200px no-repeat;}
+#panel3 a:hover {background: transparent url(../images/Sprite3.gif) -208px -200px no-repeat;}
+#panel4 a:hover {background: transparent url(../images/Sprite3.gif) -302px -200px no-repeat;}
+#panel5 a:hover {background: transparent url(../images/Sprite3.gif) -356px -200px no-repeat;}
+#panel6 a:hover {background: transparent url(../images/Sprite3.gif) -461px -200px no-repeat;}
+#panel7 a:hover {background: transparent url(../images/Sprite3.gif) -546px -200px no-repeat;}
+
+#panel1 a.activeLnk {background: transparent url(../images/Sprite3.gif) 0 -200px no-repeat;}
+#panel2 a.activeLnk {background: transparent url(../images/Sprite3.gif) -118px -200px no-repeat;}
+#panel3 a.activeLnk {background: transparent url(../images/Sprite3.gif) -208px -200px no-repeat;}
+#panel4 a.activeLnk {background: transparent url(../images/Sprite3.gif) -302px -200px no-repeat;}
+#panel5 a.activeLnk {background: transparent url(../images/Sprite3.gif) -356px -200px no-repeat;}
+#panel6 a.activeLnk {background: transparent url(../images/Sprite3.gif) -461px -200px no-repeat;}
+#panel7 a.activeLnk {background: transparent url(../images/Sprite3.gif) -546px -200px no-repeat;}
+
+#sprites a:active {border: solid 1px #f00;}
+/* GEEK
+#sprites a {border: solid 1px #f00;}
+/* */
