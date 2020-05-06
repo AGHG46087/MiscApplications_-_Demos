@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+  <html>
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="Description" content="Personal main landing page of launching demo projects in MAMP. Demo projects are written in PHP, demonstrating concepts for performance, accessibility and SEO.  All demo projects are written in JavaScript, CSS and XHTML-Strict. This project in particular provides a CSS instroduction ">
+    <meta name="Keywords" content="Sprite, Sprites, Presentation, Conclusion, Benefits, Pitfalls, Sprites Presentation, Presentation Conclusion, Benefits and
+    Pitfalls, demo, demos, CSS, CSS_102, pageConclusions">
+    <title>Sprites Presentation Conclusion</title>
+
+    <!-- Load only the minimum -->
+    <link href="css/cssbuttons.css" media="all" type="text/css" rel="stylesheet" id="cssbuttons_css"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Benefits and pitfalls</h1>
+    <p>A couple of final thoughts.
+      <ul>
+        <li>Browsers: Our new CSS Sprite method tests well in most modern browsers.</li>
+        <li>End Users: In the rare cases in which users have turn off images in their browsers but retained CSS,
+          a big empty hole will appear in the page where we expect our images to be placed.
+          The links are still there and clickable, but nothing visually appears.  </li>
+        <li>File size. The natural tendency is to assume that a full double-sized image (Sprites) must be heavier
+          than a similar set of sliced images, since the overall image area will usually be larger.
+          Plus, one master image requires only a single connection, but each slice would need its own.</li>
+        <li>HTML readability: Let's not forget that our markup is nice and clean, with all the advantages
+          that go along with that. HTML lists degrade wonderfully. and </li>
+        <li>Accessability: A proper image replacement technique will leave the text links accessible to
+          screenreaders. Replacing the sprite imagery is dead simple, since all of our dimensions and
+          offsets are controlled in a single CSS file, and all of our imagery sits in a single image.</li>
+        <li>Performance Payoff: The potential payoff for using this method versus individual images.
+          <ul>
+            <li>Combined images "may" be smaller in size compared to the size of the sum of the images.</li>
+            <li>Less images equates to fewer http connections.</li>
+            <li>Smaller images and fewer connections result in fewer packets</li>
+            <li>Fewer packets result in fewer bytes wasted on the tcp/ip headers</li>
+          </ul>
+          <u><b>Thus supporting a faster download capability for the end users.</b></u></li>
+        <li>Reuse Images: rather than use a different distinct image for a certain element,
+          recycle existing images where appropriate, if the browser has it downloaded and cached,
+          it will not retrieve it again. ( buttons example )</li>
+        <li>Master Image: The key to benefitting from this method is to ensure that the file size
+          of your master image isn't a bloated equivalent versus the sum of its pieces.</li>
+      </ul>
+    </p>
+    
+  </body>
+    <script type="text/javascript" src="scripts/prototype.js"></script>
+    <script type="text/javascript" src="scripts/demoscripts.js"></script>
+
+</html>
+  
