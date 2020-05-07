@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache' />
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0' />
+    <meta http-equiv='Expires' content='-1' />
+    <title>Things that do work</title>
+    <!--here it is! Mobile specific meta goodness :)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!--css-->
+    <link rel="stylesheet" href="./css/demo_input.css" />
+
+  </head>
+  <body>
+    <div id="mainContainer">
+      <div class="calendar-date">
+        <span id="day" class="day">31</span>
+        <span id="month" class="month">July</span>
+        <span id="year" class="year">2012</span>
+      </div> <!-- .calendar-dates -->
+
+      <div id="pageTitle">
+        <p>What the...</p>
+      </div> <!-- pageTitle -->
+
+      <div id="affectedContent" class="roundedBox">
+        <p>There are some things that does not work...</p>
+        <fieldset class="roundedBox" id="formInputDemo" >
+          <legend>Behavior: Auto-Tab does not work on tablets.</legend>
+          <form id="frmAutoTab">
+            <div class="inputGroups">
+              <label for="first">First 4 digits:</label>
+              <input class="fldAutoTab" type="text" id="first" size="5" maxlength="4" /> 
+            </div>
+            
+            <div class="inputGroups">
+              <label for="second">Middle 6 digits:</label>
+              <input class="fldAutoTab" type="text" id="second" size="7"  maxlength="6" />
+            </div>
+            
+            <div class="inputGroups">
+              <label for="third">Last 5 digits:</label>
+              <input class="fldAutoTab" type="text" id="third" size="6" maxlength="5" />
+            </div>
+            
+          </form>
+        </fieldset>
+      </div> <!-- affectedContent -->
+      
+      <div id="notReadyContent" class="roundedBox">
+        <fieldset class="roundedBox" id="formInputDemo" >
+          <legend>Presentation: mouseover/hover does not work</legend>
+          <p>Place your mouse over the following image to see a presentation change. </p>
+          <p>
+            <a id="TestMouseOver">
+              <img width="100" height="40" alt="Home" title="Home image" id="homepic" src="img/off.gif"/></a>
+          </p>
+        </fieldset>
+      </div> <!-- affectedContent -->
+
+      <div id="notReadyContent" class="roundedBox">
+        <fieldset class="roundedBox" id="formInputDemo" >
+          <legend>Sandboxing:  PDF download</legend>
+          <p>IOS devices Sandbox PDF downloads. </p>
+          <div class="topButtonStrip clearfix">
+            <span id="adminButtons">
+              <a title="" id="lnkDownloadPDF" class="button left lightbox"
+                 href="./download-popup.html?width=600&height=250&top=100&left=120"><span>Download PDF</span></a>
+            </span>
+          </div>
+          <div id="serverResponse">
+            <span id="serverData">No AJAX Data</span>
+          </div>
+        </fieldset>
+      </div> <!-- affectedContent -->
+      
+
+    </div> <!-- mainContainer -->
+
+    <div id="layer"></div>
+    <div id="popup"></div>
+    <div id="popupDivert"></div>
+
+    
+  </body>
+  <script type="text/javascript" src="./scripts/jquery-1.5.1.min.js"></script>
+
+  <script type='text/javascript' src='./scripts/demo_input.js'></script>
+</html>

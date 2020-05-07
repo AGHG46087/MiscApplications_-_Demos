@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>IOS Extra Meta Tags</title>
+    <!--here it is! Mobile specific meta goodness :)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- IOS specific meta tags -->
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+    <meta name='format-detection' content='telephone=no' />
+    <!--css-->
+    <link rel="stylesheet" href="./css/demo_input.css" />
+
+  </head>
+  <body>
+    <div id="mainContainer">
+      <div class="calendar-date">
+        <span id="day" class="day">31</span>
+        <span id="month" class="month">July</span>
+        <span id="year" class="year">2012</span>
+      </div> <!-- .calendar-dates -->
+
+      <div id="pageTitle">
+        <p>Input Fields</p>
+      </div> <!-- pageTitle -->
+
+      <div id="affectedContent" class="roundedBox">
+        <p>Not all form fields are supported in all browser.</p>
+        <fieldset class="roundedBox" id="formInputDemo" >
+          <legend>Demographic Data Entry Form</legend>
+          <form>
+            <div class="inputGroups">
+              <label for="pswd">Password:</label>
+              <input class="goodInput" type="password" name="pswd" required placeholder="Password" />
+            </div>
+
+            <div class="inputGroups">
+              <label for="email">Email:</label>
+              <input class="goodInput" type="email" name="email" required placeholder="email@example.com" />
+            </div>
+
+            <div class="inputGroups">
+              <label for="website">Website:</label>
+              <input class="goodInput" type="url" name="website" required placeholder="http://www.example.com" />
+            </div>
+
+            <div class="inputGroups">
+              <label for="luckyNumber">Number:</label>
+              <input class="goodInput" name="luckyNumber" required type="number" placeholder="[0-9]" />
+            </div>
+
+            <div class="inputGroups">
+              <label for="telephone">Telephone:</label>
+              <input class="goodInput" name="telepone" required type="tel" placeholder="[0-9]" />
+            </div>
+
+            <div class="inputGroups">
+              <label for="message">Message:</label>
+              <textarea name="message" required></textarea>
+            </div>
+
+            <br/>
+            <div class="inputGroups">
+              <input class="button blue" type="submit" value="Send Message" />
+            </div>
+          </form>
+          
+        </fieldset>
+        
+      </div> <!-- affectedContent -->
+      
+    </div> <!-- mainContainer -->
+  </body>
+  <script type="text/javascript" src="./scripts/jquery-1.5.1.min.js"></script>
+
+  <script type='text/javascript' src='./scripts/demo_input.js'></script>
+</html>
