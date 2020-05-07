@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache' />
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0' />
+    <meta http-equiv='Expires' content='-1' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Media Queries</title>
+    <link rel='stylesheet' media='screen' type='text/css' href='./css/demo_query.css' />
+  </head>
+  <!-- Conditional CSS include for IE7 and below -->
+  <!--[if lt IE 8 ]><body class='ie7'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9'><![endif]-->
+  <!--[if !IE]>--><body><!--<![endif]-->
+    <div id="content">
+    <p class="default">Desktop CSS enabled<br/>
+      <span>No media query employed</span>
+    </p>
+    <p class="tabletPortrait">Tablet Portrait CSS enabled<br/>
+      <span>
+@media only screen and (min-device-width : 768px) and
+                       (max-device-width : 1024px) and
+                       (orientation : portrait)</span>
+    </p>
+    <p class="tabletLandscape">Tablet Landscape CSS enabled<br/>
+      <span>
+@media only screen and (min-device-width : 768px) and
+                       (max-device-width : 1024px) and
+                       (orientation : landscape)</span>
+    </p>
+    <p class="smartphone">Smartphone CSS enabled<br/>
+      <span>
+@media only screen and
+  (min-device-width : 320px) and
+  (max-device-width : 480px)</span>
+    </p>
+    </div>
+    <div id="info">
+      <ul>Try viewing this page in:
+        <li>Desktop</li>
+        <li>Tablet (Landscape and Portrait)</li>
+        <li>Smartphone</li>
+      </ul>
+    </div>
+  </body>
+  <script type="text/javascript" >
+if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+    var viewportmeta = document.querySelector('meta[name="viewport"]');
+    if (viewportmeta) {
+        viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0";
+        document.body.addEventListener('gesturestart', function () {
+            viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+        }, false);
+    }
+}
+  </script>
+</html>
