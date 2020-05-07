@@ -1,0 +1,154 @@
+/*
+*
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,input,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{outline:0;font-weight:inherit;font-style:inherit;font-size:1em;font-family:inherit;vertical-align:baseline;margin:0;padding:0}body{font-size:16px;color:#000;background:transparent}:focus{outline:0}ol{list-style:decimal outside}ul{list-style:none outside}table{border-collapse:collapse;border-spacing:0;font-size:inherit}caption,th{text-align:center;font-weight:bold}fieldset,img{border:0}a img,:link img,:visited img{border:none}blockquote:before,blockquote:after,q:before,q:after{content:""}address{font-style:normal}pre,code,kbd,samp,tt{font-family:monospace;line-height:100%}sup{vertical-align:text-top}sub{vertical-align:text-bottom}:link,:visited,del,ins{text-decoration:none}
+/* Default link styles */
+a:link {color: #FF0000}     /* unvisited link */
+a:visited {color: #00FF00}  /* visited link */
+a:hover,a:focus {color: #FF00FF}   /* mouse over / focus link */
+a:focus {outline: 1px dotted #FF00FF}   /* focus link outline */
+a:active {color: #0000FF}   /* selected link */
+
+/* #Basic Styles
+================================================== */
+body {
+    font-family: Helvetica, san-serif;
+    text-align: center;
+    font-size:24px;
+    background-color:  rgb(212,207,201);
+
+}
+/* div { padding: 128px 0 0 0; } */
+#pageTitle {
+    position: relative;
+    top: 0px;
+}
+#pageTitle p {
+    -moz-transform: rotate(0deg) rotateX(28deg) skewX(10deg);
+    -webkit-transform: rotate(0deg) rotateX(28deg) skewX(10deg);
+    color: transparent;
+}
+#pageTitle p:nth-child(1) {
+    font-size: 75px;
+    text-indent: 50px;
+    text-shadow: 0 0 1px #FFFFFF, 0 4px 3px #EEEEEE,
+                 0 9px 3px #DDDDDD, 0 12px 1px #CCCCCC,
+                 0 14px 3px rgba(0, 0, 0, 0.2),
+                 0 20px 10px rgba(0, 0, 0, 0.1),
+                 0 15px 80px rgba(0, 0, 100, 0.2);
+}
+#pageTitle p:nth-child(2) {
+    font-size: 76px;
+    margin-top: -100px;
+    text-shadow: 0 0 1px #FFFFFF, 0 4px 3px #EEEEEE,
+                 0 9px 3px #DDDDDD, 0 12px 1px #CCCCCC,
+                 0 14px 3px rgba(0, 0, 0, 0.2),
+                 0 20px 10px rgba(0, 0, 0, 0.1),
+                 0 15px 80px rgba(0, 0, 100, 0.2);
+}
+#pageTitle p:nth-child(3) {
+    font-size: 77px;
+    text-shadow: 0 0 2px #DDDDDD, 0 4px 5px #FFFFFF,
+                 0 9px 5px #DDDDDD, 0 12px 10px #CCCCCC,
+                 0 14px 5px rgba(0, 0, 0, 0.2),
+                 0 20px 10px rgba(0, 0, 0, 0.1),
+                 0 15px 80px rgba(0, 0, 100, 0.2);
+}
+
+.calendar-date {
+    background-color: #998877;
+    float: right;
+    margin-left: 10px;
+    padding: 38px 5px 0;
+    position: relative;
+    top: 0px;
+}
+.calendar-date .day {
+    font-size: 45px;
+    left: 5px;
+    line-height: 45px;
+    margin-top: 2px;
+    position: absolute;
+    top: 0;            
+}
+.calendar-date .month {
+    font-size: 25px;
+    text-transform: uppercase;            
+}
+.calendar-date .year {
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    display: block;
+    position: absolute;
+    right: -12px;
+    top: 12px;
+    font-size: 21px;
+}
+
+div#mainContainer {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    min-height: 200px;
+}
+div#swipeBand {
+    position: relative;
+    width: 99%;
+    border: 4px outset blue;
+    margin: 10px 0 10px 0;
+}
+div#carouselCont {
+    position: relative;
+    height: 300px;
+    margin: 0 auto;
+    width: 100%;
+}
+div#orbitCont {
+    float: right;
+    border: 4px outset blue;
+    
+}
+div#eventLog {
+    height: 200px;
+    width: 33%;
+    overflow: scroll;
+    text-align: left;
+    float: left;
+    font-size: 50%;
+    margin: 0 0 0 0;
+    background-color: white;
+    border: 2px inset black;
+    visibility: hidden;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { /* Styles */ }
+
+/* Smartphones (landscape) ------------------------ */
+@media only screen and (min-width : 321px) { /* Styles */ }
+
+/* Smartphones (portrait) ------------------------- */
+@media only screen and (max-width : 320px) { /* Styles */ }
+
+/* iPads (portrait and landscape) ----------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    div#eventLog {
+        visibility: visible;
+    }
+
+}
+
+/* iPads (landscape) ------------------------------ */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { /* Styles */ }
+
+/* iPads (portrait) ------------------------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    div#mainContainer {
+        width: 700px;
+    }
+    div#eventLog {
+        width: 66%;
+        margin: 10px 20px 0 10px;
+    }
+    
+}

@@ -1,0 +1,109 @@
+﻿/* Undo default browser styles */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,input,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{outline:0;font-weight:inherit;font-style:inherit;font-size:1em;font-family:inherit;vertical-align:baseline;margin:0;padding:0}body{font-size:16px;color:#000;background:transparent}:focus{outline:0}ol{list-style:decimal outside}ul{list-style:none outside}table{border-collapse:collapse;border-spacing:0;font-size:inherit}caption,th{text-align:center;font-weight:bold}fieldset,img{border:0}a img,:link img,:visited img{border:none}blockquote:before,blockquote:after,q:before,q:after{content:""}address{font-style:normal}pre,code,kbd,samp,tt{font-family:monospace;line-height:100%}sup{vertical-align:text-top}sub{vertical-align:text-bottom}:link,:visited,del,ins{text-decoration:none}
+/* Default link styles */
+a:link {color: #FF0000}     /* unvisited link */
+a:visited {color: #00FF00}  /* visited link */
+a:hover,a:focus {color: #FF00FF}   /* mouse over / focus link */
+a:focus {outline: 1px dotted #FF00FF}   /* focus link outline */
+a:active {color: #0000FF}   /* selected link */
+/* Default styles */
+body{
+  background-color:blue;
+  color: white;
+  font-family:arial;
+}
+div#info {
+  margin: 0 auto;
+  position: relative;
+  width: 300px;
+}
+ul {
+    list-style: disc;
+}
+div#content {
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+}
+p{
+  font-size:200%;
+  padding:3em 0;
+  text-align:center;
+  text-transform:uppercase;
+}
+p.default{
+  display:block;  
+}
+p.tabletLandscape, p.tabletPortrait {
+  display:none;
+}
+p.smartphone{
+  display:none;
+}
+p span {
+    font-size: 50%;
+    font-family: courier;
+    white-space: pre;
+    text-align: inherit;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body{
+    background-color: #FF9900; /* orange */
+  }
+  p {
+    font-size: 100%;
+  }
+  p span {
+      font-size: 90%;
+      color: black;
+      font-weight: bold;
+  }
+  p.default, p.tabletPortrait, p.tabletLandscape {
+    display:none;
+  }
+  p.smartphone {
+    display:block;
+  }
+}
+
+/* Smartphones (landscape) ------------------------ */
+@media only screen and (min-width : 321px) { /* Styles */ }
+
+/* Smartphones (portrait) ------------------------- */
+@media only screen and (max-width : 320px) { /* Styles */ }
+
+/* iPads (portrait and landscape) ----------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { /* Styles */ }
+
+/* iPads (landscape) ------------------------------ */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  body{
+    background-color: #990066; /* maroon */
+  }
+  p.default, p.tabletPortrait, p.smartphone{
+    display:none;
+  }
+  p.tabletLandscape{
+    display:block;
+  }
+}
+
+/* iPads (portrait) ------------------------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  body{
+    background-color: #009933; /* green */
+  }
+  p.default, p.tabletLandscape, p.smartphone{
+    display:none;
+  }
+  p.tabletPortrait{
+    display:block;
+  }
+}
+
+/* Smartphone styles */
+@media
+  screen and (max-width:480px),
+  screen and (max-device-width:480px) {
+}
