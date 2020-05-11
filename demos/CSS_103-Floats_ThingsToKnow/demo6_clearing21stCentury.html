@@ -1,0 +1,179 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <title>CSS: Clearing floats demo</title>
+    <link rel='stylesheet' media='all' type='text/css' href='css/baselayout.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='css/clearing21stcentury.css' />
+
+    <!--[if lte IE 7]>
+    <style type="text/css">
+      .clearfix {
+        zoom: 1;     /* triggers hasLayout and clearing effect */
+        display: block;     /* resets display for IE/Win */
+      }  /* Only IE can see inside the conditional comment and read this CSS rule.
+        Don't ever use a normal HTML comment inside the CC or it will close prematurely. */
+      a:visited, a:link {
+        color: #0000ff;
+      }
+    </style>
+    <![endif]-->
+
+
+    
+  </head>
+  <body>    
+    <div id='titleWrap'>
+      <h1><span class='pageTitle' id='index' title='Home'>Clearing floats without structural markup</span></h1>
+    </div>
+    <div id='titleDesc'>Page demonstrates how to clear floats without additional structural markup.  </div>
+    <div id='contentWrap'>
+      <h2>Clearing floats in the age of old</h2>
+      <p>When a float is contained within a container box that has a visible border or background,
+        that float does not automatically force the container's bottom edge down as the float is made taller.
+        Instead the float is ignored by the container and will hang down out of the container bottom like a
+        flag. Those familiar only with Internet Explorer may scratch their heads and say
+        <span class='emp italics quote'>That's not right</span> True, IE/Win does enclose a float within a container
+        <span class='emp italics quote'>automatically</span>, however it will if the container element
+        happens to possess the MS-only quality called <strong class='emp'>hasLayout</strong>.</p>
+      <p>This float-enclosing behavior in IE can also be <span class='empBlue quote'>toggled</span> off again
+        just by hovering of links within the container, if that hovering alters either the link background or one of
+        several other CSS properties. Quite a mess, which we have seen in the
+        <span class='empBlue italics quote'>Guillotine Bug</span> section.</p>
+      <p>Cleared elements; as we seen earlier in the things to know section; reference adding additional
+        structural markup. without the additional structural markup, - such a cleared box cannot be at
+        the same horizontal level as a preceding float. It must appear just below that level. The image shows
+        how this might look, with a red border representing the container element: </p>
+      <img class='center' src='images/clear-box-floats.gif' />
+      <p>The standard method of making an outer container appear to enclose a nested float is to place a
+        cleared element last in the container, which has the effect of 'dragging' the lower edge of the
+        containing box lower than the float. Thus the float appears to be enclosed within the container
+        even though it really isn't. The code for a cleared box usually looks something like this: </p>
+      <pre>
+        &lt;div&gt; &lt;!-- float container --&gt;<br />
+        &nbsp;&nbsp;&lt;div style="float:left; width:30%;"&gt;&lt;p&gt;Some content&lt;/p&gt;&lt;/div&gt;<br />
+        &nbsp;&nbsp;&lt;p&gt;Text not inside the float&lt;/p&gt;<br />
+        &nbsp;&nbsp;&lt;div style="clear:both;"&gt;&lt;/div&gt;<br />
+        &lt;/div&gt;
+      </pre>
+      <h2>Issues with this approach</h2>
+      <p>The concern or issue with this approach is that this method is not intuitive, requiring an extra
+        element to be added to the structural markup. Oce of the major premises of CSS is that it should
+        help to reduce the bloated structural markup used in presentation.  The idea of adding markup just
+        so floats may be kept within containers, essentially re-bloats the page markup.</p>
+      <h2>Clearing for standards based browsers</h2>
+      <p>In this approach, <span class='italics'>no clearing element is required.</span> also the approach does not affect IE.</p>
+      <h3>Psuedoclass  :after</h3>
+      <p>In CSS2 the <span class='emp'>:after</span> psuedoclass allows for extra content to be added at the
+        end of a element.  This means no actual markup is needed in the (X)HTML.  the content is specified
+        from within the Stylesheet, and it appears in the page as would a (X)HTML element being inserted
+        following the target element.  This implies that the <span class='empBlack bold'>:after</span>
+        generated conetent cannot receive some CSS properties such as 'table', 'float', 'list', or 'position'
+        properties.  However, the 'clear' property is permitted.</p>
+      <p>The approach we will use with the <span class='empBlack bold'>:after</span> that will insert a
+        simple character such as a 'period' followed by providing the generated element style
+        <span class='emp'>{clear:both;}</span>.  Essentially at a minimum, that is all that is required, however
+        no one wants a line space meesing the end of their container box that is now fairly clean. so in this
+        case we will also <span class='emp'>{height: 0;}</span> and <span class='emp'>{visibility: hidden;}</span>
+        to prevent the period from showing. Here is an example:</p>
+      <pre>
+        .clearfix:after {
+          content: ".";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden;
+        }
+      </pre>
+      <p>In observing the above example:  you may have noticed that <span class='emp'>{display: block;}</span>
+        is also applied to the <span class='empBlack bold'>:after</span> element, the reason for this:
+        if the style is not present and the element is of the inline flavor - then that element defaults to
+        <span class='empBlue bold'>inline</span>, and cannot receive the 'clear' property.
+        <span class='empBlack bold'>NOTE:</span> if the choice is to use the
+        <span class='emp'>{overflow: hidden;}</span> to hide the period - then some browsers may actually
+        render the period. </p>
+      <h2>What about IE needs?</h2>
+      <p>Internet Explore 6 and 7, do not support the <span class='emp'>:after</span> psuedoclass, then we are
+        put into a position to be dependent on the same <span class='emp bold italics'>auto-clearing</span>
+        effect in IE6, and this behavior happens when the float containing the elements receives a
+        <span class='empBlue bold'>hasLayout</span> applied to it.  the solution can be adjusted with a simple
+        declaration of <span class='emp quote'>{zoom:1;}</span> will perform this adjustment to IE5.5 and above,
+        however it is proprietary to IE and needs to be hidden within IE conditional comments in order to validate.</p>
+      <p>As we previously seen in the <span class='emp bold'>Guillotine Bug</span>, Internet Explorer does have some
+        special needs with respect to the Auto-enclosing behavior.  <span class='empBlack bold'>Reminder:</span>
+        The container element has links inside followed by a float, adding <span class='empBlack bold'>:hover</span>
+        psuedoclass may introduce the toggling of hasLayout causing the the lower edge of the container box to
+        suddenly jump up and cut-off floated content.  </p>
+    </div>
+    <div id='guillotineDemo'>
+      <div class='guillotine-box'>
+        <div class='guillotine-float'>
+          <a href='#'>Float Link</a><br />
+          Any link in this float will restore the cutoff portion, as will the links in the first two text
+          lines outside the float. Something makes those first two lines 'special'.
+        </div>
+        <a href='#'>Link</a><br />
+        <a href='#'>Link</a><br />
+        <a href='#'>Link</a><br />
+        <a href='#'>Link</a><br />
+      </div>
+      <div class='guillotine-box'>
+        <div class='guillotine-float'>
+          <a href='#'>Float Link</a><br />
+          The non-floated links to the left are wrapped in a div, and that div has the
+          special CSS for IE applied to it. Say <span class='empBlue bold italics'>vaya con dios</span> to the Guillotine Bug!
+        </div>
+        <div class='clearfix noparachar'>
+          <a href='#'>Link</a><br />
+          <a href='#'>Link</a><br />
+          <a href='#'>Link</a><br />
+          <a href='#'>Link</a><br />
+        </div>
+      </div>
+<!--      <div style='clear: both;'></div> -->
+    </div>
+    <p class='exampleFollow'>The second example has been corrected by placing those links in a div, which then gets the zoom fix applied
+      to it. Any block element will work here. Yes, this means another element is needed, however unlike a clearing
+      element used previously, this div is a <span class='empBlue bold italics quote'>semantic</span> element.
+      Text content really ought to be wrapped in semantic containers to begin with, and since we
+      forward-thinking coders always have our content thusly contained, it's easy to apply the same
+      <span class='empBlack bold'>.clearfix</span> class to one more element. </p>
+    <h2>Making all this work together</h2>
+    <p>So far we are looking like we have everything, however - wevery version of IE does have its own way of
+      doing things.  In this case IE 5.5 Win/Mac does not auto-clear and it also does not support the
+      <span class='empBlack bold'>:after</span> psuedoclass. Our current solion works for almost everything
+      except to really make it pretty we need just one more thing. Just apply a
+      <span class='emp bold'>{display: inline-block;}</span> (solution found in csscreator)- followed by resetting
+      the display in the HTML. So here is the solution.</p>
+    <p>First we add the code to the stylesheet itself.  Notice we added a little something for IE/Mac:</p>
+    <pre>
+      .clearfix:after {
+        content: &quot;.&quot;;
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+      <span class='emp bold'>.clearfix {display: inline-block;}  /* for IE/Mac */</span>
+    </pre>
+    <p>In the (X)HTML we add our conditional comment to address the IE specific issue.:</p>
+    <pre>
+      &lt;!--[if lte IE 7]&gt;
+      &lt;style type='text/css'&gt;
+        /* Only IE can see inside the conditional comment and read this CSS rule. */
+        /* Don't ever use a normal HTML comment inside the CC or it will close prematurely. */
+        .clearfix {
+          zoom: 1;        /* triggers hasLayout */
+          <span class='emp bold'>display: block; /* resets display for IE/Win */</span>
+        }  
+      &lt;/style&gt;
+      &lt;![endif]--&gt;
+    </pre>
+    <div id='footerArea'>This is the footer area, and generally good to have in all pages.
+      <a class='footerLink' href='index.php#demo6'>index page</a>
+    </div>
+  </body>
+</html>
