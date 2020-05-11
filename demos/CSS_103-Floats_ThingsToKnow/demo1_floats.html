@@ -1,0 +1,124 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <title>CSS: Float Boxes Demo</title>
+    <link rel='stylesheet' media='all' type='text/css' href='css/baselayout.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='css/thingstoknow.css' />
+  </head>
+  <body>    
+    <div id='titleWrap'>
+      <h1><span class='pageTitle' id='index' title='Home'>CSS Floats: Things to know</span></h1>
+    </div>
+    
+    <div id='contentWrap'>
+      <ol>
+        <li class='li'><a name='item1' class='itemLink' href='#item1'>Containing Floats:</a><span> Floats are a
+            powerful CSS concept, and at times may introduce some complex tasks.</span>
+          <p class='discuss'>The probability that a developer has comes across a situation to with two block
+            components each containing a image inside it.<img src='images/thatsNotRightFloat.gif' /><br/>
+            The result seen in Figure 1 happens because the div elements don't
+            <span class='empBlue italics quote'>stretch</span> to contain the
+            floated images within them. To look at the situation from the reverse angle, it happens because the
+            floated images <span class='empBlue italics quote'>stick out</span> of the bottom of the div elements.<br />
+            This is not a bug. It's also not a flaw in CSS. It is, in fact, the behavior that most authors
+            will want most of the time. It's just not what they would want in the example shown.</p>
+          <h2 class='discuss'>A Clear Solution</h2>
+          <p class='discuss'>If floats are to be used in creating non-table layouts, then there needs to
+            be a way to make their containing elements stretch around them. At present, this requires a
+            bit of a structural markup. Since we want the bottom of the containing element to be placed
+            clear past the bottom of the float, then clear is our answer. We need only insert a
+            block-level element just before the end of the container, and clear it. Consider:
+            <pre>
+              &lt;div class='item'&gt;
+                &lt;img src='w6144.gif' /&gt;Widget 6144 &lt;br/&gt;$39.95
+                &lt;hr/&gt;
+              &lt;/div&gt;
+              &lt;div class='item'&gt;
+                &lt;img src='w6145.gif' /&gt;Widget 6145 &lt;br/&gt;$44.95
+                &lt;hr/&gt;
+              &lt;/div&gt;
+            </pre>
+          <p class='discuss'>Now we apply the following CSS rules to the preceding markup, and get the
+            result shown below.</p>
+          <pre>
+            div.item hr {display: block; clear: left; margin: -0.66em 0; visibility: hidden;}
+          </pre>
+          <img src='images/looksMuchBetterFloat.gif' />
+          <p class='discuss'>By ensuring that the hr elements are block-level, part of the normal flow,
+            and cleared, we force the divs to <span class='empBlue italics quote'>stretch around</span>
+            the left-floated images.</p>
+          <h2 class='discuss'>Set width to Fix a Float</h2>
+          <p class='discuss'>To avoid over-use of the structural markup discussed so far, although they are
+            still necessary at times. In most browsers, and as defined in CSS2.1, a floated element will
+            expand to contain any floated elements that descend from it. So in our widget example, we could
+            remove all of the <span class='emp italics quote'>clearer</span> elements and instead
+            write these styles:</p>
+          <pre>
+            div.item {float: left; border: 1px solid; padding: 5px; width: 60%;}
+            div.item img {float: left; margin: 5px;}
+          </pre>
+          <p class='discuss'>The clearing div effectively pushes the normal flow downward, forcing any
+            following content to flow after the cleared element, and therefore after the floated divs. </p>
+          <h2 class='discuss'>Drawbacks</h2>
+          <p class='discuss'>The situation becomes fragile if these floats are part of a more
+            complicated layout, one possibly using floats, positioning, or tables. his is not to say such
+            layouts are impossible to achieve. They may, however, involve a good deal of trial and error to
+            avoid obscure floating and other layout bugs that may lurk inside rendering engines. </p>
+        </li>
+        <li class='li'><a name='item2' class='itemLink' href='#item2'>Floated content:</a><span>When you float
+            an element it becomes a block box. This box can then be shifted to the left or right on the
+            current line. The markup options are: <pre>float: left, float: right or float: none</pre></span>
+          <p class='discuss'>A floated box is laid out according to the normal flow, then taken out of the
+            flow and shifted to the left or right as far as possible. Content can flow down the right side
+            of a left-floated box and down the left side of a right-floated box.</p>
+          <p class='discuss'>You can put several floats beside each other.</p>
+          <h2 class='discuss'>Where will a floated element move to?</h2>
+          <p class='discuss'>Floated boxes will move to the left or right until their outer edge touches
+            the containing block edge or the outer edge of another float. If there isn't enough horizontal
+            room on the current line for the floated box, it will move downward, line by line, until a
+            line has room for it.</p>
+          <h2 class='discuss'>Do floated items need a width?</h2>
+          <p class='discuss'>In general, You should set a width on floated items (except if applied directly
+            to an image - which has implicit width). If no width is set, the results may be less predictable.
+            Theoretically, a floated element with an undefined width should shrink to the widest element
+            within it. This could be a word, a sentence or even a single character - and results can
+            vary from browser to browser.</p>
+          <h2 class='discuss'>Elements above and below floated elements</h2>
+          <p class='discuss'>Block level elements above a floated element will not be affected by it.
+            However, elements below will wrap around the floated element. While content will wrap around a
+            floated element, border, background image and background color will extend underneath. </p>
+          <p class='discuss'>If you do not want elements below a floated element to wrap around it, you can
+            apply the clear property to the following element using
+            <pre><nobr>
+              <span class='quote'>clear: left</span>,
+              <span class='quote'>clear: right</span> or
+              <span class='quote'>clear: both</span></nobr>
+            </pre>
+          </p>
+          <h2 class='discuss'>Conclusion</h2>
+          <p class='discuss'>1. The first thing we need to remember is that a floating element is shifted
+            either to the left or to the right. It is not possible to make an element float in the centre,
+            something that often is frustrating for beginners. The basic rule is that a floating element
+            is only shifted sideways.</p>
+          <p class='discuss'>2. If we float more elements in the same direction they will stack up, but
+            sooner or later we’ll run out of space.  When there is insufficient space on the line, they
+            are shifted downward until they fit.</p>
+          <p class='discuss'>3. A floating box can never end up above the upper edge of the line where it’s
+            created. The upper edge of a floating box is aligned with the upper edge of the current line box.</p>
+        </li>
+          <!--
+        <li class='li'><a name='item2' class='itemLink' href='#item2'>Second Item:</a><span>Item text</span>
+          <p class='discuss'></p>
+        </li>
+        -->
+      </ol>
+    </div>
+    <div id='footerArea'>This is the footer area, and generally good to have in all pages.
+      <a class='footerLink' href='index.php#demo1'>index page</a>
+    </div>
+  </body>
+</html>
