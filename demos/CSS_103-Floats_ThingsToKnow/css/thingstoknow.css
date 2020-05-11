@@ -1,0 +1,33 @@
+/*
+*
+*/
+a.itemLink:link,a.itemLink:active, a.itemLink:visited {
+    color: #1D587F;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a.itemLink:link > span, a.itemLink:visited > span {
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+}
+a.itemLink:hover, a.itemLink:focus, a.itemLink:active {
+    color: #FF0000;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.itemLink:hover > span, a.itemLink:focus > span {
+    color: #0000FF;
+    font-weight: normal;
+}
+p.discuss, h2.discuss {
+    margin: 2px 20px 5px 15px;
+}
+h2.discuss { padding: 5px 0 0 0; }
+
+li.li {
+    border-bottom: 1px solid #0000AA;
+    margin: 0 0 2px 0;
+    padding: 0 0 2px 0;
+}
