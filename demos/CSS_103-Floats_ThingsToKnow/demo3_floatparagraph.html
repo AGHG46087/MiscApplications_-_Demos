@@ -1,0 +1,34 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <title>CSS: Float Boxes Paragraph Demo</title>
+    <link rel='stylesheet' media='all' type='text/css' href='css/baselayout.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='css/float_paragraph.css' />
+  </head>
+  <body>    
+    <div id='titleWrap'>
+      <h1><span class='pageTitle' id='index' title='Home'>Float Paragraph example</span></h1>
+    </div>
+    <div id='titleDesc'>Page demonstrates where items are floated then adding the paragraph text.
+      as we can see the text <span class='empBlue italics quote'>floats around</span> the floated blocks.</div>
+    <div id='contentWrap'>
+      <div id='box1' class='myBox'>Box 1</div>
+      <div id='box2' class='myBox'>Box 2</div>
+      <div id='box3' class='myBox'>Box 3</div>
+      <p id='naturalFlow'>The first thing we need to remember is that a floating element is shifted either
+        to the left or to the right. It is not possible to make an element float in the centre, something
+        that often is frustrating for beginners. The basic rule is that a floating element is only shifted
+        sideways. Elements following a floated element will wrap around the floated element. If you do not
+        want this to occur, you can apply the “clear” property to these following elements. The four options
+        are <pre>clear: left, clear: right, clear: both or clear: none.</pre>
+      </p>
+    </div>
+    <div id='footerArea'>This is the footer area, and generally good to have in all pages.
+      <a class='footerLink' href='index.php#demo3'>index page</a>
+    </div>
+  </body>
+</html>
