@@ -1,0 +1,62 @@
+/*
+*
+*/
+:link,:visited { text-decoration:none }
+ul,ol { list-style:none }
+h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{ margin:0; padding:0 }
+a img,:link img,:visited img { border:none }
+address { font-style:normal }
+
+
+body {
+    padding: 0 10px 0 10px;
+}
+#titleWrap {
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+.pageTitle {
+    font-size: 200%;
+}
+#titleDesc {
+    font-weight: normal;
+}
+#contentWrap {
+    width: 900px;
+    float: left;
+    margin: 10px 0 20px 10px;
+}
+#footerArea {
+    clear: both;
+    font-size: 110%;
+    border: medium inset #CCCCCC;
+    background-color: #EEEEEE;
+    width: 900px;
+    margin: 0px 0 0 10px;
+}
+
+a.footerLink:link,a.footerLink:active, a.footerLink:hover, a.footerLink:focus, a.footerLink:visited {
+    color: #0066CC;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a.footerLink:focus, a.footerLink:hover {
+    color: #0000CC;
+    outline: red solid thin;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+.emp { color: #FF0000;}
+.empBlue { color: #0000FF; }
+.empBlack { color: #000000;}
+.bold { font-weight:bold; }
+.italics { font-style: italic;}
+p:first-letter { color:#ff0000;font-size:large}
+h2:first-letter { color:#0000ff;font-size:xx-large}
+[class~="quote"]:before,  [class~="quote"]:after {content: '"';}
+p { margin: 5px 0 10px 0; }
+p.exampleFollow { clear: both;}
