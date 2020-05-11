@@ -1,0 +1,132 @@
+/*
+*
+*/
+body {
+    margin: 10px 10%;
+    padding: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: #999999 1px solid;
+}
+
+h1, h2, h3, h4 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    color: #333344;
+}
+#titleWrap {
+    text-align: center;
+    margin: 30px 0 10px 0; 
+}
+.pageTitle {
+    font-size: 200%;
+}
+strong.emp {
+    color: #FF0000;
+}
+.examplelist, .examplelist li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#footer {
+    border-top: #999999 1px solid;
+}
+
+.clear {
+    clear:both;
+    height:0;
+    margin:0;
+    font-size: 1px;
+    line-height: 0;
+}
+
+pre {
+    padding: 10px;
+    border: #CCCCCC 1px solid;
+    font-size: small;
+    background-color: #FAFAFF;
+}
+
+/*** All links are Guillotine invoking ***/
+
+a:hover {
+    color: #0000FF;
+    background: none #FFFFFF scroll repeat 0% 0%;
+}
+
+
+/*** Container for the Guillotine Examples ***/
+
+.container {
+    border: #CC0000 5px solid;
+    width: 400px;
+    background-color: #CCCCCC;
+}
+
+/*** Container for the Guillotine Example that uses
+     P.I.E. method to enclose the float        ***/
+
+.piecontainer {
+    border: #CC0000 5px solid;
+    width: 400px;
+    background-color: #CCCCCC;
+}
+
+.piecontainer:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility:hidden;
+}
+
+/*  \*/
+* html .piecontainer {
+    height: 1%;
+}
+/*  */
+
+/*** End P.I.E. container rules ***/
+
+.floated {
+    border: #0000CC 5px solid;
+    width: 200px;
+    float: left;
+    background-color: #FFFFCC;
+}
+
+/*  \*/
+* html .hollyhacked {
+    height: 1%;
+}
+/*  */
+
+
+a.footerLink:link,a.footerLink:active, a.footerLink:hover, a.footerLink:focus, a.footerLink:visited {
+    color: #0066CC;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a.footerLink:focus, a.footerLink:hover {
+    color: #0000CC;
+    outline: red solid thin;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+#browserIE6Warn {
+    font-size: 120%;
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.emp { color: #FF0000;}
+.empBlue { color: #0000FF;}
+.italics { font-style: italic;}
+p:first-letter { color:#ff0000;font-size:large}
+h2:first-letter { color:#0000ff;font-size:xx-large}
+[class~="quote"]:before,  [class~="quote"]:after {content: '"';}
