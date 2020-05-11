@@ -1,0 +1,320 @@
+<!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache'/>
+    <meta http-equiv='Cache-Control' content='no-cache,must-revalidate,max_age=0'/>
+    <meta http-equiv='Expires' content='-1'/>
+    <title>CSS: Float: IE6 Guillotine Bug</title>
+    <link rel='stylesheet' media='all' type='text/css' href='css/guillotine_ie6.css' />
+    <!--[if lte IE 6]>
+        <style>
+          #browserIE6Warn { display: none; }
+        </style>
+    <![endif]-->
+  </head>
+  <body>
+    <div id='titleWrap'>
+      <h1><span class='pageTitle' id='index' title='Home'>Guillotine IE 6</span></h1>
+    </div>
+    <div id='titleDesc'>
+      <h2 id='browserIE6Warn'>Demo should be viewed in IE6 to see the effect, IE7 inner float format is incorret, IE8 formatting corrected</h2>
+      <h2>Doh!, where's my float?</h2>
+      <p>The Guillotine is a bug that chops off the bottom part of floated elements when certain links are
+        hovered over.</p>
+      <p>In the live demo which follows, notice how the links in the first two lines in the non-floated
+        content do not invoke the bug, and actually reset the Guillotine when given a hover. All other
+        links in the non-floated content will invoke the bug.</p>
+      <p>Any link in the floated div will also reset the Guillotine.</p>
+      <p>The bug was discovered by <strong class='emp'>Chris Wilson - 2005</strong>.
+        <strong><u>Portions of this demo are borrowed from
+            <span class='quote'>Prabhath Sirisena</span>.</u></strong></p>
+    </div>
+    <!-- GEEK - start of demo -->
+    <!-- Live Example for Guillotine when the container has a dimension -->
+    <div class="container">
+      <div class="floated">
+	<p>This is the <strong>floated</strong> div.</p>
+	<p><a href="#">Any link</a> in this div will reset the Guillotine.</p>
+	<p>Content</p>
+	<p>More Content</p>
+	<p>And More Content</p>
+	<p>Even More Content</p>
+	<p>Until the float is taller than the non-floated content</p>
+      </div>
+      <ul class="examplelist">
+	<li><a href="#">Link in Line 1</a></li>
+	<li><a href="#">Link in Line 2</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+      </ul>
+      This is the <strong>non-floated</strong> content.
+    </div>
+    <!--
+     Clearing div so that the content doesn't wrap around
+     the float in standard-compliant browsers
+    -->
+    <div style="clear: both; height: 10px;"></div>
+    <!-- OK, continue with real stuff -->
+    <h2>The Background</h2>
+    <p>Now that we've got a glimpse of the Guillotine, let's examine what we should have at hand to set one up.</p>
+    <p>The main ingredients for a <span class='emp quote'>properly working</span> Guillotine are:</p>
+    <ol>
+      <li>A container element</li>
+      <li>A float element inside the container that is <span class='emp italics quote'>not cleared</span></li>
+      <li>Links inside the container in <em>non-floated</em> content <em>after</em> the float</li>
+      <li>a:hover style rules for those links that change certain properties</li>
+      <li>Internet Explorer, obviously</li>
+    </ol>
+    <p>The non-floated content may or may not be wrapped in a block element, such as p or div.</p>
+    <p>The a:hover style rules of the Guillotine invoking links could be anything which changes, among other things:</p>
+    <ul>
+      <li>Background</li>
+      <li>Padding</li>
+      <li>Text Style</li>
+      <li>Border etc.</li>
+    </ul>
+
+<pre>
+&lt;!-- <strong>Example Layout for a Guillotine Invoking Situation</strong> --&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+   &lt;div id=&quot;floated&quot;&gt;
+      This is the floated content.
+      It is vulnerable to the Guillotine.
+   &lt;/div&gt;
+
+   This is the non floated content inside the container.
+   Guillotine invoking links should be in this content.
+&lt;/div&gt;
+
+</pre>
+
+<pre>
+/* <strong>Example Style Rules for a Guillotine Invoking Link</strong> */
+
+a:hover {
+
+	background: none #FFFFCC scroll repeat 0% 0%;
+
+	/* and/or */
+
+	padding: 5px;
+
+	/* and/or */
+
+	text-style: italic;
+
+	/* and/or */
+
+	border-bottom: #0000FF 1px solid;
+
+}
+</pre>
+    <p>An exception is changing the text colour, which does not invoke the bug.</p>
+    <p>As you can see, it's pretty easy to find yourself trapped in a Guillotine. Armed with the above
+      prerequisites, let's move on to the scary stuff: Guillotine in action.</p>
+    <h2>The Bug</h2>
+    <p>If the container has a dimension specified, IE will automatically enclose all floats inside the container.
+      This is in gross violation of the specs, but as we have come to know rather painfully, it is something to be
+      expected from this browser. Thus, in IE, the container will stretch down to contain a float that has exceeded
+      the height of non-floated content.</p>
+    <p>It may appear that not specifying a dimension to the container ( sometimes not a practical approach ),
+      would prevent the bug, since the float will not be auto-enclosed in the first place. However IE is
+      just being what it is IE=&gt;Internet Exploder, even if the float is not auto enclosed a Guillotine link
+      would still chop off the bottom part of the float <em>under certain conditions</em>.</p>
+    <p>For the Guillotine to occur in this context, the float should not be cleared by any element in the page.</p>
+    <h2>The Fixes</h2>
+    <h3>1. When floats should not be enclosed</h3>
+    <p>This is not very elegant, but the only thing that works at the moment is to have an empty div to
+      clear everything,<em>outside</em> and <em>after</em> the container.</p>
+    <div style="border: #CC0000 5px solid; background-color: #CCCCCC">
+      <div class="floated">
+	<p>This is the <strong>floated</strong> div.</p>
+	<p><a href="#">Any link</a> in this div will reset the Guillotine.</p>
+	<p>Content</p>
+	<p>More Content</p>
+	<p>And More Content</p>
+	<p>Even More Content</p>
+	<p>Until the float is taller than the non-floated content</p>
+      </div>
+      <ul class="examplelist">
+	<li><a href="#">Link in Line 1</a></li>
+	<li><a href="#">Link in Line 2</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+      </ul>
+      This is the <strong>non-floated</strong> content.
+    </div>
+    <p style="border: #00CC00 5px solid;">This is a paragraph that comes <em>after</em> the container</p>
+    <div style="border: #CC00CC 5px solid; clear: both">This div is given a <strong>clear: both</strong></div>
+<pre>
+&lt;!-- <strong>Example Layout to Fix the Guillotine with Markup</strong> --&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+   &lt;div id=&quot;floated&quot;&gt;
+      This is the floated content.
+      It is vulnerable to the Guillotine.
+   &lt;/div&gt;
+
+   This is the non floated content inside the container.
+   Guillotine invoking links should be in this content.
+&lt;/div&gt;
+<strong>&lt;div style=&quot;clear: both&quot;&gt;&lt;/div&gt;</strong>
+</pre>
+    <h3>2. When floats should be enclosed</h3>
+    <p>The float should be cleared inside the container for it to be enclosed. Using an empty clearing
+      div was the preferred method, until a new way of <strong>Clearing Floats without Structural Markup</strong>
+      was introduced ( a manner in which a CSS attribnute introduces a technique to clear ) Experiment with this!
+      <ul>
+        <li>content "."</li>
+        <li>displays as a block</li>
+        <li>clears the float</li>
+        <li>visibiity is hidden</li>
+      </ul> If the float is cleared the old fashioned way using a div, the Guilotine will not be invoked.</p>
+    <p>The clearing div should appear <em>inside</em> the container div, <em>after</em> the actual content.</p>
+    <div class="container">
+      <div class="floated">
+	<p>This is the <strong>floated</strong> div.</p>
+	<p><a href="#">Any link</a> in this div will reset the Guillotine.</p>
+	<p>Content</p>
+	<p>More Content</p>
+	<p>And More Content</p>
+	<p>Even More Content</p>
+	<p>Until the float is taller than the non-floated content</p>
+      </div>
+      <ul class="examplelist">
+	<li><a href="#">Link in Line 1</a></li>
+	<li><a href="#">Link in Line 2</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+	<li><a href="#">Guillotine Link</a></li>
+      </ul>
+      This is the <strong>non-floated</strong> content.
+      <div style="clear: both;"></div>
+    </div>
+
+<pre>
+&lt;!-- <strong>Example Layout to Fix the Guillotine with Markup</strong> --&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+
+   &lt;div id=&quot;floated&quot;&gt;
+      This is the floated content.
+      It is vulnerable to the Guillotine.
+   &lt;/div&gt;
+
+   This is the non floated content inside the container.
+   Guillotine invoking links should be in this content.
+   <strong>&lt;div style=&quot;clear: both&quot;&gt;&lt;/div&gt;</strong>
+&lt;/div&gt;
+
+</pre>
+    <h3>3. Squashing a bug - 101</h3>
+    <p>What we really truly need is an approach for the <strong>:after</strong> psuedo method and still
+      get have the items rock and roll properly. Well guess what, in comes the
+      <a href="../articles/hollyhack.html" title="An article which explains the Holly Hack">
+        <strong>Holly&nbsp;Hack</strong></a> comes to our rescue.</p>
+    <p>First we need to help the hack just a bit - we need to contain the non-floated content inside a
+      block level element such as p or div if it is not already. Wrapping text this way is semantically correct,
+      so all the standard advocates... clap your hands.</p>
+    <p>Second, we give a height to this block element using the Holly hack, so that only IE sees the
+      dimension. And all of a sudden the bug is squashed.</p>
+    <div class="piecontainer">
+      <div class="floated">
+	<p>This is the <strong>floated</strong> div.</p>
+	<p><a href="#">Any link</a> in this div will reset the Guillotine.</p>
+	<p>Content</p>
+	<p>More Content</p>
+	<p>And More Content</p>
+	<p>Even More Content</p>
+        <p>Until the float is taller than the non-floated content</p>
+      </div>
+      <div class="hollyhacked">
+	<ul class="examplelist">
+	  <li><a href="#">Link in Line 1</a></li>
+	  <li><a href="#">Link in Line 2</a></li>
+	  <li><a href="#">Guillotine Link</a></li>
+	  <li><a href="#">Guillotine Link</a></li>
+	  <li><a href="#">Guillotine Link</a></li>
+	</ul>
+	This is the <strong>non-floated</strong> content.</div>
+    </div>
+
+<pre>
+&lt;!-- <strong>Example Layout with the Holly Hack applied</strong> --&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+   &lt;div id=&quot;floated&quot;&gt;
+      This is the floated content.
+      It is vulnerable to the Guillotine.
+   &lt;/div&gt;
+
+   <strong>&lt;p class=&quot;hollyhacked&quot;&gt;</strong>
+   This is the non floated content inside
+    the container. Guillotine invoking links
+    should be in this content.<strong>&lt;/p&gt;</strong>
+&lt;/div&gt;
+</pre>
+
+<pre>
+/* <strong>Example style rules for the above fix </strong> */
+
+#container {
+
+    /* Set margins, padding, borders, colours etc. */
+
+}
+
+
+/* <strong>Contain the floats using the :after method</strong> */
+#container:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility:hidden;
+}
+
+/*  \*/
+* html #container {
+	height: 1%;
+}
+/*  */
+
+/* End float containing rules */
+
+
+#floated {
+
+    /* Set margins, padding, borders, colours etc. */
+
+	float: left;   /* float the block */
+
+}
+
+
+/* <strong>Apply Holly Hack to the non-floated content</strong> */
+
+/*  \*/
+* html .hollyhacked {
+	height: 1%;
+}
+/*  */
+
+</pre>
+
+
+
+    <p>As you can see, there is not perfect fix for the Guillotine bug. The web app architect should pick the solution
+      according to the context and be willing to compromise. It's difficult, but what isn't with IE?</p>
+
+
+    <!-- GEEK End of Page--> 
+    <div id='footerArea'>This is the footer area, and generally good to have in all pages.
+      <a class='footerLink' href='index.php#demo4'>index page</a>
+    </div>
+  </body>
+</html>
