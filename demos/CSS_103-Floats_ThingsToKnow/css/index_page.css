@@ -1,0 +1,41 @@
+/*
+*
+*/
+#demoList {
+    margin: 0 0 20px 0;
+}
+#demoList li {
+    list-style: disc;
+}
+li:hover {
+    color: #0000FF;
+    font-size: 100%;
+    font-weight: bold;
+}
+a.profileLink:link,a.profileLink:active, a.profileLink:visited {
+    color: #1D587F;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.profileLink:link > span, a.profileLink:visited > span {
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+}
+a.profileLink:hover, a.profileLink:focus, a.profileLink:active {
+    color: #FF0000;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.profileLink:hover > span, a.profileLink:focus > span {
+    color: #0000FF;
+    font-weight: normal;
+}
+div.li {
+    padding: 0 0 0 2px;
+    content: '*';
+}
+span.nodecor {
+    text-decoration: none !important;
+}
