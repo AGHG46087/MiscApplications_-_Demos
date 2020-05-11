@@ -1,0 +1,35 @@
+/*
+*
+*/
+#contentWrap {
+    width: 500px;
+    border: thin outset #000000;
+}
+.myBox {
+    font-size: 200%;
+    float: left;
+    border: thin inset #000000;
+    padding: 0 0 0 0px;
+    margin: 0 0 0 0px;
+/*    width: 76px;  /* generally we need width, but we are ok for this demo */
+}
+#box1 {
+    background-color: #FF0000;
+    color: #FFFF00;
+    
+}
+#box2 {
+    background-color: #00FF00;
+    color: #000000;
+    float: right;
+}
+#box3 {
+    background-color: #0000FF;
+    color: #FFFFFF;
+    float: right;
+}
+#naturalFlow {
+    clear: none;
+    position: inherit;
+    padding: 0 2px 0 5px;
+}
