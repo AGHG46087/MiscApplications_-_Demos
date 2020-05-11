@@ -1,0 +1,50 @@
+/*
+*
+*/
+img.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.noparachar {
+    margin: 0;
+}
+
+#guillotineDemo {
+    padding: 10px 10% 20px 22%;
+}
+.guillotine-box {
+    float: left;
+    width: 200px;
+    border: 4px solid #5555aa;
+    background: #ddd;
+    margin: 0 40px 10px 0;
+    color: #fff;
+    font-size: .8em;
+}
+
+.guillotine-float {
+    float: right;
+    width: 130px;
+    border: 3px solid #ff8;
+    background: #766;
+    color: #ffd;
+}
+
+.guillotine-box a:hover {
+    background: #aaa; /*** Any hovered BG will trigger bug ***/
+}
+
+
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
