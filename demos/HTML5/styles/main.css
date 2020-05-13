@@ -1,0 +1,292 @@
+/** Maincontent CSS **/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,font,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,input,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{font-weight:inherit;font-style:inherit;font-size:1em;font-family:inherit;margin:0;padding:0}body{font-size:16px;color:#000;background:transparent}ol{list-style:decimal outside}ul{list-style:none outside}table{width:100%;border-collapse:collapse;border-spacing:0;font-size:inherit}caption,th,td{text-align:center;}fieldset,img{border:0}a img,:link img,:visited img{border:none}blockquote:before,blockquote:after,q:before,q:after{content:""}address{font-style:normal}pre,code,kbd,samp,tt{font-family:monospace;line-height:100%}sup{vertical-align:text-top}sub{vertical-align:text-bottom}:link,:visited,del,ins{text-decoration:none}.clearfix:after{content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;} .clearfix{display:inline-block;} html[xmlns] .clearfix{display:block;} * html .clearfix{height:1%;}
+
+body {
+    font-size: 32px;
+    background-color: #999999;
+}
+h1,h2,h3 {
+    font:22px/18px Futura-CondensedMedium,"Futura Condensed",Gill Sans,Helvetica,"Arial Narrow",sans-serif;
+    position:relative;
+    text-shadow:1px 1px 2px #FFFFFF;
+    border-bottom:1px solid #91A1A9;
+    padding:0 0 3px;
+    border:medium none;
+    color:#FFFFFF;
+    margin:8px 0 16px;
+    text-align:center;
+    text-shadow:1px 1px 1px rgba(255, 255, 255, 0.55);
+}
+div#sectionFeatures.half {
+    width: 33%;
+}
+#contentWrap {
+    background:none repeat scroll 0 0 #999999;
+    float: left;
+    padding: 0 0 30px 0;
+    width: 1000px;
+}
+#primaryContent {
+    font-size: 80%;
+    border-radius:32px;
+    -o-border-radius:32px;
+    -ms-border-radius:32px;
+    -moz-border-radius:32px;
+    -webkit-border-radius:32px;
+    
+    background:none repeat scroll 0 0 #EEEEEE;
+    float: left;
+    padding: 0 0 30px 0;
+    width: 980px;
+    min-height: 680px; /* New change: min-height, and the height can grow */
+    height: auto; /*680px; */
+    margin: 10px 10px 0 10px;
+   /* overflow: hidden; */
+}
+
+#sectionAllCenter, h1#pageHeading {
+    border-radius:16px;
+    -o-border-radius:16px;
+    -ms-border-radius:16px;
+    -moz-border-radius:16px;
+    -webkit-border-radius:16px;
+    margin: 10px 10px 0 10px;
+    padding: 10px;
+    background:none repeat scroll 0 0 #D4DEE4;
+    float: left;
+    width: 960px;
+    border: solid #FFFFFF 2px;
+}
+h1#pageHeading {
+    background: none repeat scroll 0 0 #2F404A;
+    
+}
+
+#sectionContent, #sectionFeatures {
+    border-radius:16px;
+    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.42);
+    -o-border-radius:16px;
+    -o-box-shadow:1px 1px 5px rgba(0, 0, 0, 0.42);
+    -ms-border-radius:16px;
+    -ms-box-shadow:1px 1px 5px rgba(0, 0, 0, 0.42);
+    -moz-border-radius:16px;
+    -moz-box-shadow:1px 1px 5px rgba(0, 0, 0, 0.42);
+    -webkit-border-radius:16px;
+    -webkit-box-shadow:1px 1px 5px rgba(0, 0, 0, 0.42);
+    background:none repeat scroll 0 0 #2F404A;
+    color:#FFFFFF;
+    float:right;
+    position:relative;
+    text-shadow:1px 1px 1px rgba(0, 0, 0, 0.42);
+    font-size: 40%;
+    border: solid #FFFFFF 3px;
+}
+#sectionContent {
+    float: left;
+    width: 64%;
+    height: 100%;
+    padding: 0 10px 0 0;
+}
+#demoContent ol#demoList, ul#demoPPT {
+    margin: 0 0 20px 20px;
+    list-style-position: inside;
+}
+#demoContent ol#demoList a, ul#demoPPT a {
+    color: #00FFFF;
+}
+#demoContent ol#demoList.abridged li.abridgedOut {
+    display: none;
+}
+
+#features {
+    column-count: 2;
+    column-gap: 0;
+    -o-column-count: 2;
+    -o-column-gap: 0;
+    -ms-column-count: 2;
+    -ms-column-gap: 0;
+    -moz-column-count: 2;
+    -moz-column-gap: 0;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0;
+}
+#features {
+    margin: 16px 0 16px 24px;
+}
+p#caveatText {
+    font-size: 82%;
+    margin: 0 30px 20px 20px;
+}
+/* red x */
+.featureTest li:after, .redX:after, h1 span:after
+{
+    color: #F00;
+/*    content:  ' ✘'; */
+   content:  " \2717";
+}
+.featureTest li span.ie {
+    background: transparent url('../resrc/not_supported.gif') no-repeat center center;
+    line-height: 1%;
+    padding: 0px 10px 0px 1px;
+    margin-left: 3px;
+}
+/* green check */
+.greenCheck:after, 
+.fontface li.fontface:after,
+.audio li.audio:after,
+.video li.video:after,
+.geolocation li.geolocation:after, .geolocation span.geolocation:after,
+.canvas li.canvas:after,
+.canvastext li.canvastext:after,
+.rgba li.rgba:after,
+.hsla li.hsla:after,
+.multiplebgs li.multiplebgs:after,
+.borderimage li.borderimage:after,
+.borderradius li.borderradius:after,
+.boxshadow li.boxshadow:after, .boxshadow span.boxshadow:after,
+.opacity li.opacity:after,
+.cssanimations li.cssanimations:after,
+.csscolumns li.csscolumns:after, .csscolumns span.csscolumns:after,
+.cssgradients li.cssgradients:after, .cssgradients span.cssgradients:after,
+.cssreflections li.cssreflections:after,
+.csstransforms li.csstransforms:after, .csstransforms span.csstransforms:after,
+.csstransforms3d li.csstransforms3d:after,
+.csstransitions li.csstransitions:after, .csstransitions span.csstransitions:after,
+.localstorage li.localstorage:after,
+.sessionstorage li.sessionstorage:after,
+.webworkers li.webworkers:after,
+.applicationcache li.applicationcache:after,
+.svg li.svg:after,
+.smil li.smil:after,
+.svgclippaths li.svgclippaths:after,
+.hashchange li.hashchange:after,
+.websqldatabase li.websqldatabase:after, 
+.indexeddb li.indexeddb:after,
+.websockets li.websockets:after, .websockets span.websockets:after,
+.draganddrop li.draganddrop:after, .draganddrop span.draganddrop:after,
+.history li.history:after,
+.postmessage li.postmessage:after,
+.inlinesvg li.inlinesvg:after,
+.webgl li.webgl:after,
+.touch li.touch:after,
+.flexbox li.flexbox:after,
+.textshadow li.textshadow:after {
+    color: #9f9;
+    /* content: " ✓"; */
+    content:  " \2713";
+}
+
+.fontface li.fontface span.ie,
+.audio li.audio span.ie,
+.video li.video span.ie,
+.geolocation li.geolocation span.ie,
+.canvas li.canvas span.ie,
+.canvastext li.canvastext span.ie,
+.rgba li.rgba span.ie,
+.hsla li.hsla span.ie,
+.multiplebgs li.multiplebgs span.ie,
+.borderimage li.borderimage span.ie,
+.borderradius li.borderradius span.ie,
+.boxshadow li.boxshadow span.ie,
+.opacity li.opacity span.ie, 
+.cssanimations li.cssanimations span.ie,
+.csscolumns li.csscolumns span.ie,
+.cssgradients li.cssgradients span.ie,
+.cssreflections li.cssreflections span.ie,
+.csstransforms li.csstransforms span.ie,
+.csstransforms3d li.csstransforms3d span.ie,
+.csstransitions li.csstransitions span.ie,
+.localstorage li.localstorage span.ie,
+.sessionstorage li.sessionstorage span.ie,
+.webworkers li.webworkers span.ie,
+.applicationcache li.applicationcache span.ie,
+.svg li.svg span.ie,
+.smil li.smil span.ie,
+.svgclippaths li.svgclippaths span.ie,
+.hashchange li.hashchange span.ie,
+.websqldatabase li.websqldatabase span.ie, 
+.indexeddb li.indexeddb span.ie,
+.websockets li.websockets span.ie,
+.draganddrop li.draganddrop span.ie,
+.history li.history span.ie,
+.postmessage li.postmessage span.ie,
+.inlinesvg li.inlinesvg span.ie,
+.webgl li.webgl span.ie,
+.touch li.touch span.ie,
+.flexbox li.flexbox span.ie,
+.textshadow li.textshadow span.ie {
+    background: transparent url('../resrc/supported.gif') no-repeat center center;
+}
+
+fieldset#SoWhat {
+    width: 95%;
+}
+fieldset#SoWhat legend {
+    color: #0000CC;
+    font-weight: bold;
+    font-size: 100%;
+}
+fieldset#SoWhat li {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 80%;
+}
+fieldset#SoWhat #HowTo {
+     white-space:pre;
+}
+  /* rules for iPad in landscape orientation */
+@media all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+#contentWrap {
+    width: 960px;
+}
+#primaryContent {
+    width: 940px;
+    height: auto;
+}
+#sectionContent {
+    width: 580px;
+}
+#sectionAllCenter, h1#pageHeading {
+    width: 920px;
+}
+fieldset#SoWhat {
+    display: none;
+}
+
+}
+
+  /* rules for iPad in portrait orientation */
+@media all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+#contentWrap {
+    width: 960px;
+}
+#primaryContent {
+    width: 98%;
+}
+div#drag {
+    width: 400px;
+}
+#sectionContent {
+    width: 580px;
+}
+#sectionAllCenter, h1#pageHeading {
+    width: 920px;
+}
+#demoContent ol#demoList a {
+    font-size: 130%;
+}
+fieldset#SoWhat {
+    display: none;
+}
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* iPhone, Android rules here */
+fieldset#SoWhat {
+    display: none;
+}
+
+}
+
+
