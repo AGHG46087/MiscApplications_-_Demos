@@ -1,0 +1,636 @@
+/*
+*
+*/
+#pmt_demo:link, #pmt_demo:visited {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+#contentWrap {
+    margin: 10px 10px 0 10px;
+}
+span.cssindent {
+    margin: 0 0 0 10px;
+}
+div.roundedBox, fieldset.roundedBox, article.roundedBox {
+    width: 95%;
+    font-size: 70%;
+    border-radius:16px;
+    -o-border-radius:16px;
+    -ms-border-radius:16px;
+    -moz-border-radius:16px;
+    -webkit-border-radius:16px;
+    margin: 10px 0px 10px 20px;
+    padding: 10px 5px 10px 5px;
+    background-color: #CECECE;
+    border: 2px solid #DD0000;
+    float: left;
+}
+/* this is for where we have variance in demonstrations for various browsers */
+div#cssBox.divideBrowser div.codeEx{
+    display: none;
+}
+/* enable the specific browser implementation */
+div#cssBox.divideBrowser.mozilla div.mozilla,
+div#cssBox.divideBrowser.webkit div.webkit {
+    display: block;
+}
+div.codeEx {
+    font-family: courier;
+}
+#affectedContent.columnLayout {
+    column-rule: 1px solid #BBBBBB;
+    column-count: 2;
+    column-gap: 32px;
+    -o-column-rule: 1px solid #BBBBBB;
+    -o-column-count: 2;
+    -o-column-gap: 32px;
+    -ms-column-rule: 1px solid #BBBBBB;
+    -ms-column-count: 2;
+    -ms-column-gap: 32px;
+    -moz-column-rule: 1px solid #BBBBBB;
+    -moz-column-count: 2;
+    -moz-column-gap: 32px;
+    -webkit-column-rule: 1px solid #BBBBBB;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 32px;
+}
+#slider.csscolumns {
+    width: 180px;
+    height: 8px;
+    left: 245px;
+    top: -55px;
+}
+#sliderFromColor {
+    position: relative;
+    left: 312px;
+    float: left;
+}
+#sliderToColor {
+    position: relative;
+    float: left;
+    left: 350px;
+}
+#sliderFromColor div.cssgradients, #sliderToColor div.cssgradients,
+#sliderTextShadowColor div.cssTextShadow, #sliderTextShadowPosition div.cssTextShadowPos,
+#sliderBoxShadowColor div.cssTextShadow, #sliderBoxShadowPosition div.cssTextShadowPos  {
+    width: 180px;
+    height: 8px;
+    margin: 2px 0 0 0;
+}
+#sliderTextShadowPosition {
+    position: relative;
+    left: 328px;
+    top: -75px;
+    float: left;
+}
+#sliderTextShadowColor {
+    position: relative;
+    float: left;
+    left: 350px;
+    top: -75px;
+}
+#sliderBoxShadowPosition {
+    position: relative;
+    left: -36px;
+    top: 8px;
+    float: left;
+}
+#sliderBoxShadowColor {
+    position: relative;
+    left: -14px;
+    top: 8px;
+    float: left;
+    margin: 0 0 10px 0;
+}
+#boxShadowCSS {
+    position: relative;
+    top: 45px;
+}
+div.redSlider { background: rgba(255,0,0,0.50); }
+div.greenSlider { background: rgba(0,255,0,0.50); }
+div.blueSlider { background: rgba(0,0,255,0.50); }
+div.redSlider .ui-slider-handle { background: rgba(255,128,0,1); }
+div.greenSlider .ui-slider-handle { background: rgba(0,255,128,1); }
+div.blueSlider .ui-slider-handle { background: rgba(128,0,255,1); }
+
+#slider.csscolumns .ui-slider-handle,
+div.redSlider .ui-slider-handle,
+div.greenSlider .ui-slider-handle,
+div.blueSlider .ui-slider-handle,
+div.alphaSlider .ui-slider-handle,
+div.cssTextShadowPos .ui-slider-handle {
+    height: 12px;
+    top: -3px;
+}
+#twoColor {
+    width: 260px;
+    height: 260px;
+    background: -moz-linear-gradient( left, #0000FF, #0000FF);
+    background: -webkit-gradient(linear, left center, right center, from(#0000FF), to(#0000FF));
+}
+#fourColor {
+    width: 260px;
+    height: 260px;
+    background: -moz-linear-gradient( left, #0000FF, #0000FF, #0000FF);
+    background: -webkit-gradient(linear, left center, right center, from(#0000FF), color-stop(50%,#0000FF), to(#0000FF));
+}
+div.radialGradientSquare #twoColor {
+    background: -moz-radial-gradient(left 45deg, circle closest-side, #0000FF, #0000FF);
+    background: -webkit-gradient(radial, left center, right center, from(#0000FF), to(#0000FF));
+}
+div.radialGradientSquare #fourColor {
+    background: -moz-radial-gradient(center 45deg, circle closest-side, #0000FF, #0000FF, #0000FF);
+    background: -webkit-gradient(radial, center center, 0, center center, 70.5, from(#0000FF), color-stop(50%,#0000FF),  to(#0000FF));
+}
+#radialSphere {
+    border: none;
+    width: 260px;
+    height: 260px;
+    background: -moz-radial-gradient(50% 50%,circle contain, #0000FF, #0000FF 75%,rgba(255,255,255,0));
+    background: -webkit-gradient(radial,50% 50%,5,50% 50%,100,from(#0000FF),color-stop(75%, #0000FF),to(rgba(255,255,255,0)));
+}
+#transformInfoText {
+    width: 250px;
+    float: right;
+    position: relative;
+    right: 150px;
+    top: 10px;
+}
+
+#submenu {
+    width: 260px;
+    background-color: #EEEEEE;
+    color: #666666;
+    margin-left: 90px;
+    transition:all 1s ease-in-out 0s; 
+    -o-transition:all 1s ease-in-out 0s; 
+    -ms-transition:all 1s ease-in-out 0s; 
+    -moz-transition:all 1s ease-in-out 0s; 
+    -webkit-transition:all 1s ease-in-out 0s; 
+}
+#submenu:hover, #submenu:focus {
+    transform: rotate(360deg) scale(1.5); 
+    -o-transform: rotate(360deg) scale(1.5); 
+    -ms-transform: rotate(360deg) scale(1.5); 
+    -moz-transform: rotate(360deg) scale(1.5); 
+    -webkit-transform: rotate(360deg) scale(1.5);
+    background-color: #FFCC33;
+    border-color: #0000FF;
+}
+#submenu ol li {
+    list-style-position: inside;
+}
+div#affectedLinkArea {
+    margin: 5px 20px 6px 10px;
+}
+a.transitionLink {
+    color:#003366;
+    background: #92BEDB;
+    font-size: 150%;
+    padding: 3px;
+    transition-property:color, background;
+    transition-duration: 1s, 1s;
+    transition-timing-function: linear, ease-in;
+    -o-transition-property:color, background;
+    -o-transition-duration: 1s, 1s;
+    -o-transition-timing-function: linear, ease-in;
+    -ms-transition-property:color, background;
+    -ms-transition-duration: 1s, 1s;
+    -ms-transition-timing-function: linear, ease-in;
+    -moz-transition-property:color, background;
+    -moz-transition-duration: 1s, 1s;
+    -moz-transition-timing-function: linear, ease-in;
+    -webkit-transition-property:color, background;
+    -webkit-transition-duration: 1s, 1s;
+    -webkit-transition-timing-function: linear, ease-in;
+}
+a.transitionLink:hover, a.transitionLink:focus {
+    background:#003366;
+    color: #92BEDB;
+}
+
+#shadowBox {
+    width: 80%;
+    background: none repeat scroll 0 0 black;
+    box-shadow: 0px 0px 0px #000000;
+    -o-box-shadow: 0px 0px 0px #000000;
+    -ms-box-shadow: 0px 0px 0px #000000;
+    -moz-box-shadow: 0px 0px 0px #000000;
+    -webkit-box-shadow: 0px 0px 0px #000000;
+}
+#shadowBox span.shadowTexts {
+    background: none repeat scroll 0 0 black;
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+#shadowBox span#coolShadows {
+    float: left;
+    left: 15px;
+}
+#shadowBox span#hotShadows {
+    float: right;
+    right: 15px;
+    text-shadow: 0 0 4px white, 0 -5px 4px #FFFF33, 2px -10px 6px #FFDD33, -2px -15px 11px #FF8800, 2px -25px 18px #FF2200;
+}
+
+#formInputDemo {
+    width: 80%; /*750px;*/
+    background: #FFFFFF;
+    float: left;
+    border: 2px solid #0000DD;
+    padding: 16px;
+    margin: 16px;
+    
+}
+#formInputDemo legend {
+    padding:0 4px;
+    font-size: 120%;
+    background: #3366EE;
+    color: #FFFF00;
+}
+
+#formInputDemo div.inputGroups {
+    float: left;
+    margin: 0 0 0 20px;
+}
+#formInputDemo input, #formInputDemo textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #EEEEEE;
+    border:1px solid #CCCCCC;
+    font-size: 20px;
+    width: 300px;
+    min-height: 30px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    display: block;
+			
+    border-radius:5px;
+    -o-border-radius:5px;
+    -ms-border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+#formInputDemo textarea {
+    min-height: 100px;
+}
+#formInputDemo input:focus, #formInputDemo textarea:focus {
+    box-shadow: 0 0 25px #3366EE;
+    -o-box-shadow: 0 0 25px #3366EE;
+    -ms-box-shadow: 0 0 25px #3366EE;
+    -moz-box-shadow: 0 0 25px #3366EE;
+    -webkit-box-shadow: 0 0 25px #3366EE;
+			
+    transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+#formInputDemo input:not(:focus), #formInputDemo textarea:not(:focus) { opacity: 0.5; }
+#formInputDemo input:required, #formInputDemo textarea:required { background:url("../resrc/asterisk_orange.png") no-repeat 280px 7px;}
+#formInputDemo input:valid, #formInputDemo textarea:valid { background:url("../resrc/supported.png") no-repeat 280px 5px; }
+#formInputDemo input:focus:invalid, #formInputDemo textarea:focus:invalid { background:url("../resrc/not_supported.png") no-repeat 280px 7px;}
+
+/*******************************************
+*   Glenn Updates
+********************************************/
+#ariaSlider {
+    width: 180px;
+    height: 8px;
+    left: 245px;
+    top: -75px;
+}
+#ariaSlider .ui-slider-handle{
+    height: 12px;
+    top: -3px;
+}
+#menu{
+    width: 50%;
+}
+#menu ol li{
+    float:left;
+    width: 200px;
+    list-style-position: inside;
+}
+#search{
+    width: 30%;
+}
+#searchForm > fieldset > legend{
+    display:none;
+}
+.keySnippet{
+    color: #ff0000;
+    font-weight: bold;
+}
+.ariaExample{
+    padding: 10px 0;
+    font-size: 70%;
+}
+.ariaExample > h2{
+    font-size: 100%;
+    text-align: left;
+    color: #0000FF;
+}
+#inputForm > fieldset > legend{
+    display:none;
+}
+.inputFieldGroup{
+    float:left;
+    clear:left;
+    padding: 0 0 10px 0;
+}
+.req{
+    color: #FF0000;
+}
+#exampleTable th{
+    font-weight:bold;
+}
+#detailsList{
+    list-style-type: disc;
+    list-style-position: inside;
+}	
+#detailsList li{
+    padding: 10px 0px 0px 0px;
+}
+/*** End Glenn Updates  ***/
+
+/*******************************************
+*   James Updates
+********************************************/
+#ddWrapper {
+    padding: 20px;
+}
+#drag, #drop {
+    width: 35%;
+    float: left;
+}
+#drag {
+    background:url("../resrc/table.png") no-repeat scroll center bottom transparent;
+    height:155px;
+    padding:275px 0 0 200px;
+    width:410px;
+}
+#drop {
+    background:url("../resrc/garbageCan.png") no-repeat scroll center bottom transparent;
+    height:424px;
+    width:295px;
+    position: relative;
+    z-index: 20;
+    outline:0;
+    border:none;
+}
+#data {
+    display: block;
+    height: 60px;
+    left: 190px; /* 220px; */
+    position: relative;
+    top: -240px; /* -250px; */
+    width: 60px;
+}
+#speechBubble {
+    background: url("../resrc/speechBubble.png") no-repeat scroll top center transparent;
+    width: 165px;
+    height: 135px;
+    left:-55px;
+    position:relative;
+    top:-30px;
+}
+#speechBubble p {
+    font-family: Courier, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 135px;
+    left: 15px;
+    position: relative;
+    text-align: center;
+    top: -266px;
+    width: 125px;
+}
+#tts {
+    height: 1px;
+    width: 1px;
+    float: left;
+    visibility: hidden;
+}
+.strawberry, .banana, .burger {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background: url("../resrc/food.png") no-repeat scroll top center transparent;
+    text-indent:-50000px;
+    float: left;
+}
+.strawberry, .strawberry.dragging {
+    background-position: 0px -5px;
+}
+.banana, .banana.dragging {
+    background-position: -66px -5px;
+}
+.burger, .burger.dragging {
+    background-position: -135px -5px;
+}
+
+/*** transforms and transitions ***/
+#drop:focus + #grouch { 
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+    -webkit-transform: translate(0px, -100px);
+    -moz-transform: translate(0px, -100px);
+    -o-transform: translate(0px, -100px);
+}
+#grouch {
+    position: relative;
+    z-index: 10;
+    height:150px;
+    width:295px;
+    background: url("../resrc/grouch.png") no-repeat scroll top center transparent;
+    margin: 195px 0px 0px 575px;
+    opacity: 0;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+}
+[draggable=true] {
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+/*** james styles for drag drop ***/
+
+/*******************************************
+*   Glenn & Brian SVG Updates - 
+********************************************/
+body.svgDemo #primaryContent div#cssBox {
+    overflow: hidden;
+}
+body.svgDemo #svgwrap {
+    position: relative;
+}
+rect.bar{
+    stroke-width: 5px;
+    width: 20px;
+}
+rect.activeBar{
+    fill-opacity: 0.6;
+}
+line.axis{
+    stroke-width: 2px;
+    stroke: #000000;
+    fill: none;
+}
+line.valueLine{
+    stroke-width: 1px;
+    stroke: #000000;
+    fill: none;
+}
+text{
+    fill: #000000;
+    stroke: #cccccc;
+    stroke-width: 0px;
+    font-size: 14px;
+    font-family: 'Arial';
+    text-align: center;
+}
+text.graphTitle{
+    font-weight: bold;
+    font-size: 24px;
+}
+#graphItemDetails > .itemDetails{
+    position:absolute;
+    top: 250px;
+    left: 250px;
+    border: 2px solid #ff0000;
+    background-color: #ffffff;
+    width: 250px;
+}
+#graphItemDetails > .itemDetails th{
+    font-weight: bold;
+}
+#graphItemDetails > .itemDetails > a.popupClose{
+    color: #808080;
+    text-decoration: underline;
+    font-size: 90%;
+    position: relative;
+    left: 225px;
+    top: 0px;
+}
+/* End Glenn & Brian SVG */
+
+/*******************************************
+*   James Updates - Geo Location
+********************************************/
+body.geoDemo #primaryContent {
+/*  height: 780px;*/
+}
+#affectedContent .geoLocation fieldset.roundedBox {
+    font-size: 100%;
+}
+#affectedContent .geoLocation .left, #affectedContent .geoLocation .right {
+  margin: 10px;
+  padding: 10px;
+  width: 45%;
+  float: left;
+}
+#affectedContent .geoLocation .left {
+  border-right: 2px solid #DD0000;
+}
+#affectedContent .geoLocation h2 {
+  color: #2F404A;
+}
+#affectedContent .geoLocation {
+  font-family: arial;
+  font-size: 12px;
+}
+#map {
+  margin: 15px;
+  width: 900px;
+  height: 500px;
+  float: left;
+}
+#map div.bubble { 
+  font-size: 12px;
+}
+#map h2 {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  display: block;
+}
+#map .bubble h2 span {
+  clear:left;
+  font-weight:normal;
+  line-height:normal;
+  padding: 4px 4px 2px 4px;
+  text-align:left;
+  text-transform:uppercase;
+  background-color: #1F5E8B;
+  color: #fff !important;
+}
+#map span.offerInfo, #map p { 
+  color: #666;
+  font-family: arial;
+  line-height: 1.6em;
+}
+#map span.offerInfo {
+  font-weight: bold;
+}
+#map p { 
+
+}
+#map p a { 
+  color: #1F5E8B;
+  text-decoration: none;
+}
+#map p a:hover {
+  border-bottom: 1px dotted #1F5E8B;  
+} 
+/*** end James updates Geo Location ***/
+
+/*******************************************
+*   Hans Updates - Web Sockets
+********************************************/
+
+#myCanvas {
+    background: #333333;
+}
+
+fieldset#websocketInfo {
+    width: 50%;
+    margin-top: -20px;
+}
+fieldset#websocketInfo legend {
+    font-weight: bold;
+    color: #0000CC;
+    font-size: 140%;
+}
+fieldset#websocketInfo ol > li {
+    list-style-type: decimal;
+}
+fieldset#websocketInfo span.emp {
+    font-weight: bold;
+    color: #CC0000;
+}
+fieldset#websocketInfo li ul span.emp {
+   color: #0000CC;
+}
+fieldset#websocketInfo li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+fieldset#websocketInfo li ul {
+    margin: 0 0 0 8px;
+}
+/*** end Hans updates WebSockets ***/
