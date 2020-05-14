@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content=''/>
+    <meta name='Keywords' content=''/>
+    <title>HTML 5 Demos: ARIA - States and Properties</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="contentWrap">
+      <header role="banner">
+	<h1 id="pageHeading">ARIA - States and Properties</h1>
+      </header>
+      <div id="primaryContent">
+        <div id="cssBox" class="roundedBox">
+          <div class="codeEx" role="complementary">
+	    <p>&lt;input type="text" id="field1" placeholder="" <span class="keySnippet">aria-required="true"</span> /&gt;</p>
+	    <p>&lt;input type="text" id="field2" aria-required="true" <span class="keySnippet">aria-invalid="<span id="invalidInd">false</span>"</span>
+	    /&gt;</p>
+          </div>
+        </div>
+        <div id="affectedContent" class="roundedBox" role="main">
+	  <p>This page demonstrates the use of <span class="keySnippet">aria-*</span> ARIA attributes available in HTML5.
+            Screen Reader is required for the demo.</p>
+	  <div class="ariaExample">
+	    <h2>ARIA - Input Fields</h2>
+	    <p>Input fields can now be explicitly marked as required for Assistive Technology users.
+              In addition if front-end validation rules fail a field can be marked as invalid.</p><br />
+	    <form id="inputForm">
+	      <fieldset>
+		<legend>Input your details:</legend>
+		<div class="inputFieldGroup">
+		  <label for="field1">Field 1<span class="req">*</span></label>
+		  <input type="text" id="field1" required aria-required="true" />
+		</div>
+		<div class="inputFieldGroup">
+		  <label for="field2">Field 2<span class="req">*</span></label>
+		  <input type="text" id="field2" required aria-required="true" aria-invalid="false" />
+		</div>
+	      </fieldset>
+	    </form>
+	  </div>
+        </div>
+      </div>
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>ARIA aimed at solving dynamically updated pages and provide Accessibility for RIA</li>
+          <li>ARIA is being developed with cooperation from Browser and Assitive Technology vendors - Easier interoperability</li>
+          <li>Not just dissabilities are achieved, ARIA establishes a web stadnard for keyboard interaction.</li>
+          <li>ARIA States and Properties are supported in JAWS, Window-Eyes, NVDA</li>
+        </ul>
+      </fieldset>
+    </div>
+    <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+    <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type='text/javascript' src='./scripts/application.js'></script>
+  </body>
+</html>
