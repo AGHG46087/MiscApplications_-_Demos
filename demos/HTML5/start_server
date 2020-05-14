@@ -1,0 +1,2 @@
+clear
+/Applications/MAMP/bin/php5/bin/php  stockServer.php
