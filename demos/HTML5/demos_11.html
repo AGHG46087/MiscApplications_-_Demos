@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <title>HTML 5 Demos: GEO Location</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="contentWrap">
+      <h1 id="pageHeading">GEO Location<span class="geolocation"> </span></h1>
+      <div id="primaryContent">
+        <div id="affectedContent" class="roundedBox">
+          <div class="geoLocation">
+            <div id="locationInformation" class="left">
+              <h2>Detailed location information</h2>
+              <p id="locationDetail"></p>
+              <p><label id="status" style="color: #FF0000;"></label></p>
+            </div>
+            <div id="offerSettings" class="right">
+              <h2>Offers</h2>
+              <p><label for="showOffersDining"><input id="showOffersDining" type="checkbox"></input> Show me Dining Offers <strong>(this is the only one working
+              - you get the idea)</strong></label></p>
+              <p><label for="showOffersEntertainment"><input id="showOffersEntertainment" type="checkbox"></input> Show me Entertainment Offers</label></p>
+              <p><label for="showOffersShopping"><input id="showOffersShopping" type="checkbox"></input> Show me Shopping Offers</label></p>
+              <p><label for="showOffersTravel"><input id="showOffersTravel" type="checkbox"></input> Show me Travel Offers</label></p>
+            </div>
+            <article id="mapArea" class="lookup">
+              <div id="map"></div>
+            </article>
+            <fieldset id="geoInfo" class="roundedBox">
+              <legend>Geo Location always Opt-In</legend>
+              The <a href="http://www.w3.org/TR/geolocation-API/#security">geolocation API</a> explicitly states: &quotUser Agents must not send location
+              information to Web sites without the express permission of the user.&quot
+              <ul>There's a lot going on in the Geo Location InfoBar... You, as the end user,
+                <li>are told which website wants to know your location</li>
+                <li>can choose to share your location</li>
+                <li>can choose not to share your location</li>
+                <li>can tell your browser to remember your choice (either way, share or don't share) so you never see this infobar again on this website</li>
+                <li>unconditional, so there is no way for a website to bypass it</li>
+                <li>blocking, so there is no chance that the website can determine your location while it's waiting for your answer</li>
+              </ul>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>Geolocation: Based on Cell Radio, WiFi radio, Satellite and ISP.</li>
+          <li>Geolocation although great for mobile - also works for Desktop (ISP) and WiFi devices. </li>
+          <li>Geolocation services and offers can be extended to users regardless of device utilized (provided user consent)</li>
+          <li>Offereing a user to enter alternative location extends the benefits to Geolocation.</li>
+        </ul>
+      </fieldset>
+    </div>
+    <script type="text/javascript" src='http://maps.google.com/maps/api/js?sensor=false'></script>
+    <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+    <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type='text/javascript' src='./scripts/application.js'></script>
+  </body>
+</html>
