@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <title>HTML 5 Demos: ARIA & CSS Columns</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="contentWrap">
+      <h1 id="pageHeading">ARIA Slider Widget &amp; CSS Columns<span class="csscolumns"> </span></h1>
+      <div id="primaryContent">
+        <div id="cssBox" class="roundedBox">
+          <div class="codeEx">
+            column-count: <span class="colcount">2</span>; <br />
+            &lt;div id="ariaSlider"&gt;<br />
+	    &lt;a href="#" class="ui-slider-handle ui-state-default ui-corner-all"
+            <span class="keySnippet">role=&quot;slider&quot; aria-valuenow=&quot;
+              <span class="colcount">2</span>&quot; aria-valuetext=&quot;
+              <span class="colcount">2</span> <span class="coltext">columns</span>&quot;</span>&gt;&lt;/a&gt;<br />
+	    &lt;/div&gt;
+            <br />
+          </div>
+          <div id="ariaSlider" title="slider"></div>
+        </div>
+        <div id="affectedContent" class="roundedBox columnLayout">
+          This quote from Herman Melville's classic novel echoes tales told throughout recent centuries --
+          stories in which the great sperm whale is labeled &quot;leviathan,&quot; &quot;monster,&quot;
+          and &quot;beast.&quot; For hunters, until as recently as the the late 1980s, slaughtering these
+          whales with harpoons was not only good business, but an act of bravery. Whaling is a treacherous
+          business: at an average of 62 feet long, the sperm whale (Pyseteridae catadon) is the largest
+          of all toothed whales and a fearsome adversary.
+
+          Yet beneath the surface, sperm whales possess more than intimidating girth. As you see in the NATURE
+          program SPERM WHALES: THE REAL MOBY DICK, the efforts of Jonathan Gordon and other researchers to study
+          the whales' physicality, modes of communication, and social interactions contribute to our understanding
+          of the underwater world.
+
+          A giant among marine mammals, a male sperm whale weighs between 40 and 60 tons. Smaller females reach
+          a maximum weight of only 18 tons and measure about 35 feet. Both sexes are born with thick gray skin
+          that darkens in color with age. As a whale matures, this thick covering may bear the scars caused by
+          hunters' weapons, fights over dominance, or wounds picked up while defending young. One of the
+          whales Dr. Gordon tracks on NATURE, an enormous adult male named Big Hal, carries on his forehead
+          numerous scars of previous battles with rival bulls over females.
+          The sheer size of a sperm whale is overwhelming. Its submarine-shaped bulk is capped with a huge,
+          blunt-edged head, a full third of its body.
+
+          Two whales
+
+          Whales communicate with each other by clicking. This head is actually a sophisticated communications
+          center. Scientists believe that whales' heads contain organs that broadcast and receive the loud
+          clicks, called &quot;clangs,&quot that form their language. This clicking noise is sent and received much
+          like sonar on a submarine. A whale's head is so large that what sounds to researchers like several
+          clicks can actually be just one. As Jonathan Gordon explains, &quot;It's the sound of the clicks
+          bouncing around inside its head.&quot;
+
+          Sperm whales &quot;echo-locate&quot; by bouncing a click sound off an object, such as a squid,
+          and timing how long it takes for the echo to travel back to them. The whale can then judge the
+          distance to its next meal in the darkest of waters. Male adults also use loud clicks to announce
+          their presence with authority, while mothers and their young click to stay in communication. Thus
+          connected, a cow can leave her offspring alone while she dives for food.
+        </div>
+      </div>
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>CSS Columns Advantages: reduced markeup and code</li>
+          <li>No need for users to scrool while reading the text from one column to another. Horizontal / Vertical</li>
+          <li>ARIA States and Properties are supported in JAWS, Window-Eyes, NVDA</li>
+        </ul>
+      </fieldset>
+    </div>
+    <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+    <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type='text/javascript' src='./scripts/application.js'></script>
+  </body>
+</html>
