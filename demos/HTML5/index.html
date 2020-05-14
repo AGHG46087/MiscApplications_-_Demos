@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<!--   <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' /> -->
+   <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+   <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <title>HTML 5 Demos page</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <!-- Here is some code to get us to the current browser level to run these tests -->
+  <!--[if lte IE 8 ]>
+  <style>
+    html,body {height:100%;} div#ie6-layer.block-update-layer, div#ie6-layer-content.block-update-layer{display: block;} div#ie6-layer {filter: Alpha(Opacity=20);left: 0px;top: 0px;position: absolute;background-color: #333;width: 100%;height: 100%;display: none;z-index: 99995;} div#ie6-layer-content {font-family: Arial;background-color: #fff;width: 550px;color: #000;z-index: 99999;position: absolute;display: none;margin: 50px auto;left: 30%;padding: 10px;border: 1px solid #999; } div#ie6-layer-content a#close-layer img {float: right;} div#ie6-layer-content div.browser-listing div {background: transparent url('./resrc/background_browser.gif') no-repeat scroll left top;float: left;margin: 10px 0px 0px 10px;width: 120px; height: 122px;text-align: center;} div.layer-content h2 {color: #333;} div.browser-listing h2 {font-size: 12px;} div#ie6-layer-content p {font-size: 12px;margin: 10px 0px 5px 0px;line-height: 1.6em;}
+  </style>
+  <div id="ie6-layer" class="block-update-layer"></div>
+  <div id="ie6-layer-content" class="block-update-layer" tabindex="0">
+    <div class="layer-content">
+      <a href="#" id="close-layer">
+        <img title="Close the window" alt="Close the window" src="./resrc/close.gif">
+      </a>
+      <h2>Did you know that your version of Internet Explorer is out of date?</h2>
+      <p>To get the best possible experience using the Demos website we recommend that you upgrade to a
+        newer version or another web browser supporting HTML 5. A list of the most popular web browsers
+        can be found below.</p>
+      <p>Just click on the icons to get to the download page</p>
+      <div class="browser-listing">
+        <div>
+          <a href="http://www.mozilla.com/en-US/firefox/beta/" title="">
+            <img src="./resrc/browser_firefox.gif" alt="Download the Firefox browser" title="" />
+            <h2>Mozilla Firefox 4</h2>
+          </a>
+        </div>
+        <div>
+          <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie-9/home" title="">
+            <img src="./resrc/browser_ie.gif" alt="Download the Internet Explorer browser" title="" />
+            <h2>Internet Explorer 9</h2>
+          </a>
+        </div>
+        <div>
+          <a href="http://www.apple.com/safari/download/" title="">
+            <img src="./resrc/browser_safari.gif" alt="Download the Safari browser" title="" />
+            <h2>Safari</h2>
+          </a>
+        </div>
+        <div>
+          <a href="http://www.google.com/chrome" title="">
+            <img src="./resrc/browser_chrome.gif" alt="Download the Chrome browser" title="" />
+            <h2>Chrome</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+    <span id="ie6-layer-bottom-observer" tabindex="0"></span>
+  </div>
+  <script type="text/javascript">
+    var UpgradeBrowserLayer = {
+      closeElement: document.getElementById('close-layer'),
+      layer: null,
+      content: document.getElementById('ie6-layer-content'),
+      bottomObserver: document.getElementById('ie6-layer-bottom-observer'),
+      init:function(){
+        UpgradeBrowserLayer.closeElement.onclick = function () {
+          return UpgradeBrowserLayer.closeLayer();
+        };
+        UpgradeBrowserLayer.setupObservers();
+      },
+      getMSIEVersion: function() {
+        var browserVersion = "0";
+        if(navigator.appVersion.indexOf("MSIE") != -1 ) {
+          var temp = navigator.appVersion.split("MSIE");
+          browserVersion = "" + parseFloat(temp[1]);
+        }
+        return browserVersion;
+      },
+      closeLayer:function(){
+        UpgradeBrowserLayer.layer = document.getElementById('ie6-layer').className='';
+        UpgradeBrowserLayer.content = document.getElementById('ie6-layer-content').className='';
+        return false;
+      },
+      setupObservers:function(){
+        UpgradeBrowserLayer.bottomObserver.onfocus = function () {
+          UpgradeBrowserLayer.content.focus();
+        };
+        UpgradeBrowserLayer.content.onblur = function () {
+          UpgradeBrowserLayer.closeElement.focus();
+        };
+      }
+    };
+    UpgradeBrowserLayer.init();
+  </script>
+  <![endif]-->
+    <div id="contentWrap">
+      <h1 id="pageHeading">HTML 5 Demo</h1>
+      <div id="sectionAllCenter">
+        <div id="sectionContent">
+          <div id="demoContent">
+            <h2>Feature demonstrations of HTML 5</h2>
+            <p id="caveatText">A green <span class="greenCheck"> </span> behind a feature listed on the right,
+              indicates that your current browser supports the feature and the demonstration should work properly.
+              Otherwise you will see a <span class="redX"> </span> signifying not supported.</p>
+            <ul id="demoPPT">
+               <li class="demosListItem"><a id="pptLong" class="pptItem" href="HTML 5.pptx">HTML5 Presentation </a> - PPT presentation overview of HTML5 features</li> 
+               <li class="demosListItem"><a id="pptShort" class="pptItem" href="HTML5_abridged.pptx">HTML5 Presentation - short </a> - Short PPT presentation overview of HTML5</li> 
+            </ul>
+            <ol id="demoList">
+              <li class="demosListItem"><a href="demos_intro.html">HTML5 Intro</a> - (Webkit Browser), Intro animation.</li>
+              <li class="demosListItem"><a href="demos_01.html">CSS Drag-n-Drop</a> - Demonstration of the drag and drop features</li>
+              <li class="demosListItem"><a href="demos_02.html">CSS Transitions</a> - Demonstrates a Transitions .</li>
+              <li class="demosListItem"><a href="demos_03.html">CSS Transforms</a> - Demonstrates a 2D Transforms and Transitions utilized together </li>
+              <li class="demosListItem abridgedOut"><a href="demos_04.html">CSS Linear Gradient</a> - Demonstrates Linear Gradient backgrounds.</li>
+              <li class="demosListItem"><a href="demos_05.html">CSS Radial Gradient</a> - Demonstrates Radial Gradient backgrounds.</li>
+              <li class="demosListItem"><a href="demos_06.html">CSS Shadows</a> - Demonstrates Text and Box Shadows.</li>
+              <li class="demosListItem"><a href="demos_07.html">ARIA Landmark Roles</a> - Demonstrates use of ARIA for identifying Landmarks on a page.</li>
+              <li class="demosListItem abridgedOut"><a href="demos_08.html">ARIA - States and Properties</a> - Demonstrates use of ARIA, identifying States and properties.</li>
+              <li class="demosListItem"><a href="demos_09.html">ARIA &amp CSS Columns</a> - Demonstrates a CSS Column Layout ARIA on the Slider Widget</li>
+              <li class="demosListItem"><a href="demos_10.html">HTML Input Fields</a> - Demonstrates New input types.</li>
+              <li class="demosListItem"><a href="demos_11.html">JavaScript GEO Location</a> - (Firefox) Demonstrates JavaScript GeoLocation.</li>
+              <li class="demosListItem"><a href="demos_12.html">SVG </a> - Demonstrates SVG Charting capabilities.</li>
+              <li class="demosListItem abridgedOut"><a href="demos_13.html">WebSockets </a> - REQUIRES Socket Server: Demonstrates Server push to client and Canvas.</li>
+              <li class="demosListItem"><a href="demos_final.html">HTML5 Finale</a> - (Webkit Browser), Demos simoultaneous Muli-Animations, 2D, 3D Transform and Audio.</li>
+            </ol>
+          </div>
+        </div>
+        <div id="sectionFeatures" class="half featureTest">
+          <h2>Detected HTML 5 Features </h2>
+          <ul id="features" >
+	    <li class="fontface">@font-face</li>
+	    <li class="canvas">Canvas</li>
+            <li class="canvastext">Canvas Text</li>
+	    <li class="audio">HTML5 Audio</li>
+	    <li class="video">HTML5 Video</li>
+	    <li class="rgba">rgba()</li>
+	    <li class="hsla">hsla()</li>
+	    <li class="borderimage">border-image:</li>
+	    <li class="borderradius">border-radius:</li>
+	    <li class="boxshadow">box-shadow:</li>
+	    <li class="textshadow">text-shadow:</li>
+	    <li class="opacity">opacity:</li>
+	    <li class="multiplebgs">Multiple backgrounds</li>
+            <li class="flexbox">Flexible Box Model</li>
+	    <li class="cssanimations">CSS Animations</li>
+	    <li class="csscolumns">CSS Columns</li>
+	    <li class="cssgradients">CSS Gradients</li>
+	    <li class="cssreflections">CSS Reflections</li>
+	    <li class="csstransforms">CSS 2D Transforms</li>
+	    <li class="csstransforms3d">CSS 3D Transforms</li>
+	    <li class="csstransitions">CSS Transitions</li>
+	    <li class="geolocation">Geolocation API</li>
+	    <li class="localstorage">localStorage</li>
+	    <li class="sessionstorage">sessionStorage</li>
+	    <li class="svg">SVG</li>
+	    <li class="smil">SMIL</li>
+	    <li class="svgclippaths">SVG Clipping</li>
+            <li class="inlinesvg">Inline SVG</li>
+	    <li class="draganddrop">Drag and Drop</li>
+	    <li class="hashchange">hashchange</li>
+	    <li class="postmessage">X-window Messaging</li>
+	    <li class="history">History Management</li>
+	    <li class="applicationcache">applicationCache</li>
+	    <li class="websockets">Web Sockets</li>
+	    <li class="webworkers">Web Workers</li>
+	    <li class="websqldatabase">Web SQL Database</li>
+            <li class="webgl">WebGL</li>
+	    <li class="indexeddb">IndexedDB</li>
+	    <li class="inputtypes">Input Types<sup>†</sup></li>
+	    <li class="inputs">Input Attributes<sup>‡</sup></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+    <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type='text/javascript' src='./scripts/application.js'></script>
+  </body>
+</html>
