@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content='' />
+    <meta name='Keywords' content='' />
+    <title>HTML 5 Demos: Input Fields</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="contentWrap">
+      <h1 id="pageHeading">HTML 5 Input Fields<span class="input"> </span></h1>
+      <div id="primaryContent">
+        <div id="cssBox" class="roundedBox">
+          <div class="codeEx">
+            input:not(:focus) { opacity: 0.5; }<br />
+            input:required { background:url("asterisk_orange.png") }<br />
+            input:valid { background:url("supported.png") }<br />
+            input:focus:invalid { background:url("not_supported.png") }<br />
+            &lt;input type=&quot;url&quot; name=&quot;website&quot; required placeholder=&quot;http://www.example.com&quot; /&gt;
+          </div>
+        </div>
+
+        <div id="affectedContent" class="roundedBox">
+          <p>Not all form fields are supported in all browsers,
+            Firefox also includes support for &lt;datalist&gt; tag.<br />
+          Another example is the <a id="pmt_demo" href="demos_zzzPaymentForm.html">Payment Form Demo</a>.</p>
+          <fieldset class="roundedBox" id="formInputDemo" >
+          <legend>Demographic Data Entry Form</legend>
+          <form>
+            <div class="inputGroups">
+              <label for="pswd">Password:</label>
+              <input type="password" name="pswd" required placeholder="Password" />
+            </div>
+
+            <div class="inputGroups">
+              <label for="email">Email:</label>
+              <input type="email" name="email" required placeholder="email@example.com" />
+            </div>
+            
+            <div class="inputGroups">
+              <label for="website">Website:</label>
+              <input type="url" name="website" required placeholder="http://www.example.com" />
+            </div>
+
+            <div class="inputGroups">
+	      <label for="birthday">Date of birthday (we like to send presents!)</label>
+	      <input name="birthday" required type="date" placeholder="mm/dd/yyyy" />
+            </div>
+
+            <div class="inputGroups">
+              <label for="cardsField">Card Product:</label>
+              <input type="text" id="cardsField" list="cards" required placeholder="Enter Card Product (i.e. gold)" />
+              <datalist id="cards">
+                or
+                <label>choose one
+                  <select>
+                    <option value="Blue Rewards">Blue Rewards</option>
+                    <option value="Blue Cash">Blue Cash</option>
+                    <option value="Blue Companion Card">Blue Companion Card</option>
+                    <option value="Gold Points Plus">Gold Points Plus</option>
+                    <option value="Gold Revolve">Gold Revolve</option>
+                    <option value="Green">Green</option>
+                    <option value="Platinum">Platinum</option>
+                    <option value="platinum Revolve">Platinum Revolve</option>
+                  </select>
+                </label>
+              </datalist>              
+            </div>
+
+            <div class="inputGroups">
+              <label for="message">Message:</label>
+              <textarea name="message" required></textarea>
+            </div>
+
+            <div class="inputGroups">
+              <input type="submit" value="Send Message" />
+            </div>
+          </form>
+          </fieldset>
+        </div> <!-- affectedContent -->
+      </div>   <!-- primaryContent -->
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>You may easily style all email INPUT elements with input[type=email]</li>
+          <li>You may easily style all url INPUT elements with input[type=url]</li>
+          <li>This INPUT type could be considered more semantically correct.</li>
+          <li>Mobile accessibility:  if your user is browsing with an iPhone and they arrive at a special email input, the iPhone will display a keyboard with the @ symbol provided on the primary screen.  If the INPUT is of type "url", the iPhone will display the ".com" button on the primary keyboard screen:</li>
+          <li>Reduced amount of code for validation</li>
+          <li>TYPES: search, tel, url, email, datetime, date, month, week, time, datetime-local, number, range, and color</li>
+        </ul>
+      </fieldset>
+    </div>     <!-- contentWrap -->
+  </body>
+</html>
