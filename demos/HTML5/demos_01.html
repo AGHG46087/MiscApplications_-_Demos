@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <title>HTML 5 Demos: Drag and Drop</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="contentWrap">
+      <h1 id="pageHeading">Drag and Drop<span class="draganddrop"> </span></h1>
+      <div id="primaryContent">
+        <div class="roundedBox">
+          <div class="codeEx">
+            &lt;a id="strawberry" class="strawberry draggable" href="#" draggable="true"&gt;&lt;/a&gt; <br />
+            Events: <strong>dragstart</strong>, <strong>dragenter</strong>, <strong>dragover</strong>, dragleave, drag, <strong>drop</strong>, dragend <br />
+          </div>
+        </div>
+        <div id="ddWrapper">
+<!--          <audio rel="noreferrer" src="http://translate.google.com/translate_tts?tl=en&q=" id="tts" controls autoplay preload="auto" --
+  --          autobuffer="autobuffer"></audio> -->
+          <audio rel="noreferrer" src="" id="tts" controls autoplay preload="auto" autobuffer="autobuffer"></audio>
+          <div id="drag">
+            <a href="#" class="strawberry draggable" id="strawberry">Strawberrys are okay</a>
+            <a href="#" class="banana draggable" id="banana">Yuk, I think Bananas are horrid</a>
+            <a href="#" class="burger draggable" id="burger">Yum yum, I like Burgers</a>
+          </div>
+          <div id="drop">
+          </div>
+          <div id="grouch">
+            <div id="speechBubble"></div>
+            <div id="data"></div>
+          </div>
+        </div>
+        
+      </div>
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>Drag-n-Drop are great for supporting shopping cart, points burn, etc..</li>
+          <li>Combined with new FILE API, allows for users to drag files directly into the browser.</li>
+          <li>Code reduction and the need for external javasxcripts is reduced..</li>
+          <li>Any element can be dragged, potential for user customizable views</li>
+        </ul>
+      </fieldset>
+    </div>
+    <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+    <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type='text/javascript' src='./scripts/application.js'></script>
+  </body>
+</html>
