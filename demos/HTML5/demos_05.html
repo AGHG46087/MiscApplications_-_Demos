@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <title>HTML 5 Demos: CSS Radial Gradients</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="contentWrap">
+      <h1 id="pageHeading">CSS Radial Gradients<span class="cssgradients"> </span></h1>
+      <div id="primaryContent">
+        <div id="cssBox" class="roundedBox divideBrowser">
+          <div class="codeEx mozilla">
+            background: radial-gradient(
+            <select id="mozPosX">
+              <option value="10%">10%</option>
+              <option value="20%">20%</option>
+              <option value="30%">30%</option>
+              <option value="40%">40%</option>
+              <option value="50%" selected="yes">50%</option>
+              <option value="60%">60%</option>
+              <option value="70%">70%</option>
+              <option value="80%">80%</option>
+              <option value="90%">90%</option>
+            </select>
+            <select id="mozPosY">
+              <option value="10%">10%</option>
+              <option value="20%">20%</option>
+              <option value="30%">30%</option>
+              <option value="40%">40%</option>
+              <option value="50%" selected="yes">50%</option>
+              <option value="60%">60%</option>
+              <option value="70%">70%</option>
+              <option value="80%">80%</option>
+              <option value="90%">90%</option>
+            </select>, circle 
+            <select id="pointGradient">
+              <option selected="yes" value="closest-side">closest-side</option>
+              <option value="closest-corner">closest-corner</option>
+              <option value="farthest-side">farthest-side</option>
+              <option value="farthest-corner">farthest-corner</option>
+              <option value="contain">contain</option>
+              <option value="cover">cover</option>
+            </select>
+            , <span id="fromColorValue">#0000FF</span>, <span id="toColorValue">#0000FF</span>);
+          </div>
+          <div class="codeEx webkit">
+            background: gradient(radial,
+            <select id="webkitPosX">
+              <option value="10%">10%</option>
+              <option value="20%">20%</option>
+              <option value="30%">30%</option>
+              <option value="40%">40%</option>
+              <option value="50%" selected="yes">50%</option>
+              <option value="60%">60%</option>
+              <option value="70%">70%</option>
+              <option value="80%">80%</option>
+              <option value="90%">90%</option>
+            </select>
+            <select id="webkitPosY">
+              <option value="10%">10%</option>
+              <option value="20%">20%</option>
+              <option value="30%">30%</option>
+              <option value="40%">40%</option>
+              <option value="50%" selected="yes">50%</option>
+              <option value="60%">60%</option>
+              <option value="70%">70%</option>
+              <option value="80%">80%</option>
+              <option value="90%">90%</option>
+            </select>, 0, <span id="wkPosX2">50%</span> <span id="wkPosY2">50%</span>,
+            <select id="webkitRadius">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="60">60</option>
+              <option value="70">70</option>
+              <option value="80">80</option>
+              <option value="90">90</option>
+              <option value="100" selected="yes">100</option>
+              <option value="120">120</option>
+              <option value="140">140</option>
+              <option value="160">160</option>
+              <option value="180">180</option>
+              <option value="200">200</option>
+            </select>, 
+            from(<span id="fromColorValueWebkit">#0000FF</span>), to(<span id="toColorValueWebkit">#0000FF</span>));
+          </div>
+          <div id="sliderFromColor">
+            <div id="" class="redSlider cssgradients"></div>
+            <div id="" class="greenSlider cssgradients"></div>
+            <div id="" class="blueSlider cssgradients"></div>
+          </div>
+          <div id="sliderToColor">
+            <div id="" class="redSlider cssgradients"></div>
+            <div id="" class="greenSlider cssgradients"></div>
+            <div id="" class="blueSlider cssgradients"></div>
+          </div>
+        </div>
+        <div id="affectedContent" class="roundedBox radialGradientSquare">
+          <div id="twoColor" class="roundedBox"></div>
+          <div id="fourColor" class="roundedBox"></div>
+          <div id="radialSphere" class="roundedBox"></div>
+        </div>
+      </div>
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>Can support a fallback for browsers that do not support using an image</li>
+          <li>If the browser supports Gradients, then image is not downloaded,
+            less HTTP requests, less packets, less header traffic </li>
+        </ul>
+        <div id="HowTo">
+          div {
+            background-color: #1a82f7; /* fallback color */
+            background-image: url(images/radial_bg_2.png); /* fallback image */
+            background-image: -moz-radial-gradient(100% 100% 90deg, #2F2727, #1a82f7);
+            background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
+          }
+       </div>
+      </fieldset>
+    </div>
+    <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+    <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type='text/javascript' src='./scripts/application.js'></script>
+  </body>
+</html>
