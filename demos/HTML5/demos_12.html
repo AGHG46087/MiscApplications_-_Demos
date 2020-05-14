@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <title>SVG</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+  <div id="contentWrap">
+    <h1 id="pageHeading">SVG<span class="boxshadow"> </span></h1>
+    <div id="primaryContent">
+      <div id="cssBox" class="roundedBox">
+        <div id="democontainer">
+          <div id="svgwrap">
+          <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgGraph" >
+            <g id="svgscale" transform="scale(1.0)" >  
+              <title>HTML5 SVG Graph Demo</title>
+              <desc>This is a demonstration of SVG in HTML5. This example displays a 2D bar graph.</desc>   
+              <!-- Vertical bars -->        
+              <rect fill="#0000ff" stroke="#0000ff" x="150" y="100" width="20" height="229" id="hans" class="bar" 
+              title="Hans Coffee Consumption"/>
+              <rect fill="#ff7f00" stroke="#ff7f00" x="225" y="219" width="20" height="110" id="arivu" class="bar" 
+              title="Arivu Coffee Consumption"/>
+              <rect fill="#ffff56" stroke="#ffff00" x="300" y="249" width="20" height="80" id="glenn" class="bar" 
+              title="Glenn Coffee Consumption"/>
+              <rect fill="#ff0000" stroke="#ff0000" x="375" y="154.00002" width="20" height="175" id="mahi" class="bar" 
+              title="Mahi Coffee Consumption"/>
+              <rect fill="#00bf00" stroke="#00bf00" x="450" y="278" width="20" height="50" id="teri" class="bar" 
+              title="Teri Coffee Consumption"/>
+              <rect fill="#7f7f7f" stroke="#7f7f7f" x="525" y="179" width="20" height="150" id="venkat" class="bar" 
+              title="Venkat Coffee Consumption"/>
+              <!-- X & Y Axis Lines -->
+              <line x1="90" x2="565" y1="332" y2="332" class="axis"/>
+              <line x1="90" x2="90" y1="96" y2="332" class="axis"/>
+              <!-- Y Axis Guide Lines -->
+              <line x1="90" x2="565" y1="300" y2="300" class="valueLine"/>
+              <line x1="90" x2="565" y1="260" y2="260" class="valueLine"/>
+              <line x1="90" x2="565" y1="220" y2="220" class="valueLine"/>
+              <line x1="90" x2="565" y1="180" y2="180" class="valueLine"/>
+              <line x1="90" x2="565" y1="140" y2="140" class="valueLine"/>
+              <line x1="90" x2="565" y1="100" y2="100" class="valueLine"/>
+              <!-- X Axis Labels -->
+              <a xlink:href="#" class="focusLabel">
+                <text x="140" y="350">Hans</text>
+              </a>
+              <a xlink:href="#" class="focusLabel">
+                <text x="215" y="350">Arivu</text>
+              </a>
+              <a xlink:href="#" class="focusLabel">
+                <text x="290" y="350">Glenn</text>
+              </a>
+              <a xlink:href="#" class="focusLabel">
+                <text x="365" y="350">Mahi</text>
+              </a>
+              <a xlink:href="#" class="focusLabel">
+                <text x="440" y="350">Teri</text>
+              </a>
+              <a xlink:href="#" class="focusLabel">
+                <text x="515" y="350">Venkat</text>
+              </a>
+              <!-- Y Axis Labels -->
+              <text x="65" y="305">10</text>
+              <text x="65" y="265">20</text>
+              <text x="65" y="225">30</text>
+              <text x="65" y="185">40</text>
+              <text x="65" y="145">50</text>
+              <text x="65" y="105">60</text>
+              <!-- Y Axis Label -->
+              <text transform="rotate(-45, 65.5, 350.5)" x="35" y="360">Gallons</text>
+              <!--Graph Title -->
+              <text x="130" y="70" class="graphTitle">
+                MONTHLY COFFEE CONSUMPTION
+              </text>
+            </g>
+          </svg>
+          <div id="graphItemDetails">
+            <div id="glennDetails" class="itemDetails roundedBox">
+              <table>
+                <tr>
+                  <th>Week</th>
+                  <th>Consumption</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>6 Gallons</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>6 Gallons</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5 Gallons</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>5 Gallons</td>
+                </tr>
+              </table>
+              <a href="#" title="Close details popup" class="popupClose">Close</a>
+            </div>
+            <div id="mahiDetails" class="itemDetails roundedBox">
+              <table>
+                <tr>
+                  <th>Week</th>
+                  <th>Consumption</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>15 Gallons</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>15 Gallons</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>10 Gallons</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>8 Gallons</td>
+                </tr>
+              </table>
+              <a href="#" title="Close details popup" class="popupClose">Close</a>
+            </div>
+            <div id="arivuDetails" class="itemDetails roundedBox">
+              <table>
+                <tr>
+                  <th>Week</th>
+                  <th>Consumption</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>10 Gallons</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>5 Gallons</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5 Gallons</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>10 Gallons</td>
+                </tr>
+              </table>
+              <a href="#" title="Close details popup" class="popupClose">Close</a>
+            </div>
+            <div id="venkatDetails" class="itemDetails roundedBox">
+              <table>
+                <tr>
+                  <th>Week</th>
+                  <th>Consumption</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>10 Gallons</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>15 Gallons</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5 Gallons</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>10 Gallons</td>
+                </tr>
+              </table>
+              <a href="#" title="Close details popup" class="popupClose">Close</a>
+            </div>
+            <div id="hansDetails" class="itemDetails roundedBox">
+              <table>
+                <tr>
+                  <th>Week</th>
+                  <th>Consumption</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>20 Gallons</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>15 Gallons</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>10 Gallons</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>15 Gallons</td>
+                </tr>
+              </table>
+              <a href="#" title="Close details popup" class="popupClose">Close</a>
+            </div>
+            <div id="teriDetails" class="itemDetails roundedBox">
+              <table>
+                <tr>
+                  <th>Week</th>
+                  <th>Consumption</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>3 Gallons</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>3 Gallons</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>4 Gallons</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>4 Gallons</td>
+                </tr>
+              </table>
+              <a href="#" title="Close details popup" class="popupClose">Close</a>
+            </div>
+          </div>
+          </div> <!-- svgwrap -->
+        </div> 
+      </div>
+    </div>
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>XML based, text based open for search engines and user search for content within images.</li>
+          <li>High resolution printing, zooming and panning</li>
+          <li>Higher degree of accessibility of images generated via SVG zooming for vision impariments with no loss.</li>
+        </ul>
+      </fieldset>
+  </div>
+  <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+  <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+  <script type='text/javascript' src='./scripts/modernizr.js'></script>
+  <script type='text/javascript' src='./scripts/svg-zoom.js'></script>
+  <script type='text/javascript' src='./scripts/application.js'></script>
+  </body>
+</html>
