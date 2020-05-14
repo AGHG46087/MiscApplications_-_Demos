@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" >
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content='' />
+    <meta name='Keywords' content='' />
+    <title>HTML 5 Demos: Intro</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demo_intro_fonts.css' />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demo_intro.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="sequence">
+      <img id="htmlWarsLogo" src="./resrc/html5wars.png" alt="HTML5 Wars" />
+      <p id="far-far-away">
+	A long time ago in a galaxy far,<br/>far away. . . .
+      </p>
+      <div id="crawlText">
+	<p class="episode">A New Hope</p>
+        <p class="title">HTML 5</p>
+        <p>It is a period of techno unrest...
+          Rebel Browser makers, Dogs and
+          Cats playing together, Mass histeria...
+          It is good against evil lurking in the
+          darkness. The rebels have won their
+          first victory against the evil Galactic
+          Windows Empire.</p>
+        <p>During     the     battle,    Rebel
+          browser   makers    managed   to  
+          deploy   secret   plans   to   unveil
+          better  web   pages   through   HTML5.
+          The Empire&#8217;s  ultimate   weapon,
+          the  INTERNET  EXPLODER,  a  security
+          plagued,  feature  lacking  internet
+          browser  threatens  to  destroy  an
+          entire  planet.</p>
+        <p>Pursued    by     the     Empire&#8217;s
+          sinister   IE  user agents,      Firefox
+          and Webkit browsers manage to stay
+          leaps and bounds beyond the reach of IE.
+          In their quest to be the best custodians
+          of HTML 5 agents that can save our people
+          and restore freedom to the galaxy...
+          Yoda Yoda Yoda....</p>
+        <p><strong>Demo Credits</strong>.......................
+          Arivu Arumugam......................TCS
+          Brian Snodgrass......................SPA
+          Glenn Crouch...........................SPA
+          Hans-Jurgen Greiner................PFA
+          James Jerome Smartfoster.....SPA
+          Kunal Panda.............................LPA
+          Krishan Kumar.........................TCS
+          Mahi Sethuraman.....................LPA
+          Vaibhav Navghare....................TCS
+        </p>
+      </div> <!-- End Crawl Text -->
+    </div> <!-- End Sequence -->
+    <p id="warning">This browser does not support the
+      <a href="http://www.w3.org/TR/css3-3d-transforms/">CSS 3D transforms</a> needed to display this demo.
+      You will need <a href="http://www.apple.com/safari/">Safari</a> to view it.</p>
+    <audio src="./resrc/starwars.m4a" id="audio" autobuffer="autobuffer" preload="auto"></audio>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type="text/javascript">
+      var a1 = document.getElementById('audio'); a1.volume = 0; a1.play();
+      function updateSecs() {
+        //if ( count >= 105 ) { clearInterval(intHandle); }
+        window.location.href = "index.html";
+      }
+      if (Modernizr.csstransforms3d) {
+        setTimeout(function() { a1.pause(); a1.volume = 1; a1.currentTime = 0; a1.play(); }, 12000); // 11700
+        setTimeout("updateSecs()", 110000);
+      }
+
+    </script>
+	    
+  </body>
+</html>
