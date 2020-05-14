@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <title>HTML 5 Demos: CSS Shadows</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="contentWrap">
+      <h1 id="pageHeading">CSS Shadows<span class="boxshadow"> </span></h1>
+      <div id="primaryContent">
+        <div id="cssBox" class="roundedBox ipadHeight">
+          <div class="codeEx">
+            <div id="textShadowCSS">
+            text-shadow: <span id="xPos">0</span>px <span id="yPos">0</span>px <span id="rPos">0</span>px<br />
+            <span class="cssindent">rgba(<span id="rColor">255</span>,<span id="gColor">255</span>,<span id="bColor">255</span>,<span id="aColor">1.0</span>);</span>
+            
+            </div>
+            <div id="boxShadowCSS">
+            box-shadow: <span id="bxPos">0</span>px <span id="byPos">0</span>px <span id="brPos">0</span>px<br />
+            <span class="cssindent">rgba(<span id="brColor">255</span>,<span id="bgColor">255</span>,<span id="bbColor">255</span>,<span id="baColor">1.0</span>);</span>
+            </div>
+          </div>
+          <div id="sliderTextShadowPosition">
+            <div id="" class="textXSlider cssTextShadowPos"></div>
+            <div id="" class="textYSlider cssTextShadowPos"></div>
+            <div id="" class="textRadiusSlider cssTextShadowPos"></div>
+          </div>
+          <div id="sliderTextShadowColor">
+            <div id="" class="redSlider cssTextShadow"></div>
+            <div id="" class="greenSlider cssTextShadow"></div>
+            <div id="" class="blueSlider cssTextShadow"></div>
+            <div id="" class="alphaSlider cssTextShadow"></div>
+          </div>
+          <div id="sliderBoxShadowPosition">
+            <div id="" class="textXSlider cssTextShadowPos"></div>
+            <div id="" class="textYSlider cssTextShadowPos"></div>
+            <div id="" class="textRadiusSlider cssTextShadowPos"></div>
+          </div>
+          <div id="sliderBoxShadowColor">
+            <div id="" class="redSlider cssTextShadow"></div>
+            <div id="" class="greenSlider cssTextShadow"></div>
+            <div id="" class="blueSlider cssTextShadow"></div>
+            <div id="" class="alphaSlider cssTextShadow"></div>
+          </div>
+        </div>
+        
+        <div id="affectedContent" class="roundedBox">
+          <div class="roundedBox" id="shadowBox">
+            <span id="coolShadows" class="shadowTexts">Text Shadows are Cool</span>
+            <span id="hotShadows"  class="shadowTexts">Multi Text Shadows are Hot</span>
+          </div>
+        </div>
+      </div>
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>Can support a fallback for browsers that do not support using an image</li>
+          <li>If the browser supports Shadows, then image is not downloaded,
+            less HTTP requests, less packets, less header traffic </li>
+          <li>No Image replacement required - can be rendered directly in the browser</li>
+
+        </ul>
+      </fieldset>
+    </div>
+    <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+    <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type='text/javascript' src='./scripts/application.js'></script>
+    
+  </body>
+</html>
