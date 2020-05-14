@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv='Content-Type' content='application/xhtml+xml; charset=UTF-8' />
+    <meta name='Description' content=''/>
+    <meta name='Keywords' content=''/>
+    <title>HTML 5 Demos: ARIA - Landmark Roles</title>
+    <link rel='stylesheet' media='all' type='text/css' href='styles/main.css' />
+    <link type="text/css" href="styles/dark-hive/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' media='all' type='text/css' href='styles/demos.css' />
+  </head>
+  <!-- Conditional CSS include for IE6 and below -->
+  <!--[if lt IE 7 ]><body class='ie6 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE7 -->
+  <!--[if IE 7 ]><body class='ie7 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE8 -->
+  <!--[if IE 8 ]><body class='ie8 no-js'><![endif]-->
+  <!-- Conditional CSS include for IE9 -->
+  <!--[if IE 9 ]><body class='ie9 no-js'><![endif]-->
+  <!--[if !IE]>--><body class="no-js"><!--<![endif]-->
+    <div id="contentWrap">
+      <header role="banner">
+        <h1 id="pageHeading">ARIA - Landmark Roles</h1>
+      </header>
+      <div id="primaryContent">
+        <div id="cssBox" class="roundedBox">
+          <div class="codeEx" role="complementary">
+	    <p>&lt;header <span class="keySnippet">role="banner"</span>&gt;&lt;h1 id="pageHeading"&gt;ARIA&lt;/h1&gt;&lt;/header&gt;</p>
+	    <p>&lt;div class="roundedBox" id="menu" tabindex="0" <span class="keySnippet">role="navigation"</span>&gt;</p>
+	    <p>&lt;div class="roundedBox" id="search" <span class="keySnippet">role="search"</span>&gt;</p>
+	    <p>&lt;div class="roundedBox" <span class="keySnippet">role="main"</span>&gt;</p>
+          </div>
+        </div>
+        <div id="affectedContent" class="roundedBox">
+	  <div class="roundedBox" id="menu" tabindex="0" role="navigation">
+            <ol role="menu">
+              <li role="menuitem"><a href="#">HTML 5 and CSS</a></li>
+              <li role="menuitem"><a href="#">Introduction to Transforms</a></li>
+              <li role="menuitem"><a href="#">Animations in action</a></li>
+              <li role="menuitem"><a href="#">Related Articles</a></li>
+              <li role="menuitem"><a href="#">Appendix</a></li>
+              <li role="menuitem"><a href="#">Translations in motion</a></li>
+              <li role="menuitem"><a href="#">Why CSS is cool</a></li>
+              <li role="menuitem"><a href="#">Send Feedback</a></li>
+            </ol>
+          </div>
+	  <div class="roundedBox" id="search" role="search">
+	    <form id="searchForm">
+	      <fieldset>
+	        <legend>Search the website</legend>
+	        <label for="searchtext">Search</label>
+	        <input type="search" name="s" id="searchtext" placeholder="Enter Search Term..."/>
+	        <input type="submit" value="Go" />
+	      </fieldset>
+	    </form>
+	  </div>
+	  <div class="roundedBox" role="main">
+	    <p>This page demonstrates the markup used in a typical document to support the
+              <a href="http://www.w3.org/WAI/PF/aria/#roleattribute_inherits"
+                 title="W3C ARIA Role Specification">W3C Aria Role specification</a>.
+            </p>
+	    <ul id="detailsList">
+	      <li>Through the use of the <em>role</em> attribute we can indicate landmark elements in the document -
+                such as page headings, navigation, search and main content.</li>
+	      <li>The <a href="https://addons.mozilla.org/en-US/firefox/addon/9108"
+                         title="Juice Studio Accessibility Toolbar Firefox Plugin Download">Juice Studio Accessibility
+                  Toolbar</a> is a free plugin for Firefox that will provide a visual display of the landmark
+                roles currently defined in a document/webpage.</li>
+ 	      <li>These Landmark Roles allows Assistive Technology users to quickly navigate to different areas
+                of the document. For example on JAWS <span class="keySnippet">CTRL + INSERT + ;</span> will open the
+                Landmarks dialog.
+              </li>
+	    </ul>
+	  </div>
+        </div>
+      </div>
+      <fieldset id="SoWhat" class="roundedBox">
+        <legend>So What</legend>
+        <ul>
+          <li>ARIA aimed at solving dynamically updated pages and provide Accessibility for RIA</li>
+          <li>ARIA, combined with CSS selectors provides for both Visual presentation and Accessibility</li>
+          <li>ARIA Roles are supported in JAWS, NVDA, VoiceOver</li>
+          <div id="HowTo">
+            &lt;header role=&quot;banner&quot;&gt;
+	       ...header code here
+	    &lt;/header&gt;
+            header[role="banner"] {
+	       ...your styles here
+	    }
+          </div>
+        </ul>
+      </fieldset>
+    </div>
+    <script type='text/javascript' src='./scripts/jquery-1.4.2.min.js'></script>
+    <script type='text/javascript' src='./scripts/jquery-ui-1.8.5.custom.min.js'></script>
+    <script type='text/javascript' src='./scripts/modernizr.js'></script>
+    <script type='text/javascript' src='./scripts/application.js'></script>
+  </body>
+</html>
