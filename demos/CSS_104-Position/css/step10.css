@@ -1,0 +1,37 @@
+/*
+*
+*/
+#example p {
+    display:none;
+}
+#div-1 {
+    background-color:#EEEEEE;
+    position:relative;
+}
+#div-1a {
+    background-color:green;
+    height:40px;
+    left:10px;
+    position:absolute;
+    top:20px;
+    width:40px;
+}
+#div-1b {
+    background-color:green;
+    height:40px;
+    position:absolute;
+    right:10px;
+    top:20px;
+    width:40px;
+}
+#div-1c {
+    background-color:pink;
+    height:20px;
+    left:20px;
+    position:absolute;
+    top:120px;
+    width:360px;
+}
+#div-before {
+    background-color:brown;
+}
