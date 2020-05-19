@@ -1,0 +1,27 @@
+/*
+*
+*/
+#div-before, #div-after {
+    background-color:#8888DD;
+    color:#000000;
+}
+#div-1 {
+    background-color:#000000;
+    color:#FFFFFF;
+    width:400px;
+}
+#div-1-padding {
+    padding:10px;
+}
+#div-1a {
+    background-color:#DD3333;
+    color:#FFFFFF;
+}
+#div-1b {
+    background-color:#33DD33;
+    color:#FFFFFF;
+}
+#div-1c {
+    background-color:#3333DD;
+    color:#FFFFFF;
+}
