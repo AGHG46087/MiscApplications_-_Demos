@@ -1,0 +1,19 @@
+/*
+*
+*/
+#div-1 {
+    height: 250px;
+    position:relative;
+}
+#div-1a {
+    position:absolute;
+    right:0px;
+    top:0px;
+    width:200px;
+}
+#div-1b {
+    left:0px;
+    position:absolute;
+    top:0px;
+    width:200px;
+}
