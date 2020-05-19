@@ -1,0 +1,91 @@
+/*
+*
+*/
+.tabberlive .tabbertabhide {
+    display:none;
+}
+.tabber {
+}
+.tabberlive {
+    margin-top:1em;
+}
+ul.tabbernav {
+    -x-system-font:none;
+    border-bottom:1px solid #777788;
+    font-family:Verdana,sans-serif;
+    font-size:12px;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:bold;
+    line-height:normal;
+    margin:0;
+    padding:3px 0;
+}
+ul.tabbernav li {
+    display:inline;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+ul.tabbernav li a {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#DDDDEE none repeat scroll 0 0;
+    border-color:#777788 #777788 -moz-use-text-color;
+    border-style:solid solid none;
+    border-width:1px 1px medium;
+    margin-left:3px;
+    padding:3px 0.5em;
+    text-decoration:none;
+}
+ul.tabbernav li a:link {
+    color:#444488;
+}
+ul.tabbernav li a:visited {
+    color:#666677;
+}
+ul.tabbernav li a:hover {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#AAAAEE none repeat scroll 0 0;
+    border-color:#222277;
+    color:#000000;
+}
+ul.tabbernav li.tabberactive a {
+    background-color:#FFFFFF;
+    border-bottom:1px solid #FFFFFF;
+}
+ul.tabbernav li.tabberactive a:hover {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:white none repeat scroll 0 0;
+    border-bottom:1px solid white;
+    color:#000000;
+}
+.tabberlive .tabbertab {
+    border-color:-moz-use-text-color #AAAAAA #AAAAAA;
+    border-style:none solid solid;
+    border-width:0 1px 1px;
+    height:410px;
+    overflow:auto;
+    padding:5px;
+}
+.tabberlive .tabbertab h2 {
+}
+.tabberlive .tabbertab h3 {
+}
+#tab1.tabberlive {
+}
+#tab2.tabberlive {
+}
+#tab2.tabberlive .tabbertab {
+    height:200px;
+    overflow:auto;
+}
