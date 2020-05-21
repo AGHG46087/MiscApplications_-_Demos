@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+  <head>
+    <meta HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252" />
+   <style>
+.clearfix:after{content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;} .clearfix{display:inline-block;} html[xmlns] .clearfix{display:block;} * html .clearfix{height:1%;} .dispNone { display: none; } .marginBottom { margin-bottom: 0in; } .sampleHTMLDemo { background-color:  #DEDEDE; color: #000000; font-weight: bold; text-align: center; padding: 10px 0 10px 0; } .blueBold { color: #006699; font-weight: bold; } body  { color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:10pt; font-style:normal; font-weight:normal; height:100%; margin:0; padding:20px; width:auto; } fieldset { width: 250px; padding: 8px; margin: 8px; float: left; -moz-border-radius-topright: 10px; -moz-border-radius-bottomright: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-bottomleft: 10px; background-color: #F6F6F6; } fieldset#resultbox { width: 290px; } fieldset#fontsizebox { width: 862px; } p { width: 96%; } h1 { font-size: 20px; } #promo { width: 75%; margin: auto; padding: 10px; } #colorContrastTool { float: left; } #fontandsamplewrap { width: 100%; float: left; } div#fontMetricsBlock { width: 100%; } #fontSizeGroup { float: left; width: 45px; } #fontUnitGroup { float: left; width: 75px; border-right: 2px solid #ECE9D8; } #fontWeightGroup { float: left; width: 55px; margin: 0 0 0 10px; border-right: 2px solid #ECE9D8; } #wcagUnitGroup { float: left; width: 118px; } div#sample-text { border-top: 2px solid #ECE9D8; clear: both; width: 100%; } iv#sample-text p { margin: 2px 5px 0px 0px; } #bcolor-result { background-color: #FFFFFF; } div.#toolTitle { float: left; } legend { font-weight: bold; } div.grouptitle { font-weight: bold; padding: 5px 0 0 0; } .lblColorField { position: absolute; left: -1000px; } .result { padding: 5px; } .line { top: 11px; left: 15.5px; width: 217px; } .handle { left: 219px; top: 6.5px; } .line-fill { width: 215px; } .dynamic-slider-control { position: relative; background-color: rgb(230, 230, 230); -moz-user-focus: normal; -moz-user-select: none; cursor: default; } .horizontal { width: 200px; height: 27px; } .dynamic-slider-control input { display: none; } .dynamic-slider-control .handle { position: absolute; font-size: 1px; overflow: hidden; -moz-user-select: none; cursor: default; } .dynamic-slider-control.horizontal .handle { width: 31px; height: 14px; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAOCAMAAADg+jc1AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAVUExURf/6/5yZnM3OzVphWv///+bm5v////B3FhMAAAAHdFJOU////////wAaSwNGAAAAfElEQVR42mJgY2PGDdjYAAKIgY2ZBTdgZgMIIAZmFlbcgIkZIIAIyQMEEKY8I4o8QAAhy4NlGBmQ1DAxAwQQkjxEBk5A5AECCCGPRRooDxBAcHls0kB5gABCcR+SDEweIIAI+Q8ggAjJAwQQMHyZcANmNoAAYiAQPwABBgA1xgboirgRygAAAABJRU5ErkJggg=='); } .dynamic-slider-control.horizontal .handle div {  } .dynamic-slider-control .line { position: absolute; font-size: 0.01mm; overflow: hidden; border: 1px solid rgb(90, 97, 90); background: none repeat scroll 0% 0% rgb(189, 190, 189); -moz-box-sizing: content-box; } .dynamic-slider-control.horizontal .line { height: 3px; } .dynamic-slider-control .line div { width: 1px; height: 1px; border-width: 1px; border-style: solid; border-color: rgb(230, 230, 230) rgb(189, 190, 189) rgb(189, 190, 189) rgb(230, 230, 230); } #viewresult { padding: 5px 5px 0 0; } #viewresult-sample { font-size: 12px; } #viewresult #sample-result { color: #FF0000; background-color: #FFFF00; border: 1px solid #003C00; } #viewresult #sample-result.valid { color: #003C00; background-color: #FFFDD7; } .slider { width: auto; } #resultbox .lbl { float: left; width: 210px; clear: both; padding: 5px; } #resultbox .fld { float: left; } #resultbox input { width: 58px; background-color: #FFCACA; color: #000000; font-weight: bold; } #resultbox input.valid { background-color: #CAFFCA; color: #000000; font-weight: bold; } div.twiggieContentClosed { display: none; margin: 0 10px 10px 10px } div.twiggieContentOpen { display: block; } div.twiggieControl { width: 100%; } div.twiggieControl span { cursor: pointer; } div.twiggieControl span.theTwigster { background: #fff url('data:image/gif;base64,R0lGODlhDgAPAKIHAOXl5YWFhf///15eXtnZ2ejo6MfHxwAAACH5BAEAAAcALAAAAAAOAA8AAAMteLrc/gwAuEAIk1qBdRBF92xEmDVkKUZBQRjBcFYfLI8BEc/s7t2UgyRIPCQAADs=') no-repeat scroll center center; line-height:1%; margin:0 0 0 5px; padding:0 8px 0 5px; } div.twiggieControlOpen span.theTwigster { background: #fff url('data:image/gif;base64,R0lGODlhDgAPAKIHAOXl5W5ubtnZ2VRUVP///+jo6MfHxwAAACH5BAEAAAcALAAAAAAOAA8AAAMpeLrc/jDKBaq9NOjNgQKBQIyEGAzeFxRCa5xpxr7oAwpwBNZSNf3AXwIAOw==') no-repeat scroll center center; padding: 0px 8px 0px 5px; } 
+    </style>
+    
+    <title>Color Contrast Best Practices for Web Accessibility</title>
+  </head>
+  <body>
+    <div id="promo" dir="LTR">
+      <div id="mainId">
+        <h1>Best Practices for Web Accessibility: <strong>Color Contrast</strong></h1>
+        <p>Two colors are considered to provide good color visibility if the Luminance contrast between the two colors
+          are greater than a set threshold against a font(unit, size and weight). See
+        </P>
+        <div class="clearfix" id="toolTitle"><strong>Color Contrast Lumninance Check </strong></div>
+      </div>
+
+      <div id="colorContrastTool" class="clearfix">
+        <div id='fontandsamplewrap'>
+        <fieldset id='fontsizebox'>
+          <legend>Font Size, Units &amp; Weight</legend>
+          <div class="clearfix" id="fontMetricsBlock">
+            <div id="fontSizeGroup">
+              <label for="fontsize" id="lblFontSize">Size</label>
+              <input value="20" id="fontsize" maxlength="2" size="2" type="text" title="Numeric font size" />
+            </div>
+            <div id="fontUnitGroup">
+              <form name="fontUnitForm" method="get" action="" onsubmit="return false;" />
+              <input type="radio" name="px-pt" class="px-pt" id="pxUnit" title="pixels" value="pixel" checked="checked" />
+              <label id="lblPXUnit" for="pxUnit" class="px-ptLabel">pixels</label>
+              <input type="radio" name="px-pt" class="px-pt" id="ptUnit" title="points" value="point" />
+              <label id="lblPTUnit" for="ptUnit" class="px-ptLabel">points</label>
+              </form>
+            </div>
+            <div id="fontWeightGroup">
+              <label id="lblWeight" for="fontWeight" class="">Weight</label>
+              <input value="200" id="fontWeight" maxlength="3" size="3" type="text" title="Numeric font weight" />
+            </div>
+            <div id="wcagUnitGroup">
+              <form name="wcagUnitForm" method="get" action="" onsubmit="return false;" />
+              <input type="radio" name="wcagLevel" class="wcagLevel" id="level2a" title="Level AA" value="level2a" checked="checked" />
+              <label id="lblAALevel" for="level2a" class="levelLabel">WCAG2 <strong>AA</strong></label>
+              <br />
+              <input type="radio" name="wcagLevel" class="wcagLevel" id="level3a" title="Level AAA" value="level3a"  />
+              <label id="lblAAALevel" for="level3a" class="levelLabel">WCAG2 <strong>AAA</strong></label>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix" id="sample-text">
+            <p id="viewresult">Example text using <span id="specFont">XXpx</span> <span class="dispNone" id="cnvtFont">(YYpt)</span>
+              <span id="specWeight"></span>, WCAG2 <span id="spec-level"></span> result is <span id="sample-result"></span></p>
+            <div id="viewresult-sample">Sample 12px normal text. <strong>Sample 12px bold text.</strong>
+              <em>Sample 12px italic text.</em>
+            </div>
+          </div>
+        </fieldset>
+        </div>
+        <fieldset id='bgcolorbox'>
+          <legend>Background Color</legend>
+          <div id="bcolor-result" class="result"><label for="bgColor" class="lblColorField">HEX Background Color</label>&nbsp; #
+            <input value="6699CE" id="bgColor" maxlength="6" size="6" type="text" title="HEX Background Color" />
+          </div>
+          <div class="ctrl">
+            <label for="bgRed-slider-input">Red:</label>
+            <div class="horizontal dynamic-slider-control slider" id="bgRed-slider">
+              <input value="255" class="slider-input" id="bgRed-slider-input" title="Adjust Red" />
+              <div class="line">
+                <div class="line-fill" ></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+          <div class="ctrl">
+            <label for="bgGreen-slider-input">Green:</label>
+            <div class="horizontal dynamic-slider-control slider" id="bgGreen-slider">
+              <input value="255" class="slider-input" id="bgGreen-slider-input" title="Adjust Green" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+          <div class="ctrl">
+            <label for="bgBlue-slider-input">Blue:</label>
+            <div class="horizontal dynamic-slider-control slider" id="bgBlue-slider">
+              <input value="255" class="slider-input" id="bgBlue-slider-input" title="Adjust Blue" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+          <div class="ctrl">
+            <label for="bgValue-slider-input">Value (%):</label>
+            <div class="horizontal dynamic-slider-control slider" id="bgValue-slider">
+              <input value="100" class="slider-input" id="bgValue-slider-input" title="Adjust RGB value" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+          
+          <div class="ctrl">
+            <label for="bgSaturation-slider-input">Saturation (%):</label>
+            <div class="horizontal dynamic-slider-control slider" id="bgSaturation-slider">
+              <input value="0" class="slider-input" id="bgSaturation-slider-input" title="Adjust Saturation" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+          <div class="ctrl">
+            <label for="bgHue-slider-input">Hue (°):</label>
+            <div class="horizontal dynamic-slider-control slider" id="bgHue-slider">
+              <input value="0" class="slider-input" id="bgHue-slider-input" title="Adjust Hue" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset id='fgcolorbox'>
+          <legend>Foreground Color</legend>
+          <div id="fcolor-result" class="result"><label for="fgColor" class="lblColorField">HEX Foreground Color</label>&nbsp; #
+            <input value="FFFFFF" id="fgColor" maxlength="6" size="6" type="text" title="HEX Foreground Color" />
+          </div>
+          <div class="ctrl">
+            <label for="fgRed-slider-input">Red:</label>
+            <div class="horizontal dynamic-slider-control slider" id="fgRed-slider">
+              <input value="255" class="slider-input" id="fgRed-slider-input" title="Adjust Red" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+          <div class="ctrl">
+            <label for="fgGreen-slider-input">Green:</label>
+            <div class="horizontal dynamic-slider-control slider" id="fgGreen-slider">
+              <input value="0" class="slider-input" id="fgGreen-slider-input" title="Adjust Green" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+          <div class="ctrl">
+            <label for="fgBlue-slider-input">Blue:</label>
+            <div class="horizontal dynamic-slider-control slider" id="fgBlue-slider">
+              <input value="0" class="slider-input" id="fgBlue-slider-input" title="Adjust Blue" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+          <div class="ctrl">
+            <label for="fgValue-slider-input">Value (%):</label>
+            <div class="horizontal dynamic-slider-control slider" id="fgValue-slider">
+              <input value="100" class="slider-input" id="fgValue-slider-input" title="Adjust RGB value" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+          
+          <div class="ctrl">
+            <label for="fgSaturation-slider-input">Saturation (%):</label>
+            <div class="horizontal dynamic-slider-control slider" id="fgSaturation-slider" >
+              <input value="100" class="slider-input" id="fgSaturation-slider-input" title="Adjust Saturation" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+          <div class="ctrl">
+            <label for="fgHue-slider-input">Hue (°)</label>
+            <div class="horizontal dynamic-slider-control slider" id="fgHue-slider">
+              <input value="0" class="slider-input" id="fgHue-slider-input" title="Adjust Hue" />
+              <div class="line">
+                <div class="line-fill"></div>
+              </div>
+              <div class="handle"><div>&nbsp;</div></div>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset id='resultbox'>
+          <legend>WCAG Results</legend>
+          <div class="grouptitle clearfix">WCAG 2 - Color Contrast Luminocity</div>
+          <div>
+            <div class="lbl"><label for="contrastratio">Contrast Luminocity Ratio</label> <strong id="symbol">&lt;</strong>
+              <span id="ratioThreshold">4.5</span></div>
+            <div class="fld"><input class="resultInput" value="" id="contrastratio" maxlength="7"
+                                    type="text" title="Contrast Lumninocity Ratio" />
+            </div>
+          </div>
+          <div class="twiggieControl grouptitle clearfix" id="AA-rule-group" value="AA-rule-list">
+            <span class="theTwigster">&nbsp;</span><span class="twiggieTitle">WCAG 2 - Level AA</span>
+          </div>
+          <div id="AA-rule-list" class="twiggieContentClosed">
+          <div id="AA-rule1">
+            <div class="lbl"><label for="w2-14Normal">Size less than 18pt Compliant</label></div>
+            <div class="fld"><input class="resultInput" value="NO" id="w2-14Normal" maxlength="7"
+                                    type="text" title="Size &lt; 18pt font" />
+            </div>
+          </div>
+          <div id="AA-rule2">
+            <div class="lbl"><label for="w2-14Bold">Size 14pt-18pt <strong>Bold</strong> Compliant</label></div>
+            <div class="fld"><input class="resultInput" value="" id="w2-14Bold" maxlength="7"
+                                    type="text" title="Size 14pt-18pt, bold font" />
+            </div>
+          </div>
+          <div id="AA-rule3">
+            <div class="lbl"><label for="w2-18Normal">Size greater than 18pt Compliant</label></div>
+            <div class="fld"><input class="resultInput" value="" id="w2-18Normal" maxlength="7"
+                                    type="text" title="Size &gt; 18pt, normal or bold font" /> </div>
+          </div>
+          </div>
+          <div class="twiggieControl grouptitle clearfix" id="AAA-rule-group" value="AAA-rule-list">
+            <span class="theTwigster">&nbsp;</span><span class="twiggieTitle">WCAG 2 - Level AAA</span>
+          </div>
+          <div id="AAA-rule-list" class="twiggieContentClosed">
+          <div id="AAA-rule1">
+            <div class="lbl"><label for="w2a-14Normal">Size less than 18pt Compliant</label></div>
+            <div class="fld"><input class="resultInput" value="" id="w2a-14Normal" maxlength="7"
+                                    type="text" title="Size &lt; 18pt font" />
+            </div>
+          </div>
+          <div id="AAA-rule2">
+            <div class="lbl"><label for="w2a-14Bold">Size 14pt-18pt <strong>Bold</strong> Compliant</label></div>
+            <div class="fld"><input class="resultInput" value="" id="w2a-14Bold" maxlength="7"
+                                    type="text" title="Size 14pt-18pt, bold font" />
+            </div>
+          </div>
+          <div id="AAA-rule3">
+            <div class="lbl"><label for="w2a-18Normal">Size greater than 18pt Compliant</label></div>
+            <div class="fld"><input class="resultInput" value="" id="w2a-18Normal" maxlength="7"
+                                    type="text" title="Size &gt; 18pt, normal or bold font" />
+            </div>
+          </div>
+          </div>
+          <div class="twiggieControl grouptitle clearfix" id="priority2-rule-group" value="priority2-rule-list">
+            <span class="theTwigster">&nbsp;</span><span class="twiggieTitle">WCAG 1 - Color / Brightness difference</span>
+          </div>
+          <div id="priority2-rule-list" class="twiggieContentClosed">
+          <div>
+            <div class="lbl"><label for="bDiff">Brightness Difference: (&gt;= 125)</label></div>
+            <div class="fld"><input class="resultInput" value="" id="bDiff" size="7" maxlength="7"
+                                    type="text" title="WCAG1 Brightness Difference" />
+            </div>
+          </div>
+          <div>
+            <div class="lbl"><label for="cDiff">Color Difference: (&gt;= 500)</label></div>
+            <div class="fld"><input class="resultInput" value="" id="cDiff" size="7" maxlength="7"
+                                    type="text" title="WCAG1 Color Difference" />
+            </div>
+          </div>
+          <div>
+            <div class="lbl"><label for="cResult">WCAG 1 colors compliant?</label></div>
+            <div class="fld"><input class="resultInput" value="" id="cResult" maxlength="7"
+                                    type="text" title="WCAG1 Compliant result" />
+            </div>
+          </div>
+          </div>
+        </fieldset>
+
+      </div> <!-- colorContrastTool -->
+
+      <h2 class="clearfix"><strong>Color Contrast Luminance</strong></h2>
+      <p>Guideline 1.4 of WCAG 2 states, make it easy to distinguish foreground information from
+        background images or sounds.</p>
+      <p>The luminosity contrast ratio algorithm is the recommendation WCAG 2. Brightness is measured by
+        relative luminance(L) where L is calculated
+        by:<br/>
+        <pre>
+            L = 0.2126 * R + 0.7152 * G + 0.0722 * B where R, G and B are defined as:
+            if RsRGB <= 0.03928 then R = RsRGB/12.92 else R = ((RsRGB+0.055)/1.055) ^ 2.4
+            if GsRGB <= 0.03928 then G = GsRGB/12.92 else G = ((GsRGB+0.055)/1.055) ^ 2.4
+            if BsRGB <= 0.03928 then B = BsRGB/12.92 else B = ((BsRGB+0.055)/1.055) ^ 2.4
+               and RsRGB, GsRGB, and BsRGB are defined as:
+                   RsRGB = R8bit/255
+                   GsRGB = G8bit/255
+                   BsRGB = B8bit/255
+            The calculation (L1 + 0.05) / (L2 + 0.05) should result in a number greater than 4.5:1.
+        </pre>
+        The Result of the formula is measured against the <strong>font size</strong> and <strong>weight</strong>
+        that determines the actual PASS/FAIL.
+      </p>
+      <p><strong>WCAG 2.  1.4.3: Contrast Minimum (Level AA)</strong>
+        <ul>
+          <li>General Text and images of text have a contrast ratio of at least 4.5:1.</li>
+          <li>Text Less than 18pt font normal weight (less than 14pt regardless of weight) and
+            color contrast ratio of at least 4.5:1.</li>
+          <li>Large text between 14pt and 18pt font <strong>bold</strong> and has a color contrast ratio of at least 3:1.</li>
+          <li>Large text greater than 18pt font rgardless of weight and has a color contrast ratio of at least 3:1.</li>
+        </ul>
+      </p>
+      <p><strong>WCAG 2.  1.4.6: Contrast Enhanced (Level AAA)</strong>
+        <ul>
+          <li>General Text and images of text have a contrast ratio of at least 7:1.</li>
+          <li>Text Less than 18pt font normal weight (less than 14pt regardless of weight) and
+            color contrast ratio of at least 7:1.</li>
+          <li>Large text between 14pt and 18pt font <strong>bold</strong> and has a color contrast ratio of at least 4.5:1.</li>
+          <li>Large text greater than 18pt font rgardless of weight and has a color contrast ratio of at least 4.5:1.</li>
+        </ul>
+      </p>
+      <h2 class="clearfix"><strong>Color Brightness / Difference (AERT-WCAG 1)</strong></h2>
+      <p>Guideline of WCAG 1 does not in fact, provide any specific guidelines concerning color contrast. The formulas
+        commonly used to judge brighness and differnece were specified in Techniques For Accessibility Evaluation
+        And Repair Tools (AERT).</p>
+      <p>The AERT provides two formulas to assist, the issue is that they are independent and one does not account
+        for the other.  They are provided to help authors conform to the WCAG 1 but are not actually part of the
+        WCAG 1 document:<br/>
+        <strong>Color Brightness</strong><br/>
+        <pre>
+            ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+        </pre>
+        <strong>Color Difference</strong><br/>
+        <pre>
+            (maximum (Red value 1, Red value 2) - minimum (Red value 1, Red value 2)) +
+            (maximum (Green value 1, Green value 2) - minimum (Green value 1, Green value 2)) +
+            (maximum (Blue value 1, Blue value 2) - minimum (Blue value 1, Blue value 2))
+        </pre>
+      </p>
+      
+      <h3><strong>Color challenges</strong></h3>
+      <p>For users that do not experience color contrast deficiencies, saturation and hue have little or
+        no effect on legibility assessed through reading performance.  Vision impairments that affect color
+        contrast may affect luminance contrast to some degree.  Hence the recommendation with respect to color
+        contrast includes the calculation in such a way that color is not a key factor so that people who
+        have color vision deficit will also have sufficient contrast between foreground and background</p>
+      <p>Text and images of text that is larger in size or contains wider character strokes is considered
+        easier to read at lower contrast.  The color contrast requirement for larger text is lower.  Text
+        that falls into this category is a font that is 18 point text or 14 point bold text.  This allows
+        for designers to use a wider range of color choices for large text that is consistent with titles
+        and headers.</p>
+      <p>Images of text being an image are more difficult to change the foreground and background color
+        contrast and color combinations for images of text, which would be required for some users to meet
+        this requirement</p>
+      <p><strong class='emp'>NOTE</strong></font>: In addition, the enlargement of
+        images of text also does not scale clearly during enlargement as the images tend to realize the
+        pixilation in the colors chosen.  Therefore, it is strongly recommended using text where ever
+        possible; if the image of text cannot be rendered as standard text fonts, consider supplying an
+        image of high color contrast and higher resolution for scaling.</p>
+      <p>This guideline applies to all situations in which images of text that are intended to be understood
+        as text. Corporate visual guidelines beyond logo and logotype are also included in the guideline.</p>
+
+    </div> <!-- end document -->
+
+    <script type="text/javascript">
+if(CCL==null||typeof(CCL)=="undefined"){var CCL=new Object()}CCL.Utils={pad:function(a){return("00"+a.toString(16).toUpperCase()).slice(-2)},convertRGB_HSV:function(a,f,h){var a=(a/255),f=(f/255),h=(h/255);var c=Math.min(Math.min(a,f),h),j=Math.max(Math.max(a,f),h),l=j-c;var k=j,d,e;if(j==c){e=0}else{if(j==a){e=(60*((f-h)/(j-c)))%360}else{if(j==f){e=60*((h-a)/(j-c))+120}else{if(j==h){e=60*((a-f)/(j-c))+240}}}}if(e<0){e+=360}if(j==0){d=0}else{d=1-(c/j)}return[Math.round(e),Math.round(d*100),Math.round(k*100)]},convertHSV_RGB:function(j,w,o){var w=w/100,o=o/100;var e=Math.floor((j/60)%6);var l=(j/60)-e;var d=o*(1-w);var c=o*(1-l*w);var u=o*(1-(1-l)*w);var m=[];switch(e){case 0:m=[o,u,d];break;case 1:m=[c,o,d];break;case 2:m=[d,o,u];break;case 3:m=[d,c,o];break;case 4:m=[u,d,o];break;case 5:m=[o,d,c];break}var a=Math.min(255,Math.round(m[0]*256)),k=Math.min(255,Math.round(m[1]*256)),n=Math.min(255,Math.round(m[2]*256));return[a,k,n]},formatFloat:function(c,a,d){if(a<1){a=1}var b=Math.pow(10,a);c=parseInt(c*b)/b;return c+(d?d:"")},getQueryParam:function(b){b=b.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var a="[\\?&]"+b+"=([^&#]*)";var d=new RegExp(a);var c=d.exec(window.location.href);if(c==null||c.indexOf("undefined")>-1){return null}else{return c[1]}},closeTwiggie:function(c){if("string"==typeof(c)){c=document.getElementById(c)}var a=c.getAttribute("value");var b=document.getElementById(a);if(b.className.indexOf("twiggieContentClosed")==-1){CCL.Utils.removeClass(c,"twiggieControlOpen");CCL.Utils.addClass(b,"twiggieContentClosed")}},openTwiggie:function(c){if("string"==typeof(c)){c=document.getElementById(c)}var a=c.getAttribute("value");var b=document.getElementById(a);if(b.className.indexOf("twiggieContentClosed")>-1){CCL.Utils.addClass(c,"twiggieControlOpen");CCL.Utils.removeClass(b,"twiggieContentClosed")}},toggleTwiggie:function(c){var a=c.getAttribute("value");var b=document.getElementById(a);if(b.className.indexOf("twiggieContentClosed")>-1){CCL.Utils.openTwiggie(c)}else{CCL.Utils.closeTwiggie(c)}},removeClass:function(c,a){if("string"!=typeof(c)){c=c.id}var b=document.getElementById(c);calssName=" "+a;b.className=b.className.replace(a,"")},addClass:function(c,a){if("string"!=typeof(c)){c=c.id}var b=document.getElementById(c);if(b.className!=null&&b.className.indexOf(a)==-1){b.className+=" "+a}},clearClassNameValidFromResults:function(){var a=document.getElementById("resultbox");var d=a.getElementsByTagName("input");for(var b=0;d!=null&&b<d.length;b++){var c=d[b];c.className=c.className.replace(" valid","")}},getCheckedValue:function(b){if(!b){return""}var c=b.length;if(c==undefined){if(b.checked){return b.value}else{return""}}for(var a=0;a<c;a++){if(b[a].checked){return b[a].value}}return""},setColorsObj:function(d,c,a){var b={};b.red=d;b.green=c;b.blue=a;return b}};CCL.Update={isStartedBy:null,HSVSliders:function(b,a){var c=b;window[c+"Hue"].setValue(a[0]);window[c+"Saturation"].setValue(a[1]);window[c+"Value"].setValue(a[2])},RGBSliders:function(b,a){var c=b;window[c+"Red"].setValue(a[0]);window[c+"Green"].setValue(a[1]);window[c+"Blue"].setValue(a[2])},ColorValue:function(a){document.getElementById(a+"Color").value=CCL.Utils.pad(window[a+"Red"].getValue())+CCL.Utils.pad(window[a+"Green"].getValue())+CCL.Utils.pad(window[a+"Blue"].getValue())},SampleTextStyle:function(d,c,e,a){c+=(e.indexOf("pixel")>-1)?"px":"pt";var b=document.getElementById(d);b.style.fontSize=c;b.style.fontWeight=a},inputColorChange:function(h,d){var c=h.value.toUpperCase();var j=(h.id.indexOf("fgColor")>-1)?"fg":"bg";if(/^[0-9A-F]{3}$|^[0-9A-F]{6}$/.test(c)){if(c.length==3){c=c.match(/[0-9A-F]/g);c=c[0]+c[0]+c[1]+c[1]+c[2]+c[2];this.value=c}var f=parseInt(c.substr(0,2),16);var e=parseInt(c.substr(2,2),16);var a=parseInt(c.substr(4,2),16);CCL.Update.RGBSliders(j,[f,e,a])}if(d==false){return}CCL.Update.ColorResults()},RGBChange:function(f){if(!this.isStartedBy){this.isStartedBy="rgb"}if(this.isStartedBy=="rgb"){var e=(f=="fg")?fgRed.getValue():bgRed.getValue();var d=(f=="fg")?fgGreen.getValue():bgGreen.getValue();var a=(f=="fg")?fgBlue.getValue():bgBlue.getValue();var c=CCL.Utils.convertRGB_HSV(e,d,a);CCL.Update.HSVSliders(f,c);CCL.Update.ColorResults();CCL.Update.ColorValue(f);this.isStartedBy=null}},HSVChange:function(e){if(!this.isStartedBy){this.isStartedBy="hsv"}if(this.isStartedBy=="hsv"){var d=(e=="fg")?fgHue.getValue():bgHue.getValue();var c=(e=="fg")?fgSaturation.getValue():bgSaturation.getValue();var a=(e=="fg")?fgValue.getValue():bgValue.getValue();var b=CCL.Utils.convertHSV_RGB(d,c,a);CCL.Update.RGBSliders(e,b);CCL.Update.ColorResults();CCL.Update.ColorValue(e);this.isStartedBy=null}},ColorResults:function(){CCL.Utils.clearClassNameValidFromResults();var j=CCL.Utils.getCheckedValue(document.forms.wcagUnitForm.elements.wcagLevel);document.getElementById("spec-level").innerHTML=(j.indexOf("2a")>-1)?"AA":"AAA";var e=parseInt(document.getElementById("fontsize").value);var d=CCL.Utils.getCheckedValue(document.forms.fontUnitForm.elements["px-pt"]);d=(d==null||d.length==0)?"pixel":d;var u=e;CCL.Utils.addClass("cnvtFont","dispNone");if(d.indexOf("pixel")>-1){u=Math.round(parseFloat(e)*72/96);document.getElementById("cnvtFont").innerHTML="("+u+"pt)";CCL.Utils.removeClass("cnvtFont","dispNone")}var r=document.getElementById("fontWeight").value;var q=r;if(typeof r=="string"&&r.indexOf("bold")>-1){q=((r.indexOf("bolder")>-1)?900:700)}document.getElementById("specWeight").innerHTML=(q>=700)?"bold":"normal";CCL.Update.SampleTextStyle("viewresult",e,d,q);e+=(d!=null&&d.indexOf("pixel")>-1)?"px":"pt";document.getElementById("specFont").innerHTML=e;var n={};n.bgColor=CCL.Utils.setColorsObj(bgRed.getValue(),bgGreen.getValue(),bgBlue.getValue());n.fgColor=CCL.Utils.setColorsObj(fgRed.getValue(),fgGreen.getValue(),fgBlue.getValue());var v="rgb("+n.fgColor.red+","+n.fgColor.green+","+n.fgColor.blue+")";var C="rgb("+n.bgColor.red+","+n.bgColor.green+","+n.bgColor.blue+")";var t=document.getElementById("fcolor-result");t.style.backgroundColor=v;document.getElementById("sample-text").style.color=v;var p=document.getElementById("bcolor-result");p.style.backgroundColor=C;document.getElementById("sample-text").style.backgroundColor=C;var h=125;var f=500;var o=((n.bgColor.red*299)+(n.bgColor.green*587)+(n.bgColor.blue*114))/1000;var z=((n.fgColor.red*299)+(n.fgColor.green*587)+(n.fgColor.blue*114))/1000;var x=Math.abs(o-z);var B=((Math.max(n.fgColor.red,n.bgColor.red)-Math.min(n.fgColor.red,n.bgColor.red))+(Math.max(n.fgColor.green,n.bgColor.green)-Math.min(n.fgColor.green,n.bgColor.green))+(Math.max(n.fgColor.blue,n.bgColor.blue)-Math.min(n.fgColor.blue,n.bgColor.blue)));document.getElementById("bDiff").value=parseFloat(CCL.Utils.formatFloat(x,2));document.getElementById("cDiff").value=parseFloat(CCL.Utils.formatFloat(B,2));CCL.Utils.addClass("bDiff",((x>=h)?"valid":""));CCL.Utils.addClass("cDiff",((B>=f)?"valid":""));if((x>=h)&&(B>=f)){document.getElementById("cResult").value="YES";CCL.Utils.addClass("cResult","valid")}else{if((x>=h)||(B>=f)){document.getElementById("cResult").value="Sorry....."}else{document.getElementById("cResult").value="NO"}}var A={};var c={};var E={};var w={};var a={};var l={};var m={};for(i in n){A[i]=n[i].red/255;c[i]=n[i].green/255;E[i]=n[i].blue/255;w[i]=((A[i]<=0.03928)?(A[i]/12.92):(Math.pow(((A[i]+0.055)/1.055),2.4)));a[i]=((c[i]<=0.03928)?(c[i]/12.92):(Math.pow(((c[i]+0.055)/1.055),2.4)));l[i]=((E[i]<=0.03928)?(E[i]/12.92):(Math.pow(((E[i]+0.055)/1.055),2.4)));m[i]=(w[i]*0.2126)+(a[i]*0.7152)+(l[i]*0.0722)}var y=((Math.max(m.fgColor,m.bgColor)+0.05)/(Math.min(m.fgColor,m.bgColor)+0.05));y=parseFloat(CCL.Utils.formatFloat(y,2));var k=y;document.getElementById("contrastratio").value=k;document.getElementById("w2-14Normal").value=(k>=4.5?"YES":"NO");document.getElementById("w2-14Bold").value=(k>=3?"YES":"NO");document.getElementById("w2-18Normal").value=(k>=3?"YES":"NO");document.getElementById("w2a-14Normal").value=(k>=7?"YES":"NO");document.getElementById("w2a-14Bold").value=(k>=4.5?"YES":"NO");document.getElementById("w2a-18Normal").value=(k>=4.5?"YES":"NO");var g=(j.indexOf("2a")>-1)?4.5:7;var D=(j.indexOf("2a")>-1)?3:4.5;var b=(((u>=18)&&(k>=D))||((u>=14)&&(u<18)&&(q>=700)&&(k>=D))||((u<18)&&(k>=g)));var s=((((u>=14)&&(u<18)&&(q>=700))||(u>=18))?D:g)+":1";CCL.Utils.addClass("contrastratio",((b==true)?"valid":""));document.getElementById("symbol").innerHTML=((b)?"&gt;":"&lt;");document.getElementById("ratioThreshold").innerHTML=s;CCL.Utils.addClass("w2-14Normal",((k>=4.5)?"valid":""));CCL.Utils.addClass("w2-14Bold",((k>=3)?"valid":""));CCL.Utils.addClass("w2-18Normal",((k>=3)?"valid":""));CCL.Utils.addClass("w2a-14Normal",((k>=7)?"valid":""));CCL.Utils.addClass("w2a-14Bold",((k>=4.5)?"valid":""));CCL.Utils.addClass("w2a-18Normal",((k>=4.5)?"valid":""));CCL.Utils.addClass("sample-result",((b)?"valid":""));document.getElementById("sample-result").innerHTML=((b)?"PASS":"FAIL");CCL.Utils.closeTwiggie(((j.indexOf("3a")>-1)?"AA-rule-group":"AAA-rule-group"));CCL.Utils.openTwiggie(((j.indexOf("2a")>-1)?"AA-rule-group":"AAA-rule-group"))}};function Timer(a){this._pauseTime=typeof a=="undefined"?1000:a;this._timer=null;this._isStarted=false}Timer.prototype.start=function(){if(this.isStarted()){this.stop()}var a=this;this._timer=window.setTimeout(function(){if(typeof a.ontimer=="function"){a.ontimer()}},this._pauseTime);this._isStarted=false};Timer.prototype.stop=function(){if(this._timer!=null){window.clearTimeout(this._timer)}this._isStarted=false};Timer.prototype.isStarted=function(){return this._isStarted};Timer.prototype.getPauseTime=function(){return this._pauseTime};Timer.prototype.setPauseTime=function(a){this._pauseTime=a};function Range(){this._value=0;this._minimum=0;this._maximum=100;this._extent=0;this._isChanging=false}Range.prototype.setValue=function(a){a=parseInt(a);if(isNaN(a)){return}if(this._value!=a){if(a+this._extent>this._maximum){this._value=this._maximum-this._extent}else{if(a<this._minimum){this._value=this._minimum}else{this._value=a}}if(!this._isChanging&&typeof this.onchange=="function"){this.onchange()}}};Range.prototype.getValue=function(){return this._value};Range.prototype.setExtent=function(a){if(this._extent!=a){if(a<0){this._extent=0}else{if(this._value+a>this._maximum){this._extent=this._maximum-this._value}else{this._extent=a}}if(!this._isChanging&&typeof this.onchange=="function"){this.onchange()}}};Range.prototype.getExtent=function(){return this._extent};Range.prototype.setMinimum=function(a){if(this._minimum!=a){var b=this._isChanging;this._isChanging=true;this._minimum=a;if(a>this._value){this.setValue(a)}if(a>this._maximum){this._extent=0;this.setMaximum(a);this.setValue(a)}if(a+this._extent>this._maximum){this._extent=this._maximum-this._minimum}this._isChanging=b;if(!this._isChanging&&typeof this.onchange=="function"){this.onchange()}}};Range.prototype.getMinimum=function(){return this._minimum};Range.prototype.setMaximum=function(b){if(this._maximum!=b){var a=this._isChanging;this._isChanging=true;this._maximum=b;if(b<this._value){this.setValue(b-this._extent)}if(b<this._minimum){this._extent=0;this.setMinimum(b);this.setValue(this._maximum)}if(b<this._minimum+this._extent){this._extent=this._maximum-this._minimum}if(b<this._value+this._extent){this._extent=this._maximum-this._value}this._isChanging=a;if(!this._isChanging&&typeof this.onchange=="function"){this.onchange()}}};Range.prototype.getMaximum=function(){return this._maximum};Slider.isSupported=typeof document.createElement!="undefined"&&typeof document.documentElement!="undefined"&&typeof document.documentElement.offsetWidth=="number";function Slider(b,d,c){if(!b){return}this._orientation=c||"horizontal";this._range=new Range();this._range.setExtent(0);this._blockIncrement=10;this._unitIncrement=1;this._timer=new Timer(100);if(Slider.isSupported&&b){this.document=b.ownerDocument||b.document;this.element=b;this.element.slider=this;this.element.unselectable="on";this.element.className=this._orientation+" "+this.classNameTag+" "+this.element.className;this.line=this.document.createElement("DIV");this.line.className="line";this.line.unselectable="on";this.line.appendChild(this.document.createElement("DIV"));this.element.appendChild(this.line);this.handle=this.document.createElement("DIV");this.handle.className="handle";this.handle.unselectable="on";this.handle.appendChild(this.document.createElement("DIV"));this.handle.firstChild.appendChild(this.document.createTextNode(String.fromCharCode(160)));this.element.appendChild(this.handle)}this.input=d;var a=this;this._range.onchange=function(){a.recalculate();if(typeof a.onchange=="function"){a.onchange()}};if(Slider.isSupported&&b){this.element.onfocus=Slider.eventHandlers.onfocus;this.element.onblur=Slider.eventHandlers.onblur;this.element.onmousedown=Slider.eventHandlers.onmousedown;this.element.onmouseover=Slider.eventHandlers.onmouseover;this.element.onmouseout=Slider.eventHandlers.onmouseout;this.element.onkeydown=Slider.eventHandlers.onkeydown;this.element.onkeypress=Slider.eventHandlers.onkeypress;this.element.onmousewheel=Slider.eventHandlers.onmousewheel;this.handle.onselectstart=this.element.onselectstart=function(){return false};this._timer.ontimer=function(){a.ontimer()};window.setTimeout(function(){a.recalculate()},1)}else{this.input.onchange=function(f){a.setValue(a.input.value)}}}Slider.eventHandlers={getEvent:function(b,a){if(!b){if(a){b=a.document.parentWindow.event}else{b=window.event}}if(!b.srcElement){var a=b.target;while(a!=null&&a.nodeType!=1){a=a.parentNode}b.srcElement=a}if(typeof b.offsetX=="undefined"){b.offsetX=b.layerX;b.offsetY=b.layerY}return b},getDocument:function(a){if(a.target){return a.target.ownerDocument}return a.srcElement.document},getSlider:function(b){var a=b.target||b.srcElement;while(a!=null&&a.slider==null){a=a.parentNode}if(a){return a.slider}return null},getLine:function(b){var a=b.target||b.srcElement;while(a!=null&&a.className!="line"){a=a.parentNode}return a},getHandle:function(c){var b=c.target||c.srcElement;var a=/handle/;while(b!=null&&!a.test(b.className)){b=b.parentNode}return b},onfocus:function(b){var a=this.slider;a._focused=true;a.handle.className="handle hover"},onblur:function(b){var a=this.slider;a._focused=false;a.handle.className="handle"},onmouseover:function(b){b=Slider.eventHandlers.getEvent(b,this);var a=this.slider;if(b.srcElement==a.handle){a.handle.className="handle hover"}},onmouseout:function(b){b=Slider.eventHandlers.getEvent(b,this);var a=this.slider;if(b.srcElement==a.handle&&!a._focused){a.handle.className="handle"}},onmousedown:function(d){d=Slider.eventHandlers.getEvent(d,this);var a=this.slider;if(a.element.focus){a.element.focus()}Slider._currentInstance=a;var c=a.document;if(c.addEventListener){c.addEventListener("mousemove",Slider.eventHandlers.onmousemove,true);c.addEventListener("mouseup",Slider.eventHandlers.onmouseup,true)}else{if(c.attachEvent){c.attachEvent("onmousemove",Slider.eventHandlers.onmousemove);c.attachEvent("onmouseup",Slider.eventHandlers.onmouseup);c.attachEvent("onlosecapture",Slider.eventHandlers.onmouseup);a.element.setCapture()}}if(Slider.eventHandlers.getHandle(d)){Slider._sliderDragData={screenX:d.screenX,screenY:d.screenY,dx:d.screenX-a.handle.offsetLeft,dy:d.screenY-a.handle.offsetTop,startValue:a.getValue(),slider:a}}else{var b=Slider.eventHandlers.getLine(d);a._mouseX=d.offsetX+(b?a.line.offsetLeft:0);a._mouseY=d.offsetY+(b?a.line.offsetTop:0);a._increasing=null;a.ontimer()}},onmousemove:function(g){g=Slider.eventHandlers.getEvent(g,this);if(Slider._sliderDragData){var c=Slider._sliderDragData.slider;var a=c.getMaximum()-c.getMinimum();var b,h,f;if(c._orientation=="horizontal"){b=c.element.offsetWidth-c.handle.offsetWidth;h=g.screenX-Slider._sliderDragData.dx;f=Math.abs(g.screenY-Slider._sliderDragData.screenY)>100}else{b=c.element.offsetHeight-c.handle.offsetHeight;h=c.element.offsetHeight-c.handle.offsetHeight-(g.screenY-Slider._sliderDragData.dy);f=Math.abs(g.screenX-Slider._sliderDragData.screenX)>100}c.setValue(f?Slider._sliderDragData.startValue:c.getMinimum()+a*h/b);return false}else{var c=Slider._currentInstance;if(c!=null){var d=Slider.eventHandlers.getLine(g);c._mouseX=g.offsetX+(d?c.line.offsetLeft:0);c._mouseY=g.offsetY+(d?c.line.offsetTop:0)}}},onmouseup:function(c){c=Slider.eventHandlers.getEvent(c,this);var a=Slider._currentInstance;var b=a.document;if(b.removeEventListener){b.removeEventListener("mousemove",Slider.eventHandlers.onmousemove,true);b.removeEventListener("mouseup",Slider.eventHandlers.onmouseup,true)}else{if(b.detachEvent){b.detachEvent("onmousemove",Slider.eventHandlers.onmousemove);b.detachEvent("onmouseup",Slider.eventHandlers.onmouseup);b.detachEvent("onlosecapture",Slider.eventHandlers.onmouseup);a.element.releaseCapture()}}if(Slider._sliderDragData){Slider._sliderDragData=null}else{a._timer.stop();a._increasing=null}Slider._currentInstance=null},onkeydown:function(c){c=Slider.eventHandlers.getEvent(c,this);var b=this.slider;var a=c.keyCode;switch(a){case 33:b.setValue(b.getValue()+b.getBlockIncrement());break;case 34:b.setValue(b.getValue()-b.getBlockIncrement());break;case 35:b.setValue(b.getOrientation()=="horizontal"?b.getMaximum():b.getMinimum());break;case 36:b.setValue(b.getOrientation()=="horizontal"?b.getMinimum():b.getMaximum());break;case 38:case 39:b.setValue(b.getValue()+b.getUnitIncrement());break;case 37:case 40:b.setValue(b.getValue()-b.getUnitIncrement());break}if(a>=33&&a<=40){return false}},onkeypress:function(b){b=Slider.eventHandlers.getEvent(b,this);var a=b.keyCode;if(a>=33&&a<=40){return false}},onmousewheel:function(b){b=Slider.eventHandlers.getEvent(b,this);var a=this.slider;if(a._focused){a.setValue(a.getValue()+b.wheelDelta/120*a.getUnitIncrement());return false}}};Slider.prototype.classNameTag="dynamic-slider-control",Slider.prototype.setValue=function(a){this._range.setValue(a);this.input.value=this.getValue()};Slider.prototype.getValue=function(){return this._range.getValue()};Slider.prototype.setMinimum=function(a){this._range.setMinimum(a);this.input.value=this.getValue()};Slider.prototype.getMinimum=function(){return this._range.getMinimum()};Slider.prototype.setMaximum=function(a){this._range.setMaximum(a);this.input.value=this.getValue()};Slider.prototype.getMaximum=function(){return this._range.getMaximum()};Slider.prototype.setUnitIncrement=function(a){this._unitIncrement=a};Slider.prototype.getUnitIncrement=function(){return this._unitIncrement};Slider.prototype.setBlockIncrement=function(a){this._blockIncrement=a};Slider.prototype.getBlockIncrement=function(){return this._blockIncrement};Slider.prototype.getOrientation=function(){return this._orientation};Slider.prototype.setOrientation=function(a){if(a!=this._orientation){if(Slider.isSupported&&this.element){this.element.className=this.element.className.replace(this._orientation,a)}this._orientation=a;this.recalculate()}};Slider.prototype.recalculate=function(){if(!Slider.isSupported||!this.element){return}var c=this.element.offsetWidth;var e=this.element.offsetHeight;var a=this.handle.offsetWidth;var d=this.handle.offsetHeight;var f=this.line.offsetWidth;var b=this.line.offsetHeight;if(this._orientation=="horizontal"){this.handle.style.left=(c-a)*(this.getValue()-this.getMinimum())/(this.getMaximum()-this.getMinimum())+"px";this.handle.style.top=(e-d)/2+"px";this.line.style.top=(e-b)/2+"px";this.line.style.left=a/2+"px";this.line.style.width=Math.max(0,c-a-2)+"px";this.line.firstChild.style.width=Math.max(0,c-a-4)+"px"}else{this.handle.style.left=(c-a)/2+"px";this.handle.style.top=e-d-(e-d)*(this.getValue()-this.getMinimum())/(this.getMaximum()-this.getMinimum())+"px";this.line.style.left=(c-f)/2+"px";this.line.style.top=d/2+"px";this.line.style.height=Math.max(0,e-d-2)+"px";this.line.firstChild.style.height=Math.max(0,e-d-4)+"px"}};Slider.prototype.ontimer=function(){var b=this.handle.offsetWidth;var d=this.handle.offsetHeight;var a=this.handle.offsetLeft;var c=this.handle.offsetTop;if(this._orientation=="horizontal"){if(this._mouseX>a+b&&(this._increasing==null||this._increasing)){this.setValue(this.getValue()+this.getBlockIncrement());this._increasing=true}else{if(this._mouseX<a&&(this._increasing==null||!this._increasing)){this.setValue(this.getValue()-this.getBlockIncrement());this._increasing=false}}}else{if(this._mouseY>c+d&&(this._increasing==null||!this._increasing)){this.setValue(this.getValue()-this.getBlockIncrement());this._increasing=false}else{if(this._mouseY<c&&(this._increasing==null||this._increasing)){this.setValue(this.getValue()+this.getBlockIncrement());this._increasing=true}}}this._timer.start()};var fgRed=new Slider(document.getElementById("fgRed-slider"),document.getElementById("fgRed-slider-input"));fgRed.setMaximum(255);var fgGreen=new Slider(document.getElementById("fgGreen-slider"),document.getElementById("fgGreen-slider-input"));fgGreen.setMaximum(255);var fgBlue=new Slider(document.getElementById("fgBlue-slider"),document.getElementById("fgBlue-slider-input"));fgBlue.setMaximum(255);var fgHue=new Slider(document.getElementById("fgHue-slider"),document.getElementById("fgHue-slider-input"));fgHue.setMaximum(360);var fgSaturation=new Slider(document.getElementById("fgSaturation-slider"),document.getElementById("fgSaturation-slider-input"));fgSaturation.setMaximum(100);var fgValue=new Slider(document.getElementById("fgValue-slider"),document.getElementById("fgValue-slider-input"));fgValue.setMaximum(100);var bgRed=new Slider(document.getElementById("bgRed-slider"),document.getElementById("bgRed-slider-input"));bgRed.setMaximum(255);var bgGreen=new Slider(document.getElementById("bgGreen-slider"),document.getElementById("bgGreen-slider-input"));bgGreen.setMaximum(255);var bgBlue=new Slider(document.getElementById("bgBlue-slider"),document.getElementById("bgBlue-slider-input"));bgBlue.setMaximum(255);var bgHue=new Slider(document.getElementById("bgHue-slider"),document.getElementById("bgHue-slider-input"));bgHue.setMaximum(360);var bgSaturation=new Slider(document.getElementById("bgSaturation-slider"),document.getElementById("bgSaturation-slider-input"));bgSaturation.setMaximum(100);var bgValue=new Slider(document.getElementById("bgValue-slider"),document.getElementById("bgValue-slider-input"));bgValue.setMaximum(100);var AA_ruleGroup=document.getElementById("AA-rule-group").onclick=function(){CCL.Utils.toggleTwiggie(this)};var AAA_ruleGroup=document.getElementById("AAA-rule-group").onclick=function(){CCL.Utils.toggleTwiggie(this)};var priority2_ruleGroup=document.getElementById("priority2-rule-group").onclick=function(){CCL.Utils.toggleTwiggie(this)};var inputFontSize=document.getElementById("fontsize").onchange=function(){CCL.Update.ColorResults()};var inputFontWeight=document.getElementById("fontWeight").onchange=function(){CCL.Update.ColorResults()};var radioPXUnit=document.getElementById("pxUnit").onchange=function(){CCL.Update.ColorResults()};var radioPTUnit=document.getElementById("ptUnit").onchange=function(){CCL.Update.ColorResults()};var radioLevel2a=document.getElementById("level2a").onchange=function(){CCL.Update.ColorResults()};var radioLevel3a=document.getElementById("level3a").onchange=function(){CCL.Update.ColorResults()};var inputForegroundColor=document.getElementById("fgColor");var inputBackgroundColor=document.getElementById("bgColor");inputForegroundColor.onchange=function(a){CCL.Update.inputColorChange(this,a)};inputBackgroundColor.onchange=function(a){CCL.Update.inputColorChange(this,a)};fgRed.onchange=fgGreen.onchange=fgBlue.onchange=function(){CCL.Update.RGBChange("fg")};bgRed.onchange=bgGreen.onchange=bgBlue.onchange=function(){CCL.Update.RGBChange("bg")};fgHue.onchange=fgSaturation.onchange=fgValue.onchange=function(){CCL.Update.HSVChange("fg")};bgHue.onchange=bgSaturation.onchange=bgValue.onchange=function(){CCL.Update.HSVChange("bg")};inputForegroundColor.value="FFFFFF";inputBackgroundColor.value="6699CE";inputForegroundColor.onchange();inputBackgroundColor.onchange();function processQueryString(){var b=CCL.Utils.getQueryParam("fg")||"FFFFFF";var a=CCL.Utils.getQueryParam("bg")||"6699CE";var c=CCL.Utils.getQueryParam("size")||"20";var d=CCL.Utils.getQueryParam("unit")||"px";var e=CCL.Utils.getQueryParam("weight")||"400";var f=CCL.Utils.getQueryParam("wcag")||"level2a";d+="Unit";document.getElementById(d).checked="checked";document.getElementById(f).checked="checked";document.getElementById("fontsize").value=c;document.getElementById("fontWeight").value=e;document.getElementById("bgColor").value=a;document.getElementById("fgColor").value=b;inputForegroundColor.value=b;inputBackgroundColor.value=a;inputForegroundColor.onchange(false);inputBackgroundColor.onchange(false);CCL.Update.ColorResults()}function colorContrastLoadEvent(){fgRed.recalculate();fgGreen.recalculate();fgBlue.recalculate();bgRed.recalculate();bgGreen.recalculate();bgBlue.recalculate();fgHue.recalculate();fgSaturation.recalculate();fgValue.recalculate();bgHue.recalculate();bgSaturation.recalculate();bgValue.recalculate()}var previousOnload=window.onload;window.onload=function(){if(previousOnload){previousOnload()}colorContrastLoadEvent();setTimeout(processQueryString,100)};
+
+   </script>
+  </body>
+</html>
